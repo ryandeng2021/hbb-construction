@@ -4,10 +4,11 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  // If your GitHub Pages URL is https://username.github.io/repository-name
-  // Uncomment and set the basePath to '/repository-name'
-  // basePath: '/repository-name',
-  // trailingSlash: true,
+  // GitHub Pages basePath - update this to match your repository name
+  // If your site is at https://username.github.io/hbb-construction/
+  // then basePath should be '/hbb-construction'
+  basePath: '/hbb-construction',
+  trailingSlash: true, // Recommended for GitHub Pages
 };
 
 module.exports = nextConfig;
