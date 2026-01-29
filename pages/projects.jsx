@@ -14,7 +14,7 @@ const ProjectsPage = () => {
 
       {/* Meta Information */}
       <Head>
-        <title>Our Projects – Buildify Construction Portfolio</title>
+        <title>Our Projects – HBB Construction Portfolio</title>
         <meta 
           name="description" 
           content="Explore our portfolio of construction projects including commercial, residential, and industrial developments." 

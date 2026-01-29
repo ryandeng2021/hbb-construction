@@ -15,7 +15,7 @@ const TeamMemberDetail = ({ member }) => {
       <Fragment>
         <PageProgress />
         <Head>
-          <title>Team Member Not Found – Buildify</title>
+          <title>Team Member Not Found – HBB Construction</title>
         </Head>
         <main className="content-wrapper">
           <div className="container py-12">
@@ -37,8 +37,8 @@ const TeamMemberDetail = ({ member }) => {
 
       {/* Meta Information */}
       <Head>
-        <title>{member.name} – {member.title} | Buildify</title>
-        <meta name="description" content={`Meet ${member.name}, ${member.title} at Buildify. ${member.bio}`} />
+        <title>{member.name} – {member.title} | HBB Construction</title>
+        <meta name="description" content={`Meet ${member.name}, ${member.title} at HBB Construction. ${member.bio}`} />
       </Head>
 
       <main className="content-wrapper overflow-hidden">

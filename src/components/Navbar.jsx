@@ -44,7 +44,7 @@ const Navbar = ({
           title={
             <Image
               unoptimized={true}
-              alt="Logo | Buildify"
+              alt="Logo | HBB Construction"
               src="/img/logo.svg"
               width={190}
               height={70}
@@ -65,7 +65,7 @@ const Navbar = ({
             href="/"
             title={
               <Image
-                alt="Logo | Buildify"
+                alt="Logo | HBB Construction"
                 src="/img/logo.svg"
                 width={160}
                 height={60}
@@ -126,7 +126,7 @@ const Navbar = ({
               <div className="d-flex align-items-center mb-5">
                 <i className="uil uil-envelope fs-32 text-main bg-white rounded-circle me-2" />
                 <p className="fs-16 text-center m-0">
-                  <a href="mailto:buildify@gmail.com">buildify@gmail.com</a>
+                  <a href="mailto:hbbconstruction@gmail.com">hbbconstruction@gmail.com</a>
                 </p>
               </div>
               <div className="d-flex mb-5">

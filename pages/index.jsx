@@ -21,7 +21,7 @@ const Home = () => {
 
       {/* Meta Information */}
       <Head>
-        <title>Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies</title>
+        <title>HBB Construction</title>
         <meta name="description" content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap" />
       </Head>
 

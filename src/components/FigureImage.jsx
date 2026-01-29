@@ -19,7 +19,7 @@ const FigureImage = (props) => {
     <div className={className} {...others}>
       <Image
         src={src}
-        alt="Page Not Found | Buildify"  // Provide meaningful alt text or consider passing as prop
+        alt="Page Not Found | HBB Construction"  // Provide meaningful alt text or consider passing as prop
         width={width}
         height={height}
         unoptimized={true} // Disable optimization (useful for external or dynamic images)

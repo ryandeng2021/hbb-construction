@@ -1436,7 +1436,7 @@ export const teamRows = [
       title: 'Project Manager',
       image: '/img/team/john-mitchell.webp',
       bio: 'John Mitchell is a seasoned project manager with expertise in coordinating complex construction projects from inception to completion. His attention to detail and leadership skills ensure projects are delivered on time and within budget.',
-      email: 'john.mitchell@buildify.com',
+      email: 'john.mitchell@hbbconstruction.com',
       phone: '+1 (555) 234-5678',
       experience: '15+ Years',
       specialties: ['Project Coordination', 'Team Management', 'Quality Control']
@@ -1447,7 +1447,7 @@ export const teamRows = [
       title: 'Project Manager',
       image: '/img/team/david-ramirez.webp',
       bio: 'David Ramirez is a highly skilled engineer specializing in structural design and site management. His technical expertise and problem-solving abilities have been instrumental in the success of numerous high-profile projects.',
-      email: 'david.ramirez@buildify.com',
+      email: 'david.ramirez@hbbconstruction.com',
       phone: '+1 (555) 345-6789',
       experience: '3+ Years',
       specialties: ['Structural Engineering', 'Site Management', 'Technical Design']
@@ -1458,7 +1458,7 @@ export const teamRows = [
       title: 'Project Manager',
       image: '/img/team/david-ramirez.webp',
       bio: 'David Ramirez is a highly skilled engineer specializing in structural design and site management. His technical expertise and problem-solving abilities have been instrumental in the success of numerous high-profile projects.',
-      email: 'david.ramirez@buildify.com',
+      email: 'david.ramirez@hbbconstruction.com',
       phone: '+1 (555) 345-6789',
       experience: '3+ Years',
       specialties: ['Structural Engineering', 'Site Management', 'Technical Design']

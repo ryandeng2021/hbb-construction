@@ -16,7 +16,7 @@ const ProjectDetail = ({ project }) => {
       <Fragment>
         <PageProgress />
         <Head>
-          <title>Project Not Found – Buildify</title>
+          <title>Project Not Found – HBB Construction</title>
         </Head>
         <main className="content-wrapper">
           <div className="container py-12">
@@ -38,7 +38,7 @@ const ProjectDetail = ({ project }) => {
 
       {/* Meta Information */}
       <Head>
-        <title>{project.title} – Buildify Construction</title>
+        <title>{project.title} – HBB Construction</title>
         <meta name="description" content={project.description} />
       </Head>
 
