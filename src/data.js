@@ -1467,9 +1467,6 @@ export const teamRows = [
       experience: '3+ Years',
       specialties: ['Structural Engineering', 'Site Management', 'Technical Design']
     },
-  ],
-  [
-    // Row 3: 3 members
     {
       id: 5,
       name: 'Suzy',
