@@ -123,18 +123,17 @@ const Navbar = ({
 
           {/* Offcanvas footer with contact info and social links (mobile only) */}
           <div className="offcanvas-footer d-lg-none">
-            <div>
+            <div className="mw-100">
               <div className="d-flex align-items-center mb-5">
-                <i className="uil uil-envelope fs-32 text-main bg-white rounded-circle me-2" />
+                <i className="nav-icon uil uil-envelope fs-32 text-main bg-white rounded-circle me-2" />
                 <p className="fs-16 text-center m-0">
-                  <a href="mailto:hbbconstruction@gmail.com">hbbconstruction@gmail.com</a>
+                  <a href="mailto:ryand@hbbconstruction.com">ryand@hbbconstruction.com</a>
                 </p>
               </div>
               <div className="d-flex mb-5">
-                <i className="uil uil-phone-volume fs-32 text-main bg-white rounded-circle me-2" />
+                <i className="nav-icon uil uil-phone-volume fs-32 text-main bg-white rounded-circle me-2" />
                 <p className="fs-18 text-center m-0 d-flex flex-column">
-                  <a href="tel:+919876543210">+91 98765 43210</a>
-                  <a href="tel:+911234567890">+91 12345 67890</a>
+                  <a href="tel:+919876543210">+1 (650) 996-0715</a>
                 </p>
               </div>
               <SocialLinks />

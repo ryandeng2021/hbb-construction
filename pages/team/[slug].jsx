@@ -90,12 +90,7 @@ const TeamMemberDetail = ({ member }) => {
                 {/* Bio */}
                 <div className="mb-6">
                   <h2 className="mb-4 oswald">About</h2>
-                  <p className="text-justify roboto fs-16 mb-4">{member.bio}</p>
-                  <p className="text-justify roboto fs-16">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  <p className="roboto fs-16 mb-4">{member.bio}</p>
                 </div>
 
                 {/* Contact Information */}

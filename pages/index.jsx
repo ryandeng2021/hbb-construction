@@ -32,14 +32,14 @@ const Home = () => {
 
         {/* About Section */}
         <section id="about" className="wrapper">
-          <div className="container py-8 py-md-10">
+          <div className="container py-md-10">
             <About {...aboutSection} />
           </div>
         </section>
 
         {/* Our Projects */}
         <section id="projects" className="wrapper">
-          <div className="container py-8 py-md-10">
+          <div className="container py-md-10">
             <Projects />
           </div>
         </section>
@@ -58,14 +58,14 @@ const Home = () => {
 
         {/* Why Choose Us */}
         <section className="wrapper whychoose-bg">
-          <div className="container py-8 py-md-10">
+          <div className="container py-md-10">
             <WhyChoose />
           </div>
         </section>
 
         {/* Our Process */}
         <section id="process" className="wrapper">
-          <div className="container py-8 py-md-10">
+          <div className="container py-md-10">
             <Process />
           </div>
         </section>

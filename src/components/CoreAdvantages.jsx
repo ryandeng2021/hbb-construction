@@ -51,7 +51,7 @@ const CoreAdvantages = () => {
                         </Fragment>
                       ))}
                     </h3>
-                    <p className="roboto text-justify mb-0 small">
+                    <p className="roboto mb-0 small">
                       {advantage.description}
                     </p>
                   </div>

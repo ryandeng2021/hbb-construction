@@ -91,14 +91,7 @@ const ProjectDetail = ({ project }) => {
               <div className="row mb-8">
                 <div className="col-lg-8 mx-auto">
                   <h2 className="mb-4 oswald">Project Overview</h2>
-                  <p className="text-justify roboto fs-16 mb-4">{project.description}</p>
-                  <p className="text-justify roboto fs-16">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                    pariatur.
-                  </p>
+                  <p className="roboto fs-16 mb-4">{project.description}</p>
                 </div>
               </div>
             )}

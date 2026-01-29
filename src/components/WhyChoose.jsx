@@ -24,16 +24,16 @@ const WhyChoose = () => {
       </div>
 
       {/* Text Content Section - shown first on larger screens */}
-      <div className="col-lg-6">
+      <div className="col-lg-6 why-choose-text-content">
         {/* Section label */}
-        <h3 className="fs-16 py-2 px-3 text-main d-inline rounded-pill oswald">
+        <h3 className="fs-16 text-main d-inline rounded-pill oswald">
           {whyChooseSection.subHeading}
         </h3>
 
         {/* Main headline */}
-        <h2 className="mb-5 mt-3 justify-content-start oswald">
+        <h2 className="mb-5 mt-3 justify-content-start oswald why-choose-heading">
           {whyChooseSection.heading}
-          <span className="ms-2">{whyChooseSection.span}</span>
+          <span className='why-choose-span' >{whyChooseSection.span}</span>
           {whyChooseSection.location}
         </h2>
 
@@ -47,7 +47,7 @@ const WhyChoose = () => {
                   <i className="uil uil-check primary-bg text-white p-1" />
                   <h3 className="ms-2 fw-bold fs-20 oswald">{title}</h3>
                 </div>
-                <p className="text-justify roboto">{description}</p>
+                <p className="roboto why-choose-description">{description}</p>
               </li>
             ))}
           </ul>

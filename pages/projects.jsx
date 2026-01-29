@@ -21,7 +21,7 @@ const ProjectsPage = () => {
         />
       </Head>
 
-      <main className="content-wrapper overflow-hidden">
+      <main className="content-wrapper overflow-hidden projects-page">
         <section className="wrapper">
           <div className="container py-12 py-md-14">
             <Projects />

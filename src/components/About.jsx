@@ -60,7 +60,7 @@ const About = (props) => {
         {headingH1 && (
           <h1 className="mb-3 mt-4 justify-content-start oswald">
             {headingH1}
-            {span && <span className="ms-2">{span}</span>}
+            {span && <span>{span}</span>}
           </h1>
         )}
 
@@ -68,14 +68,14 @@ const About = (props) => {
         {!headingH1 && heading && (
           <h2 className="mb-3 mt-3 justify-content-start fs-34 fw-bold oswald">
             {heading}
-            {span && <span className="ms-2 fs-34 fw-bold oswald">{span}</span>}
+            {span && <span className="fs-34 fw-bold oswald">{span}</span>}
           </h2>
         )}
 
         {/* Main and Additional Paragraphs */}
-        {para && <p className="mb-8 text-justify roboto">{para}</p>}
-        {para2 && <p className="mb-3 text-justify roboto">{para2}</p>}
-        {para3 && <p className="mb-3 text-justify roboto">{para3}</p>}
+        {para && <p className="mb-8 roboto">{para}</p>}
+        {para2 && <p className="mb-3 roboto">{para2}</p>}
+        {para3 && <p className="mb-3 roboto">{para3}</p>}
 
         {/* Optional Button */}
         {btnTitle && btnUrl && (

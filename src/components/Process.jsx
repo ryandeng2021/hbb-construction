@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { processSteps } from '../data';
 
 /**
  * Process component - displays workflow steps as flip cards
  * Cards flip on hover to show more details
- * Cards are connected to form a snake/zigzag workflow visualization
- * Flow: left to right (row 1), down, right to left (row 2), down, left to right (row 3), etc.
+ * Cards are displayed in rows from left to right
  * 
  * @returns JSX.Element
  */
 const Process = () => {
+  const [itemsPerRow, setItemsPerRow] = useState(processSteps.itemsPerRow || 4);
+
+  useEffect(() => {
+    // Detect mobile screen size and adjust itemsPerRow
+    const handleResize = () => {
+      if (window.innerWidth <= 991.98) {
+        setItemsPerRow(2); // 2 items per row on mobile
+      } else {
+        setItemsPerRow(processSteps.itemsPerRow || 4); // Desktop itemsPerRow
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Listen for resize events
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div>
       {/* Header Section */}
@@ -28,52 +47,29 @@ const Process = () => {
       {/* Process Steps Grid */}
       <div className="process-workflow">
         {(() => {
-          const itemsPerRow = processSteps.itemsPerRow || 4;
+          // Sort steps by id to ensure correct order (1-6)
+          const sortedSteps = [...processSteps.steps].sort((a, b) => a.id - b.id);
           const rows = [];
           
-          // Group steps into rows dynamically
-          for (let i = 0; i < processSteps.steps.length; i += itemsPerRow) {
-            rows.push(processSteps.steps.slice(i, i + itemsPerRow));
+          // Group steps into rows dynamically based on itemsPerRow
+          for (let i = 0; i < sortedSteps.length; i += itemsPerRow) {
+            rows.push(sortedSteps.slice(i, i + itemsPerRow));
           }
           
           return rows.map((row, rowIndex) => {
             const isLastRow = rowIndex === rows.length - 1;
-            const isFirstRow = rowIndex === 0;
-            // Even rows (0, 2, 4...) go left-to-right, odd rows (1, 3, 5...) go right-to-left
-            const isRightToLeft = rowIndex % 2 === 1;
-            const orderedRow = isRightToLeft ? [...row].reverse() : row;
-            // Calculate offset for reverse rows to align with previous row's last card
-            // When row is reversed, we want the last card (in original order) to align with previous row's last card
-            const previousRowLength = rowIndex > 0 ? rows[rowIndex - 1].length : 0;
-            const currentRowLength = row.length;
-            // For reverse rows, if they have fewer items, offset to align connector positions
-            const offsetNeeded = isRightToLeft && !isFirstRow && previousRowLength > currentRowLength
-              ? (previousRowLength - currentRowLength) * (250 + 48) // card width + connector width
-              : 0;
             
             return (
               <div 
                 key={rowIndex} 
-                className={`process-row ${isRightToLeft ? 'reverse-row' : ''}`}
-                style={offsetNeeded > 0 ? { paddingLeft: `${offsetNeeded}px` } : {}}
+                className="process-row"
               >
-                {orderedRow.map((step, stepIndex) => {
-                  const originalIndex = processSteps.steps.findIndex(s => s.id === step.id);
-                  const positionInOrderedRow = stepIndex;
-                  const isLastInRow = positionInOrderedRow === orderedRow.length - 1;
+                {row.map((step, stepIndex) => {
+                  const originalIndex = sortedSteps.findIndex(s => s.id === step.id);
+                  const isLastInRow = stepIndex === row.length - 1;
                   
-                  // Calculate which card should connect down/up
-                  // Last card in row (except last row) connects down
-                  // For right-to-left rows, "last" in display means the first card in the ordered array
-                  // First card in row (except first row) connects up
-                  // For right-to-left rows, "first" in display means the last card in the ordered array
-                  const isLastInDisplay = isRightToLeft ? positionInOrderedRow === 0 : isLastInRow;
-                  const isFirstInDisplay = isRightToLeft ? isLastInRow : positionInOrderedRow === 0;
-                  
-                  // Only show ONE vertical connector per connection
                   // Show down connector on the last card of each row (except last row)
-                  // Do NOT show up connector - only use down connectors to avoid duplicates
-                  const shouldConnectDown = !isLastRow && isLastInDisplay;
+                  const shouldConnectDown = !isLastRow && isLastInRow;
                   const shouldConnectUp = false; // Disabled to prevent duplicate vertical arrows
                   
                   return (

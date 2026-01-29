@@ -21,7 +21,7 @@ const Projects = () => {
   return (
     <div>
       {/* Header Section */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 projects-page-header">
         <div className="d-inline-flex align-items-center mb-3">
           <i className="uil uil-hard-hat fs-40 text-main me-2" />
           <h1 className="mb-0 oswald">

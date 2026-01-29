@@ -228,7 +228,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                 </div>
                 {description && (
                   <div className="col-12 mt-3">
-                    <p className="text-justify roboto fs-16">{description}</p>
+                    <p className="roboto fs-16 project-image-description">{description}</p>
                   </div>
                 )}
               </div>
@@ -320,7 +320,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                           )}
                         </div>
                         {imgDesc && (
-                          <p className="text-justify roboto fs-16 text-muted">{imgDesc}</p>
+                          <p className="roboto fs-16 text-muted project-image-description">{imgDesc}</p>
                         )}
                       </div>
                     );
@@ -328,7 +328,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                   {/* Shared description for three-image layout (only if no individual descriptions) */}
                   {description && !imagesArray.some(img => typeof img !== 'string' && img?.description) && (
                     <div className="w-100 mt-3">
-                      <p className="text-justify roboto fs-16">{description}</p>
+                      <p className="roboto fs-16 project-image-description">{description}</p>
                     </div>
                   )}
                 </>
@@ -399,7 +399,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                           )}
                         </div>
                         {imgDesc && (
-                          <p className="text-justify roboto fs-16 text-muted">{imgDesc}</p>
+                          <p className="roboto fs-16 text-muted project-image-description">{imgDesc}</p>
                         )}
                       </div>
                     );
@@ -407,7 +407,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                   {/* Shared description for two-image layout (only if no individual descriptions) */}
                   {description && !imagesArray[0]?.description && !imagesArray[1]?.description && (
                     <div className="w-100 mt-3">
-                      <p className="text-justify roboto fs-16">{description}</p>
+                      <p className="roboto fs-16 project-image-description">{description}</p>
                     </div>
                   )}
                 </>
@@ -442,7 +442,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                         )}
                       </div>
                       {(description || (typeof imagesArray[0] !== 'string' && imagesArray[0]?.description)) && (
-                        <p className="text-justify roboto fs-16">
+                        <p className="roboto fs-16 project-image-description">
                           {description || imagesArray[0]?.description}
                         </p>
                       )}

@@ -710,6 +710,13 @@ progress {
   margin-left: auto;
 }
 
+@media (max-width: 576px) {
+  .container {
+    padding-block: 1rem;
+  }
+}
+
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -33137,7 +33144,6 @@ button:focus {
     background: none;
   }
   .navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item {
-    color: #fff;
     padding-left: 1rem;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
