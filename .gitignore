@@ -39,6 +39,3 @@ yarn-error.log*
 
 tools/node_modules
 tools/output
-
-/public/img/*
-/public/video/*
