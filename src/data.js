@@ -302,7 +302,7 @@ export const projects = [
     description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
     location: 'Los Altos',
     year: '2026',
-    heroImage: '/img/14-2.jpg',
+    heroImage: getAssetPath('/img/14-2.jpg'),
     content: [
       {
         layout: 'one',
@@ -445,7 +445,7 @@ export const projects = [
     description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach without elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.',
     location: 'Pleasanton',
     year: '2024',
-    heroImage: '/img/1-1.jpeg',
+    heroImage: getAssetPath('/img/1-1.jpeg'),
     content: [
       {
         layout: 'two',
@@ -520,7 +520,7 @@ export const projects = [
     description: 'Large-scale residential complex with modern amenities and eco-friendly design principles.',
     location: 'Palo Alto',
     year: '2024',
-    heroImage: '/img/2-1.jpeg',
+    heroImage: getAssetPath('/img/2-1.jpeg'),
     content: [
       {
         heroImage: '/public/img/2-1.jpeg',
@@ -640,7 +640,7 @@ export const projects = [
             description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach without elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.',
     location: 'Belmont',
     year: '2023',
-    heroImage: '/img/3-1.jpeg',
+    heroImage: getAssetPath('/img/3-1.jpeg'),
     content: [
       {
         layout: 'one',
@@ -679,7 +679,7 @@ export const projects = [
             description: 'Designed around light, air, and openness, the project reflects a distinctly Californian way of life.',
     location: 'San Jose',
     year: '2024',
-    heroImage: '/img/4-1.jpg',
+    heroImage: getAssetPath('/img/4-1.jpg'),
     content: [
       {
         layout: 'one',
@@ -758,7 +758,7 @@ export const projects = [
             description: 'Natural light and simple geometry frame the dining experience with quiet elegance.',
     location: 'San Jose',
     year: '2023',
-    heroImage: '/img/5-1.jpeg',
+    heroImage: getAssetPath('/img/5-1.jpeg'),
     content: [
       {
         layout: 'one',
@@ -806,7 +806,7 @@ export const projects = [
             description: 'The main focus of this project is interior work, with a strong emphasis on the kitchen renovation as per the homeowners\' priorities. We maintained ongoing discussions with the homeowner to ensure that every detail and desired ambiance was meticulously crafted. The kitchen features a specially designed, ultra-modern range hood that aligns with contemporary tastes. Our dedicated efforts ensured the realization of this luxurious kitchen, leaving the homeowner thoroughly satisfied.',
     location: 'San Mateo',
     year: '2024',
-    heroImage: '/img/6-1.jpg',
+    heroImage: getAssetPath('/img/6-1.jpg'),
     content: [
       {
         layout: 'one',
@@ -878,7 +878,7 @@ export const projects = [
             description: 'The main focus of this project is interior work, with a strong emphasis on the kitchen renovation as per the homeowner\'s priorities. We maintained ongoing discussions with the homeowner to ensure that every detail and desired ambiance was meticulously crafted. The kitchen features a specially designed, ultra-modern range hood that aligns with contemporary tastes. \nOur dedicated efforts ensured the realization of this luxurious kitchen, leaving the homeowner thoroughly satisfied.',
     location: 'Newark',
     year: '2023',
-    heroImage: '/img/7-3.jpeg',
+    heroImage: getAssetPath('/img/7-3.jpeg'),
     content: [
       {
         layout: 'one',
@@ -931,7 +931,7 @@ export const projects = [
             description: 'In this project, all materials chosen by the homeowner are not locally sourced, necessitating a departure from standard construction processes. We had to plan plumbing and electrical layouts based on the specifications of the products purchased by the homeowner. As a result, our communication with the client was nearly real-time throughout the construction process. Through persistent effort, we successfully achieved the exact look and feel the client envisioned for their home.',
     location: 'Cupertino',
     year: '2024',
-    heroImage: '/img/8-1.jpeg',
+    heroImage: getAssetPath('/img/8-1.jpeg'),
     content: [
       {
         layout: 'two',
@@ -1031,7 +1031,7 @@ export const projects = [
             description: 'This modern-style residence, located in Palo Alto, features a 9-foot high ceiling that maximizes natural light and enhances the spaciousness of the interior. The homeowner prioritized stylish and cohesive material selections that are both sleek and tactile. Throughout the construction process, we closely collaborated with the homeowner, referencing blueprints and confirming potential outcomes in advance to ensure efficiency and meet their expectations.',
     location: 'Palo Alto',
     year: '2023',
-    heroImage: '/img/10-1.jpg',
+    heroImage: getAssetPath('/img/10-1.jpg'),
     content: [
       {
         layout: 'one',
@@ -1100,7 +1100,7 @@ export const projects = [
             description: 'This project features a compact residential unit similar to a condo. Due to limited storage space, the homeowner desired more storage options. After discussions with the homeowner, our team created a sunken space similar to a basement using concrete, and raised the crawl space. This solution not only ensured compliance with building codes but also maximized storage capacity. Additionally, it effectively mitigates termite risks to a certain extent.',
     location: 'San Jose',
     year: '2023',
-    heroImage: '/img/11-1.jpeg',
+    heroImage: getAssetPath('/img/11-1.jpeg'),
     content: [
       {
         layout: 'one',
@@ -1150,7 +1150,7 @@ export const projects = [
             description: 'The focal point of this project is the bathroom, where the client opted for a striking black and white contrast in design. This bold contrast enhances the visual impact of the design. The bathtub is built-in, requiring framing during the construction phase to accommodate plumbing needs. The vanity in the bathroom features a floating design, necessitating a supporting frame. While floating cabinets offer easy cleaning, they provide less storage space compared to traditional designs.',
     location: 'Fremont',
     year: '2023',
-    heroImage: '/img/12-8.jpg',
+    heroImage: getAssetPath('/img/12-8.jpg'),
     content: [
       {
         layout: 'one',
@@ -1218,7 +1218,7 @@ export const projects = [
             description: 'his project features a compact residential unit similar to a condo. Due to limited storage space, the homeowner desired more storage options. After discussions with the homeowner, our team created a sunken space similar to a basement using concrete, and raised the crawl space. This solution not only ensured compliance with building codes but also maximized storage capacity. Additionally, it effectively mitigates termite risks to a certain extent.',
     location: 'San Jose',
     year: '2022',
-    heroImage: '/img/13-1.jpg',
+    heroImage: getAssetPath('/img/13-1.jpg'),
     content: [
       {
         layout: 'one',
@@ -1265,7 +1265,7 @@ export const projects = [
             description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
     location: 'San Jose',
     year: '2023',
-    heroImage: '/img/15-1.jpeg',
+    heroImage: getAssetPath('/img/15-1.jpeg'),
     content: [
       {
         layout: 'one',
