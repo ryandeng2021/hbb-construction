@@ -203,7 +203,7 @@ export const footerData = {
   },
   description: 'HBB Construction is a trusted residential construction company in Bay Area, delivering high-quality, innovative, and reliable home-building solutions.',
   contact: {
-    address: '1580 Oakland Rd San Jose, CA 95131 United States',
+    address: '1580 Oakland Road C207, San Jose, CA 95131 United States',
     email: 'ryand@hbbconstruction.com',
     phones: [
       '+1 (650) 996-0715'
@@ -1425,7 +1425,7 @@ export const teamRows = [
     {
       id: 1,
       name: 'Ryan',
-      title: 'Chief Executive Officer',
+      title: 'Managing Director',
       image: getAssetPath('/img/team/kevin-patterson.webp'),
             bio: 'Ryan Deng brings over 15 years of experience in construction management and strategic leadership. Under his guidance, HBB CONSTRUCTION has grown into a leading construction company known for excellence and innovation.',
       email: 'ryand@hbbconstruction.com',
@@ -1437,10 +1437,10 @@ export const teamRows = [
     {
       id: 2,
       name: 'Copper',
-      title: 'Project Manager',
+      title: 'Principal',
       image: getAssetPath('/img/team/john-mitchell.webp'),
             bio: 'John Mitchell is a seasoned project manager with expertise in coordinating complex construction projects from inception to completion. His attention to detail and leadership skills ensure projects are delivered on time and within budget.',
-      email: 'john.mitchell@hbbconstruction.com',
+      email: 'copper@hbbconstruction.com',
       phone: '+1 (555) 234-5678',
       experience: '15+ Years',
       specialties: ['Project Coordination', 'Team Management', 'Quality Control']
@@ -1451,7 +1451,7 @@ export const teamRows = [
       title: 'Project Manager',
       image: getAssetPath('/img/team/david-ramirez.webp'),
             bio: 'David Ramirez is a highly skilled engineer specializing in structural design and site management. His technical expertise and problem-solving abilities have been instrumental in the success of numerous high-profile projects.',
-      email: 'david.ramirez@hbbconstruction.com',
+      email: 'lynn@hbbconstruction.com',
       phone: '+1 (555) 345-6789',
       experience: '3+ Years',
       specialties: ['Structural Engineering', 'Site Management', 'Technical Design']
@@ -1462,7 +1462,7 @@ export const teamRows = [
       title: 'Project Manager',
       image: getAssetPath('/img/team/david-ramirez.webp'),
             bio: 'David Ramirez is a highly skilled engineer specializing in structural design and site management. His technical expertise and problem-solving abilities have been instrumental in the success of numerous high-profile projects.',
-      email: 'david.ramirez@hbbconstruction.com',
+      email: 'bai@hbbconstruction.com',
       phone: '+1 (555) 345-6789',
       experience: '3+ Years',
       specialties: ['Structural Engineering', 'Site Management', 'Technical Design']
@@ -1473,31 +1473,13 @@ export const teamRows = [
     {
       id: 5,
       name: 'Suzy',
-      title: 'Architectual Designer',
+      title: 'Design Manager',
       image: getAssetPath('/img/team/david-ramirez.webp'),
             bio: 'Suzy Zhang is a highly skilled architectual designer specializing in residential and commercial design. Her technical expertise and problem-solving abilities have been instrumental in the success of numerous high-profile projects.',
       email: 'suzy@hbbconstruction.com',
       phone: '+1 (267) 292-1638',
       experience: '3+ Years',
       specialties: ['Architectual Design', 'Residential Design', 'Commercial Design']
-    },
-    {
-      id: 6,
-      name: ' Structual Engineer',
-      title: 'Structual Engineer',
-      image: getAssetPath('/img/team/david-ramirez.webp'),
-            bio: 'David Ramirez is a highly skilled engineer specializing in structural design and site management. His technical expertise and problem-solving abilities have been instrumental in the success of numerous high-profile projects.',
-      experience: '3+ Years',
-      specialties: ['Structual Engineering', 'Site Management', 'Technical Design']
-    },
-    {
-      id: 7,
-      name: 'Land Surveyors',
-      title: 'Land Surveyors',
-      image: getAssetPath('/img/team/david-ramirez.webp'),
-            bio: 'Our topographic surveys are prepared by licensed land surveyors in accordance with local jurisdiction requirements.',
-      experience: '3+ Years',
-      specialties: ['Land Surveyors', 'Site Management', 'Technical Design']
     },
   ],
   [
