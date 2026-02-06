@@ -6,6 +6,7 @@ import PageProgress from 'components/PageProgress';
 import About from 'components/About';
 import Team from 'components/Team';
 import CoreAdvantages from 'components/CoreAdvantages';
+import ConstructionTimeline from 'components/ConstructionTimeline';
 import NextLink from 'components/NextLink';
 
 // Data
@@ -48,6 +49,13 @@ const AboutUs = () => {
         <section className="wrapper">
           <div className="container py-12 py-md-14">
             <CoreAdvantages />
+          </div>
+        </section>
+
+        {/* Construction Timeline */}
+        <section id="construction-timeline" className="wrapper">
+          <div className="container py-md-10">
+            <ConstructionTimeline />
           </div>
         </section>
 
