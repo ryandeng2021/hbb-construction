@@ -1,7 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 // BasePath for GitHub Pages - should match next.config.js
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hbb-construction' : '';
+// Set to '' for root domain deployment (e.g., www.hbbconstruction.com)
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '' : '';
 
 export default class SandBox extends Document {
   render() {

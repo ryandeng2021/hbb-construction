@@ -18,7 +18,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 // If images are at: https://username.github.io/img/logo.svg → Use OPTION 2 (empty string)
 // If images are at: https://username.github.io/repo-name/img/logo.svg → Use OPTION 1 (set repo name)
 
-const repositoryName = 'hbb-construction'; // ⚠️ Set to your repository name OR '' for user/org site
+const repositoryName = ''; // ⚠️ Set to your repository name OR '' for user/org site (empty for root domain deployment)
 
 const nextConfig = {
   reactStrictMode: false,

@@ -8,7 +8,8 @@
 
 // BasePath for GitHub Pages - update this to match your repository name
 // This should match the repositoryName in next.config.js
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/hbb-construction' : '';
+// Set to '' for root domain deployment (e.g., www.hbbconstruction.com)
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '' : '';
 
 /**
  * Gets the basePath for the current environment
