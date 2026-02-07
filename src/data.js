@@ -372,7 +372,6 @@ export const projects = [
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
       },
       {
         layout: 'two',
@@ -584,26 +583,6 @@ export const projects = [
     year: '2026',
     heroImage: getAssetPath('/img/14-2.jpg'),
     content: [
-      {
-        layout: 'one',
-        images: [
-          {
-            src: getAssetPath('/img/14-18.jpg'),
-            alt: 'Single Family Home Remodel overview'
-          }
-        ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
-      },
-      {
-        layout: 'one',
-        images: [
-          {
-            src: getAssetPath('/img/14-18.jpg'),
-            alt: 'Single Family Home Remodel overview'
-          }
-        ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
-      },
       {
         layout: 'two',
         images: [
