@@ -353,7 +353,7 @@ export const whyChoose = [
 // Video section: { layout: 'one', video: { src: '/video/project.mp4', alt: 'Project Video' }, description: 'Optional text' }
 export const projects = [
   {
-    id: 16,
+    id: 17,
     title: 'Single Family Home Addition & Remodel',
     slug: 'project-16',
     category: 'House Addition & Remodel',
