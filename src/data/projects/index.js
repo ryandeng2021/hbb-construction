@@ -4,6 +4,7 @@
 
 import { project17 } from './project-17';
 import { project18 } from './project-18';
+import { project19 } from './project-19';
 import { project16 } from './project-16';
 import { project15 } from './project-15';
 import { project1 } from './project-1';
@@ -21,8 +22,9 @@ import { project12 } from './project-12';
 import { project13 } from './project-13';
 
 export const projects = [
-  project17,
+  project19,
   project18,
+  project17,
   project16,
   project15,
   project1,
