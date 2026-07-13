@@ -1,7 +1,7 @@
 import NextLink from 'components/NextLink';
 import SocialLinks from 'components/SocialLinks';
 import Image from 'next/image';
-import { usefulLinks, footerData, backgroundImages } from '../data.js';
+import { usefulLinks, footerData, backgroundImages } from '../data';
 
 /**
  * Widget component renders a titled list of links

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import NextLink from 'components/NextLink';
 import PageProgress from 'components/PageProgress';
 import ProjectContent from 'components/ProjectContent';
-import { projects } from '../../src/data.js';
+import { projects } from '../../src/data';
 
 /**
  * Individual project detail page
