@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 import Projects from 'components/Projects';
 import PageProgress from 'components/PageProgress';
+import SEO from 'components/SEO';
 
 /**
  * Projects page - displays the portfolio of all projects
@@ -9,17 +9,13 @@ import PageProgress from 'components/PageProgress';
 const ProjectsPage = () => {
   return (
     <Fragment>
-      {/* Page loading progress bar */}
       <PageProgress />
-
-      {/* Meta Information */}
-      <Head>
-        <title>Our Projects – HBB Construction Portfolio</title>
-        <meta 
-          name="description" 
-          content="Explore our portfolio of construction projects including commercial, residential, and industrial developments." 
-        />
-      </Head>
+      <SEO
+        path="/projects"
+        title="Our Projects"
+        description="Explore HBB Construction's portfolio of Bay Area residential projects - custom homes, additions, remodels, and ADUs."
+        image="/img/1-1.jpeg"
+      />
 
       <main className="content-wrapper overflow-hidden projects-page">
         <section className="wrapper">
@@ -33,4 +29,3 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
-

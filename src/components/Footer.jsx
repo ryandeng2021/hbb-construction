@@ -12,9 +12,9 @@ const Widget = ({ list, title }) => (
   <div className="widget">
     <h4 className="widget-title fs-18 mb-3 text-uppercase oswald">{title}</h4>
     <ul className="list-unstyled text-reset mb-0">
-      {list.map(({ id, title }) => (
-        <li key={id} className='roboto'>
-          <NextLink href="#" title={title} />
+      {list.map(({ id, title: linkTitle, url }) => (
+        <li key={id} className="roboto">
+          <NextLink href={url || '/'} title={linkTitle} />
         </li>
       ))}
     </ul>
@@ -29,7 +29,9 @@ const Footer = () => {
       id="contact" 
       className="border-top footer-bg overflow-hidden"
       style={{
-        backgroundImage: `url(${backgroundImages.footer})`,
+        backgroundImage: backgroundImages.footer
+          ? `url(${backgroundImages.footer})`
+          : undefined,
         backgroundPosition: 'bottom right',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'auto',

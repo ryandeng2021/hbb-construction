@@ -63,11 +63,10 @@ export const heroCarousel = [
 
 // Navigation links used across the website
 export const usefulLinks = [
-  { id: 1, title: 'Home' },
-  { id: 2, title: 'About Us' },
-  { id: 3, title: 'Projects' },
-  { id: 4, title: 'Contact Us' }, // fixed id gap from 3 to 5
-  { id: 5, title: 'Privacy Policy' } // fixed id gap from 5 to 7
+  { id: 1, title: 'Home', url: '/' },
+  { id: 2, title: 'About Us', url: '/aboutus' },
+  { id: 3, title: 'Projects', url: '/projects' },
+  { id: 4, title: 'Contact Us', url: '/#contact' },
 ];
 
 // Navigation menu items with dropdowns
@@ -92,7 +91,7 @@ export const navigationMenu = [
   {
     id: 3,
     title: 'Projects',
-    href: '/#projects',
+    href: '/projects',
     hasDropdown: false
   },
   {

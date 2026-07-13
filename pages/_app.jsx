@@ -5,6 +5,7 @@ import ThemeProvider from 'theme/ThemeProvider';
 import Layout from 'components/Layout';
 import { backgroundImages } from '../src/data';
 import { getAssetPath } from '../src/utils/path';
+import { DEFAULT_TITLE, DEFAULT_DESCRIPTION, SITE_NAME } from '../src/data/site';
 
 // Import global styles and third-party CSS
 import 'animate.css';
@@ -18,12 +19,10 @@ function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const [loading, setLoading] = useState(true);
 
-  // Dynamically import Bootstrap JS on client-side only (to avoid SSR issues)
   useEffect(() => {
     if (typeof window !== 'undefined') import('bootstrap');
   }, []);
 
-  // Initialize scrollCue plugin on route change
   useEffect(() => {
     (async () => {
       const scrollCue = (await import('plugins/scrollcue')).default;
@@ -36,7 +35,6 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [pathname]);
 
-  // Disable loading state once component mounts
   useEffect(() => {
     setLoading(false);
   }, []);
@@ -44,7 +42,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
         <Head>
-          {/* Inject background image URLs as CSS variables */}
           <style dangerouslySetInnerHTML={{
             __html: `
               :root {
@@ -56,26 +53,20 @@ function MyApp({ Component, pageProps }) {
               }
             `
           }} />
-          {/* Basic meta tags */}
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-          {/* TODO: Replace 'Location' and 'Construction' with your actual business info */}
-          <title>HBB Construction</title>
-          <meta
-            name="description"
-            content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
-          />
-
-          {/* Open Graph tags for social sharing */}
+          {/* Fallback defaults — page-level <SEO /> overrides these */}
+          <title>{DEFAULT_TITLE}</title>
+          <meta name="description" content={DEFAULT_DESCRIPTION} />
+          <meta name="author" content={SITE_NAME} />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="HBB Construction" />
-
+          <meta property="og:site_name" content={SITE_NAME} />
          </Head>
         <Layout>
           <ThemeProvider>
-            {/* Show loader while app is loading */}
-            {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
+            {/* Always render the page (needed for SSR meta/SEO). Loader is client-only overlay. */}
+            <Component {...pageProps} />
+            {loading ? <div className="page-loader" /> : null}
           </ThemeProvider>
         </Layout>
     </Fragment>

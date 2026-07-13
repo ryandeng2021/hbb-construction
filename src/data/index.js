@@ -8,3 +8,14 @@ export { projects } from './projects';
 export { aboutSection } from './about';
 export { coreAdvantages } from './coreAdvantages';
 export { teamRows, teamMembers } from './team';
+export {
+  SITE_URL,
+  SITE_BASE_PATH,
+  SITE_NAME,
+  DEFAULT_TITLE,
+  DEFAULT_DESCRIPTION,
+  absoluteUrl,
+  absoluteAssetUrl,
+  truncateMeta,
+  getLocalBusinessJsonLd,
+} from './site';

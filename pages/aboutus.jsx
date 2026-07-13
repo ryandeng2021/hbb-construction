@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 
 // Components
 import PageProgress from 'components/PageProgress';
+import SEO from 'components/SEO';
 import About from 'components/About';
 import Team from 'components/Team';
 import CoreAdvantages from 'components/CoreAdvantages';
@@ -15,23 +15,20 @@ import { aboutSection } from '../src/data';
 const AboutUs = () => {
   return (
     <Fragment>
-      {/* Page loading progress bar */}
       <PageProgress />
-
-      {/* Meta Information */}
-      <Head>
-        <title>About Us – HBB Construction</title>
-        <meta name="description" content="Learn more about HBB Construction, our team, and our commitment to excellence in residential construction." />
-      </Head>
+      <SEO
+        path="/aboutus"
+        title="About Us"
+        description="Learn about HBB Construction (Honey Badger Brothers) - our Bay Area team, in-house construction process, and commitment to residential building excellence."
+        image="/img/1-1.jpeg"
+      />
 
       <main className="content-wrapper overflow-hidden">
-        {/* About Section */}
-        <section className="wrapper">
+        <section id="about" className="wrapper">
           <div className="container py-12 py-md-14">
-            {/* Back Button */}
             <div className="mb-6">
-              <NextLink 
-                href="/" 
+              <NextLink
+                href="/"
                 title={
                   <Fragment>
                     <i className="uil uil-arrow-left me-2" />
@@ -45,22 +42,19 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Core Advantages */}
         <section className="wrapper">
           <div className="container py-12 py-md-14">
             <CoreAdvantages />
           </div>
         </section>
 
-        {/* Construction Timeline */}
         <section id="construction-timeline" className="wrapper">
           <div className="container py-md-10">
             <ConstructionTimeline />
           </div>
         </section>
 
-        {/* Our Team */}
-        <section className="wrapper">
+        <section id="team" className="wrapper">
           <div className="container py-12 py-md-14">
             <Team />
           </div>
@@ -71,4 +65,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
