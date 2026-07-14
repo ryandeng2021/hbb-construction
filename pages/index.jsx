@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 
 // Components
 import PageProgress from 'components/PageProgress';
+import SEO from 'components/SEO';
 import Hero from 'components/Hero';
 import About from 'components/About';
 import WhyChoose from 'components/WhyChoose';
@@ -16,36 +16,31 @@ import { aboutSection, badgesData } from '../src/data';
 const Home = () => {
   return (
     <Fragment>
-      {/* Page loading progress bar */}
       <PageProgress />
-
-      {/* Meta Information */}
-      <Head>
-        <title>HBB Construction</title>
-        <meta name="description" content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap" />
-      </Head>
+      <SEO
+        path="/"
+        title="HBB Construction | Residential Builders in the Bay Area"
+        description="Bay Area residential construction company specializing in custom homes, remodels, additions, and ADUs. Honey Badger Brothers Construction - built with integrity and precision."
+        image="/img/1-1.jpeg"
+        includeLocalBusiness
+      />
 
       <main className="content-wrapper overflow-hidden">
-
-        {/* Hero Section */}
         <Hero />
 
-        {/* About Section */}
         <section id="about" className="wrapper">
           <div className="container py-md-10">
             <About {...aboutSection} />
           </div>
         </section>
 
-        {/* Our Projects */}
         <section id="projects" className="wrapper">
           <div className="container py-md-10">
             <Projects />
           </div>
         </section>
 
-        {/* Badges/Statistics */}
-        <section 
+        <section
           className="wrapper badges-wrapper"
           style={{
             backgroundImage: `url(${badgesData.backgroundImage})`
@@ -56,14 +51,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
         <section className="wrapper whychoose-bg">
           <div className="container py-md-10">
             <WhyChoose />
           </div>
         </section>
 
-        {/* Our Process */}
         <section id="process" className="wrapper">
           <div className="container py-md-10">
             <Process />
