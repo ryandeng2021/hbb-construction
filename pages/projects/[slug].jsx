@@ -1,10 +1,11 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import NextLink from 'components/NextLink';
 import PageProgress from 'components/PageProgress';
 import ProjectContent from 'components/ProjectContent';
-import { projects } from '../../src/data.js';
+import SEO from 'components/SEO';
+import { projects } from '../../src/data';
+import { absoluteUrl, absoluteAssetUrl, truncateMeta } from '../../src/data/site';
 
 /**
  * Individual project detail page
@@ -15,9 +16,11 @@ const ProjectDetail = ({ project }) => {
     return (
       <Fragment>
         <PageProgress />
-        <Head>
-          <title>Project Not Found – HBB Construction</title>
-        </Head>
+        <SEO
+          path="/projects"
+          title="Project Not Found"
+          noindex
+        />
         <main className="content-wrapper">
           <div className="container py-12">
             <div className="text-center">
@@ -31,16 +34,36 @@ const ProjectDetail = ({ project }) => {
     );
   }
 
+  const projectJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.title,
+    description: truncateMeta(project.description),
+    image: absoluteAssetUrl(project.image),
+    url: absoluteUrl(`/projects/${project.slug}`),
+    locationCreated: project.location
+      ? { '@type': 'Place', name: project.location }
+      : undefined,
+    dateCreated: project.year ? String(project.year) : undefined,
+    creator: {
+      '@type': 'Organization',
+      name: 'HBB Construction',
+    },
+  };
+
   return (
     <Fragment>
-      {/* Page loading progress bar */}
       <PageProgress />
-
-      {/* Meta Information */}
-      <Head>
-        <title>{project.title} – HBB Construction</title>
-        <meta name="description" content={project.description} />
-      </Head>
+      <SEO
+        path={`/projects/${project.slug}`}
+        title={project.title}
+        description={
+          project.description ||
+          `${project.title} — ${project.category || 'residential project'} by HBB Construction${project.location ? ` in ${project.location}` : ''}.`
+        }
+        image={project.image || project.heroImage}
+        jsonLd={projectJsonLd}
+      />
 
       <main className="content-wrapper overflow-hidden">
         <section className="wrapper">

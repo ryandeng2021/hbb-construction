@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import NextLink from 'components/NextLink';
 import PageProgress from 'components/PageProgress';
+import SEO from 'components/SEO';
 import { teamMembers } from '../../src/data';
+import { truncateMeta } from '../../src/data/site';
 
 /**
  * Individual team member detail page
@@ -14,9 +15,7 @@ const TeamMemberDetail = ({ member }) => {
     return (
       <Fragment>
         <PageProgress />
-        <Head>
-          <title>Team Member Not Found – HBB Construction</title>
-        </Head>
+        <SEO path="/aboutus" title="Team Member Not Found" noindex />
         <main className="content-wrapper">
           <div className="container py-12">
             <div className="text-center">
@@ -32,14 +31,15 @@ const TeamMemberDetail = ({ member }) => {
 
   return (
     <Fragment>
-      {/* Page loading progress bar */}
       <PageProgress />
-
-      {/* Meta Information */}
-      <Head>
-        <title>{member.name} – {member.title} | HBB Construction</title>
-        <meta name="description" content={`Meet ${member.name}, ${member.title} at HBB Construction. ${member.bio}`} />
-      </Head>
+      <SEO
+        path={`/team/${member.slug}`}
+        title={`${member.name} – ${member.title}`}
+        description={truncateMeta(
+          `Meet ${member.name}, ${member.title} at HBB Construction. ${member.bio || ''}`
+        )}
+        image={member.image}
+      />
 
       <main className="content-wrapper overflow-hidden">
         <section className="wrapper">

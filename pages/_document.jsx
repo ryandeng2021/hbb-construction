@@ -9,14 +9,14 @@ export default class SandBox extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Favicon and icons for different platforms */}
+          {/* Favicon — Chrome tab + bookmarks */}
+          <link rel="icon" href={`${BASE_PATH}/favicon.ico`} sizes="32x32" />
           <link rel="icon" type="image/png" href={`${BASE_PATH}/img/favicon/favicon-96x96.png`} sizes="96x96" />
           <link rel="icon" type="image/svg+xml" href={`${BASE_PATH}/img/favicon/favicon.svg`} />
-          <link rel="shortcut icon" href={`${BASE_PATH}/img/favicon/favicon.ico`} />
           <link rel="apple-touch-icon" sizes="180x180" href={`${BASE_PATH}/img/favicon/apple-touch-icon.png`} />
           <link rel="manifest" href={`${BASE_PATH}/img/favicon/site.webmanifest`} />
-          {/* Century Gothic is a system font, no need for Google Fonts import */}
-          {/* If you need to load Century Gothic from a CDN or local file, add it here */}
+          <meta name="theme-color" content="#111111" />
+
           {/* Icon fonts with basePath prefix */}
           <style dangerouslySetInnerHTML={{
             __html: `
@@ -40,9 +40,7 @@ export default class SandBox extends Document {
           }} />
         </Head>
         <body>
-          {/* Main React app content will be injected here */}
           <Main />
-          {/* Scripts required by Next.js will be injected here */}
           <NextScript />
         </body>
       </Html>
@@ -50,18 +48,15 @@ export default class SandBox extends Document {
   }
 }
 
-// Optional: Customize initial document props (mostly used for server-side rendering extensions)
 SandBox.getInitialProps = async (ctx) => {
   const originalRenderPage = ctx.renderPage;
 
-  // Enhance app/component rendering if needed
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App) => App,               // You can wrap your App component here
-      enhanceComponent: (Component) => Component // You can wrap individual components here
+      enhanceApp: (App) => App,
+      enhanceComponent: (Component) => Component
     });
 
-  // Get default initial props from Next.js
   const initialProps = await Document.getInitialProps(ctx);
   return { ...initialProps };
 };

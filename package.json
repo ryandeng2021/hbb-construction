@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",
-    "build": "npm run sass && next build",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "build": "npm run generate:sitemap && npm run sass && next build",
     "export": "npm run build",
     "start": "next start",
     "sass": "sass --no-source-map src/assets/scss:public/css"
