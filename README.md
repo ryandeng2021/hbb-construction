@@ -149,9 +149,6 @@ All reusable components are in `src/components/`:
 ## 📄 License
 
 This project is private and proprietary.
-
-## 🤝 Contributing
-
 This is a private project. For issues or questions, please contact the project maintainers.
 
 ---
