@@ -2,9 +2,9 @@ import { getAssetPath } from '../../utils/path';
 
 export const project3 = {
     id: 3,
-    title: 'Single Family Home Remodel',
+    title: 'Single Family Home Remodel & Addition',
     slug: 'project-3',
-    category: 'House Remodel',
+    category: 'House Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/3-1.jpeg'),
     description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach without elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.',

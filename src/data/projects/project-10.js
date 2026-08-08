@@ -2,8 +2,8 @@ import { getAssetPath } from '../../utils/path';
 
 export const project10 = {
     id: 10,
-    title: 'Detached ADU',
-    slug: 'project-9',
+    title: 'New Detached ADU',
+    slug: 'project-10',
     category: 'ADU',
     status: 'completed',
     image: getAssetPath('/img/11-5.png'),

@@ -2,9 +2,9 @@ import { getAssetPath } from '../../utils/path';
 
 export const project8 = {
     id: 8,
-    title: 'Single Family Home Remodel',
-    slug: 'Project 8',
-    category: 'House Remodel',
+    title: 'Single Family Home Remodel & Addition',
+    slug: 'project-8',
+    category: 'House Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/8-1.jpeg'),
     description: 'In this project, all materials chosen by the homeowner are not locally sourced, necessitating a departure from standard construction processes. We had to plan plumbing and electrical layouts based on the specifications of the products purchased by the homeowner. As a result, our communication with the client was nearly real-time throughout the construction process. Through persistent effort, we successfully achieved the exact look and feel the client envisioned for their home.',

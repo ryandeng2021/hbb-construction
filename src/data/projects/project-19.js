@@ -8,10 +8,49 @@ export const project19 = {
     status: 'completed',
     image: getAssetPath('/img/19-1.png'),
     description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
-    location: 'San Jose',
+    location: 'Mountain View',
     year: '2026',
     heroImage: getAssetPath('/img/19-1.png'),
     content: [
+            {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-17.webp'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/19-18.webp'),
+            alt: 'Residential units',
+          },
+        ]
+      },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-19.webp'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/19-20.webp'),
+            alt: 'Residential units',
+          },
+        ]
+      },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-21.webp'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/19-22.webp'),
+            alt: 'Residential units',
+          },
+        ]
+      },
       {
         layout: 'two',
         images: [
@@ -72,6 +111,59 @@ export const project19 = {
           {
             src: getAssetPath('/img/19-11.png'),
             alt: 'Commercial office spaces',
+
+          },
+        ]
+      },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-6.webp'),
+            alt: 'Single Family Home Remodel overview',
+          },
+          {
+            src: getAssetPath('/img/19-12.jpg'),
+            alt: 'Residential units',
+          },
+        ]
+      },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-13.jpg'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/19-14.png'),
+            alt: 'Residential units',
+          },
+        ]
+      },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-29.webp'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/19-30.webp'),
+            alt: 'Residential units',
+          },
+        ]
+      },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/19-31.webp'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/19-32.webp'),
+            alt: 'Residential units',
           },
         ]
       },

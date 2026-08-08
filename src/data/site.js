@@ -24,10 +24,10 @@ export const BUSINESS = {
   email: 'ryand@hbbconstruction.com',
   phone: '+1-650-996-0715',
   address: {
-    streetAddress: '1580 Oakland Road C207',
-    addressLocality: 'San Jose',
+    streetAddress: '3006 Lawrence Expy',
+    addressLocality: 'Santa Clara',
     addressRegion: 'CA',
-    postalCode: '95131',
+    postalCode: '95051',
     addressCountry: 'US',
   },
   areaServed: 'San Francisco Bay Area',

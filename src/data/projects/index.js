@@ -5,6 +5,9 @@
 import { project17 } from './project-17';
 import { project18 } from './project-18';
 import { project19 } from './project-19';
+import { project20 } from './project-20';
+import { project21 } from './project-21';
+import { project22 } from './project-22';
 import { project16 } from './project-16';
 import { project15 } from './project-15';
 import { project1 } from './project-1';
@@ -22,10 +25,13 @@ import { project12 } from './project-12';
 import { project13 } from './project-13';
 
 export const projects = [
+  project20,
   project19,
+  project16,
+  project22,
+  project21,
   project18,
   project17,
-  project16,
   project15,
   project1,
   project2,

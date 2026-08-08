@@ -2,9 +2,9 @@ import { getAssetPath } from '../../utils/path';
 
 export const project13 = {
     id: 13,
-    title: 'Single Family Home Remodel',
-    slug: 'project-12',
-    category: 'House Remodel',
+    title: 'Single Family Home Remodel & Addition',
+    slug: 'project-13',
+    category: 'House Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/15-1.jpeg'),
     description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',

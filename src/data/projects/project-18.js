@@ -88,5 +88,27 @@ export const project18 = {
           },
         ]
       },
+      {
+        layout: 'two',
+        images: [
+          {
+            src: getAssetPath('/img/18-12.jpg'),
+            alt: 'Residential units',
+          },
+          {
+            src: getAssetPath('/img/18-14.jpg'),
+            alt: 'Residential units',
+          },
+        ]
+      },
+      {
+        layout: 'one',
+        images: [
+          {
+            src: getAssetPath('/img/18-13.jpg'),
+            alt: 'Residential units',
+          },
+        ]
+      },
     ]
   };

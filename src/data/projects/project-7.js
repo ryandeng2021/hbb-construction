@@ -3,7 +3,7 @@ import { getAssetPath } from '../../utils/path';
 export const project7 = {
     id: 7,
     title: 'Single Family Home Addition',
-    slug: 'Project 7',
+    slug: 'project-7',
     category: 'House Remodel',
     status: 'completed',
     image: getAssetPath('/img/7-3.jpeg'),

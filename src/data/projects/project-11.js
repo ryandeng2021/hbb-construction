@@ -2,9 +2,9 @@ import { getAssetPath } from '../../utils/path';
 
 export const project11 = {
     id: 11,
-    title: 'Single Family Home Remodel',
-    slug: 'project-10',
-    category: 'House Remodel',
+    title: 'Single Family Home Remodel & Addition',
+    slug: 'project-11',
+    category: 'House Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/12-8.jpg'),
     description: 'The focal point of this project is the bathroom, where the client opted for a striking black and white contrast in design. This bold contrast enhances the visual impact of the design. The bathtub is built-in, requiring framing during the construction phase to accommodate plumbing needs. The vanity in the bathroom features a floating design, necessitating a supporting frame. While floating cabinets offer easy cleaning, they provide less storage space compared to traditional designs.',

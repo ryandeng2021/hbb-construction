@@ -16,6 +16,15 @@ export const project16 = {
         layout: 'one',
         images: [
           {
+            src: getAssetPath('/img/16-2.jpg'),
+            alt: 'Single Family Home Remodel overview'
+          }
+        ],
+      },
+      {
+        layout: 'one',
+        images: [
+          {
             src: getAssetPath('/img/16-3.jpg'),
             alt: 'Single Family Home Remodel overview'
           }

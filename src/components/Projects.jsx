@@ -52,15 +52,6 @@ const Projects = () => {
               Completed
             </button>
           </li>
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeFilter === 'ongoing' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('ongoing')}
-              type="button"
-            >
-              Ongoing
-            </button>
-          </li>
         </ul>
       </div>
 

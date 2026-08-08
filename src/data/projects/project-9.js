@@ -2,9 +2,9 @@ import { getAssetPath } from '../../utils/path';
 
 export const project9 = {
     id: 9,
-    title: 'Single Family Home Remodel',
-    slug: 'Project 9',
-    category: 'House Remodel',
+    title: 'Single Family Home Remodel & Addition',
+    slug: 'project-9',
+    category: 'House Remodel & Addition ',
     status: 'completed',
     image: getAssetPath('/img/10-1.jpg'),
     description: 'This modern-style residence, located in Palo Alto, features a 9-foot high ceiling that maximizes natural light and enhances the spaciousness of the interior. The homeowner prioritized stylish and cohesive material selections that are both sleek and tactile. Throughout the construction process, we closely collaborated with the homeowner, referencing blueprints and confirming potential outcomes in advance to ensure efficiency and meet their expectations.',
