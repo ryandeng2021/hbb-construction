@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project9 = {
     id: 9,
-    title: 'Single Family Home Remodel & Addition',
+    title: 'Remodel & Addition',
     slug: 'project-9',
     category: 'House Remodel & Addition ',
     status: 'completed',
     image: getAssetPath('/img/10-1.jpg'),
-    description: 'This modern-style residence, located in Palo Alto, features a 9-foot high ceiling that maximizes natural light and enhances the spaciousness of the interior. The homeowner prioritized stylish and cohesive material selections that are both sleek and tactile. Throughout the construction process, we closely collaborated with the homeowner, referencing blueprints and confirming potential outcomes in advance to ensure efficiency and meet their expectations.',
+    description: "Nine-foot ceilings run throughout this Palo Alto remodel, giving every room extra volume to showcase the homeowner's sleek material choices.",
     location: 'Palo Alto',
     year: '2023',
     heroImage: getAssetPath('/img/10-1.jpg'),
@@ -65,7 +65,7 @@ export const project9 = {
             alt: 'Parking and infrastructure'
           }
         ],
-        description: 'Outdoor spaces are treated as extensions of the interior rather than secondary areas.'
+        description: 'In the primary bedroom, the raised ceiling and simple palette combine to make the room feel restful rather than cramped.'
       }
     ]
   };

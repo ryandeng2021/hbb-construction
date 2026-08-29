@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project8 = {
     id: 8,
-    title: 'Single Family Home Remodel & Addition',
+    title: 'Remodel & Addition',
     slug: 'project-8',
     category: 'House Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/8-1.jpeg'),
-    description: 'In this project, all materials chosen by the homeowner are not locally sourced, necessitating a departure from standard construction processes. We had to plan plumbing and electrical layouts based on the specifications of the products purchased by the homeowner. As a result, our communication with the client was nearly real-time throughout the construction process. Through persistent effort, we successfully achieved the exact look and feel the client envisioned for their home.',
+    description: 'In Cupertino, imported finishes chosen by the homeowner drove every plumbing and electrical decision, resulting in a home built to exact specification.',
     location: 'Cupertino',
     year: '2024',
     heroImage: getAssetPath('/img/8-1.jpeg'),
@@ -24,7 +24,7 @@ export const project8 = {
             alt: 'Medical facility construction'
           }
         ],
-        description: 'The house responds to the mild California climate by blurring the boundary between indoor and outdoor living.'
+        description: 'Wide openings connect the kitchen directly to the yard, letting the indoor counters and outdoor patio function as one continuous space.'
       },
       {
         layout: 'one',
@@ -34,7 +34,7 @@ export const project8 = {
             alt: 'Operating theaters and medical equipment'
           }
         ],
-        description: 'The interior spaces are designed to be bright and airy, with large windows and high ceilings that allow natural light to flow in.'
+        description: 'Tall windows above the kitchen counters pull in steady daylight, keeping the imported stone surfaces bright throughout the day.'
       },
       {
         layout: 'one',

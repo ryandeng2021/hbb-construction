@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project2 = {
     id: 2,
-    title: 'Single Family Home Rebuild',
+    title: 'Rebuild',
     slug: 'project-2',
     category: 'House Demo and Rebuild',
     status: 'Completed',
     image: getAssetPath('/img/2-1.jpeg'),
-    description: 'Large-scale residential complex with modern amenities and eco-friendly design principles.',
+    description: "This Palo Alto rebuild pairs a sculptural entry with sunlit living spaces, translating the client's brief into a home that feels both grounded and airy.",
     location: 'Palo Alto',
     year: '2024',
     heroImage: getAssetPath('/img/2-1.jpeg'),
@@ -27,7 +27,7 @@ export const project2 = {
                 alt: 'Construction site overview'
               }
             ],
-            description: 'TA calm and luminous interior where space, light, and structure work in quiet harmony.'
+            description: 'The new entry facade balances solid and glazed volumes, announcing a calm, contemporary presence from the street.'
           },
           {
             layout: 'one',
@@ -37,7 +37,7 @@ export const project2 = {
                 alt: 'Interior construction details'
               }
             ],
-            description: 'The living room is conceived as an open, light-filled volume that anchors daily life.'
+            description: 'Viewed from outside, the massing steps back in stages, softening the transition between the street and the private entry.'
           },
           {
             layout: 'two',
@@ -45,7 +45,7 @@ export const project2 = {
               {
                 src: getAssetPath('/img/2-5.jpg'),
                 alt: 'Building facade',
-                description: 'Modern glass facade provides natural lighting and energy efficiency.'
+                description: 'In the kitchen, a continuous run of cabinetry and stone countertops creates a clean, efficient backdrop for everyday cooking.'
               },
               {
                 src: getAssetPath('/img/2-6.jpg'),
@@ -59,12 +59,12 @@ export const project2 = {
               {
                 src: getAssetPath('/img/2-7.png'),
                 alt: 'Building facade',
-                description: 'Floor-to-ceiling glazing allows daylight to wash gently across the space throughout the day.'
+                description: 'Full-height glazing along the living room lets afternoon light spill deep into the room, softening every surface it touches.'
               },
               {
                 src: getAssetPath('/img/2-8.png'),
                 alt: 'Structural framework',
-                description: 'The space feels generous yet intimate, defined more by light than by walls.'
+                description: "Furniture is kept low and spare here, so the living room's height and openness remain the space's defining feature."
               }
             ]
           }

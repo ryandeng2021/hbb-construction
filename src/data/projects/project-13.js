@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project13 = {
     id: 13,
-    title: 'Single Family Home Remodel & Addition',
+    title: 'Remodel & Addition',
     slug: 'project-13',
     category: 'House Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/15-1.jpeg'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
+    description: 'A whole-house remodel and addition in San Jose that refreshes the kitchen, bathrooms, and bedrooms into one cohesive, light-filled family home.',
     location: 'San Jose',
     year: '2023',
     heroImage: getAssetPath('/img/15-1.jpeg'),
@@ -20,7 +20,7 @@ export const project13 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'Natural light plays a central role in shaping the interior atmosphere throughout the day.'
+        description: 'A skylight above the bathroom vanity washes the tile and countertop in soft daylight, making the compact room feel noticeably larger.'
       },
       {
         layout: 'one',

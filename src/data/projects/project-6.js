@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project6 = {
     id: 6,
-    title: 'Single Family Home Remodel',
+    title: 'Remodel',
     slug: 'project-6',
     category: 'House Remodel',
     status: 'completed',
     image: getAssetPath('/img/6-1.jpg'),
-    description: 'The main focus of this project is interior work, with a strong emphasis on the kitchen renovation as per the homeowners\' priorities. We maintained ongoing discussions with the homeowner to ensure that every detail and desired ambiance was meticulously crafted. The kitchen features a specially designed, ultra-modern range hood that aligns with contemporary tastes. Our dedicated efforts ensured the realization of this luxurious kitchen, leaving the homeowner thoroughly satisfied.',
+    description: 'This San Mateo remodel is built around one showpiece kitchen, finished with a sculptural range hood the homeowners had long envisioned.',
     location: 'San Mateo',
     year: '2024',
     heroImage: getAssetPath('/img/6-1.jpg'),
@@ -29,7 +29,7 @@ export const project6 = {
             alt: 'Entertainment complex'
           }
         ],
-        description: 'The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'Custom cabinetry lines the kitchen from counter to ceiling, giving the homeowners the storage and polish they asked for.'
       },
       {
         layout: 'two',
@@ -37,12 +37,12 @@ export const project6 = {
           {
             src: getAssetPath('/img/6-5.jpg'),
             alt: 'Food court area',
-            description: 'A modern, light-filled space with a sleek, minimalistic design.'
+            description: "An oversized island anchors the kitchen's layout, giving the room a natural gathering point for cooking and conversation."
           },
           {
             src: getAssetPath('/img/6-6.jpg'),
             alt: 'Parking facility expansion',
-            description: 'A spacious and open area with a modern, minimalistic design.'
+            description: "Pendant lighting over the counters keeps the kitchen bright without competing with the room's minimal cabinetry."
           }
         ]
       },
@@ -52,12 +52,12 @@ export const project6 = {
           {
             src: getAssetPath('/img/6-7.jpg'),
             alt: 'Food court area',
-            description: 'The house reflects a contemporary interpretation of Californian residential architecture.'
+            description: "The custom range hood becomes the kitchen's focal point, its bold form set against otherwise quiet, pared-back surfaces."
           },
           {
             src: getAssetPath('/img/6-8.jpg'),
             alt: 'Parking facility expansion',
-            description: 'The interior prioritizes lived experience over formal expression.'
+            description: 'Even the smallest details, from hardware to trim, were chosen to keep the kitchen feeling deliberate and uncluttered.'
           }
         ]
       },

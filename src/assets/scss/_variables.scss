@@ -404,9 +404,8 @@ $mark-padding: 0.05rem 0.4rem 0.2rem !default;
 //----------------------------------------------------------//
 //	TYPOGRAPHY
 //----------------------------------------------------------//
-// Century Gothic is a system font, no need for Google Fonts import
-// $path-to-fonts: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700' !default;
-$font-family-sans-serif: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif !default;
+// Cormorant Garamond is loaded via Google Fonts link in pages/_document.jsx
+$font-family-sans-serif: 'Cormorant Garamond', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $font-family-custom-icons: 'Custom' !default;
 $font-family-unicons: 'Unicons' !default;

@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project16 = {
     id: 16,
-    title: 'Single Family Home Addition & Remodel',
+    title: 'Addition & Remodel',
     slug: 'project-16',
     category: 'House Addition & Remodel',
     status: 'completed',
     image: getAssetPath('/img/16-3.jpg'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
+    description: 'A Sunnyvale addition and remodel that reworks the kitchen, stairwell, and bedrooms into a brighter, more connected floor plan without disturbing the home\'s original character.',
     location: 'Sunnyvale',
     year: '2026',
     heroImage: getAssetPath('/img/16-1.jpg'),
@@ -29,7 +29,7 @@ export const project16 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'The remodeled kitchen swaps closed-off cabinetry for clean, unfussy lines, turning what was once a cramped galley into the home\'s brightest everyday space.'
       },
       {
         layout: 'two',
@@ -43,7 +43,7 @@ export const project16 = {
             alt: 'Single Family Home Remodel overview'
           },
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'The rebuilt staircase now reads as a design feature in its own right, with crisp railings and even lighting guiding movement between floors.'
       },
       {
         layout: 'two',

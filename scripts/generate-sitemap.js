@@ -61,6 +61,7 @@ const staticRoutes = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/aboutus/', priority: '0.9', changefreq: 'monthly' },
   { path: '/projects/', priority: '0.9', changefreq: 'weekly' },
+  { path: '/gallery/', priority: '0.8', changefreq: 'weekly' },
 ];
 
 const projectSlugs = collectProjectSlugs();

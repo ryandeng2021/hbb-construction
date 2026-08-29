@@ -1,15 +1,13 @@
 import { getAssetPath } from '../../utils/path';
 
-const description = 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.';
-
 export const project20 = {
     id: 20,
-    title: 'Single Family Home New Construction',
+    title: 'New Construction',
     slug: 'project-20',
     category: 'House New Construction',
     status: 'completed',
     image: getAssetPath('/img/20-1.webp'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
+    description: 'This ground-up Los Altos home pairs an open kitchen-and-living core with quiet, sunlit bedrooms tucked toward the rear of the plan.',
     location: 'Los Altos',
     year: '2026',
     heroImage: getAssetPath('/img/20-1.webp'),
@@ -20,7 +18,7 @@ export const project20 = {
           { src: getAssetPath('/img/20-4.webp'), alt: 'Single Family Home Remodel overview' },
           { src: getAssetPath('/img/20-5.webp'), alt: 'Single Family Home Remodel overview' }
         ],
-        description
+        description: 'A pass-through counter connects the kitchen to the adjoining living room, keeping sightlines open across both spaces.'
       },
       {
         layout: 'two',
@@ -84,7 +82,7 @@ export const project20 = {
           { src: getAssetPath('/img/20-2.webp'), alt: 'Single Family Home Remodel overview' },
           { src: getAssetPath('/img/20-22.webp'), alt: 'Single Family Home Remodel overview' }
         ],
-        description
+        description: 'Beyond the living room, a neatly organized closet adds practical, out-of-sight storage tucked just off the main hallway.'
       },
     ]
   };

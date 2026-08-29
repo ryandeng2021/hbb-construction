@@ -23,7 +23,7 @@ const About = (props) => {
       return (
         <video
           className="mr-5"
-          style={{ maxWidth: '100%', borderRadius: '10px' }}
+          style={{ maxWidth: '100%' }}
           autoPlay
           muted
           loop

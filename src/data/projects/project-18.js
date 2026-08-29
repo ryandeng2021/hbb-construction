@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project18 = {
     id: 18,
-    title: 'Single Family Home Addition & Remodel',
+    title: 'Addition & Remodel',
     slug: 'project-18',
     category: 'House Addition & Remodel',
     status: 'completed',
     image: getAssetPath('/img/18-1.jpg'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
+    description: 'A Sunnyvale addition and remodel that pairs an updated kitchen with reworked bathrooms and living areas, giving the home a more open, modern everyday flow.',
     location: 'Sunnyvale',
     year: '2026',
     heroImage: getAssetPath('/img/18-1.jpg'),
@@ -24,7 +24,7 @@ export const project18 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'The living room flows straight into the newly remodeled kitchen, creating one open space where the family can cook, gather, and relax together.'
       },
       {
         layout: 'two',
@@ -38,7 +38,7 @@ export const project18 = {
             alt: 'Single Family Home Remodel overview'
           },
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'A refreshed bathroom sits just steps from the new kitchen, both finished with the same clean, modern fixtures for a consistent feel throughout.'
       },
       {
         layout: 'one',

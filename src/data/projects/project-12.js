@@ -7,7 +7,7 @@ export const project12 = {
     category: 'ADU ',
     status: 'completed',
     image: getAssetPath('/img/13-1.jpg'),
-    description: 'his project features a compact residential unit similar to a condo. Due to limited storage space, the homeowner desired more storage options. After discussions with the homeowner, our team created a sunken space similar to a basement using concrete, and raised the crawl space. This solution not only ensured compliance with building codes but also maximized storage capacity. Additionally, it effectively mitigates termite risks to a certain extent.',
+    description: 'A detached backyard ADU in San Jose built on a raised, reinforced foundation that quietly solves the homeowner\'s storage shortage while guarding against moisture and pests.',
     location: 'San Jose',
     year: '2022',
     heroImage: getAssetPath('/img/13-1.jpg'),
@@ -20,7 +20,7 @@ export const project12 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.'
+        description: 'This general living space benefits from generous windows that draw daylight deep into the room, keeping the layout open and airy throughout the day.'
       },
       {
         layout: 'two',
@@ -43,7 +43,7 @@ export const project12 = {
             alt: 'Retail and dining spaces'
           }
         ],
-        description: 'Architectural elements such as overhangs and recessed openings mediate climate and privacy.'
+        description: 'The bathroom\'s walls and fixtures were carefully aligned to keep sightlines clean, giving the small footprint a calmer, more organized feel.'
       }
     ]
   };

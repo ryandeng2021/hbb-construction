@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project15 = {
     id: 15,
-    title: 'Single Family Home New Construction',
+    title: 'New Construction',
     slug: 'project-15',
     category: 'House New Construction',
     status: 'completed',
     image: getAssetPath('/img/14-2.jpg'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
+    description: 'A ground-up new construction in Los Altos on a generous lot, where restrained architectural lines and quiet materials let the size of the property speak for itself.',
     location: 'Los Altos',
     year: '2026',
     heroImage: getAssetPath('/img/14-2.jpg'),
@@ -20,7 +20,7 @@ export const project15 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'The completed facade sits comfortably on its expansive lot, its clean lines and understated massing giving the home a calm, timeless presence from the street.'
       },
       {
         layout: 'one',
@@ -30,7 +30,7 @@ export const project15 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'Viewed from a different angle, the exterior\'s restrained detailing and generous setbacks reinforce the sense of quiet scale the homeowner asked for.'
       },
       {
         layout: 'two',
@@ -45,7 +45,7 @@ export const project15 = {
             alt: 'Single Family Home Remodel overview'
           },
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'A walkthrough video captures the finished exterior in motion, showing how the simple facade reads consistently from every approach to the house.'
       },
       {
         layout: 'two',

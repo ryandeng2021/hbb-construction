@@ -1,16 +1,14 @@
 import { getAssetPath } from '../../utils/path';
 
-const description = 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.';
-
 export const project22 = {
     id: 22,
-    title: 'Single Family Home Addition & Remodel',
+    title: 'Addition & Remodel',
     slug: 'project-22',
     category: 'House Addition & Remodel',
     status: 'completed',
     image: getAssetPath('/img/22-1.webp'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
-    location: 'San Jose',
+    description: "This Palo Alto remodel threads a new staircase and spa-style bathroom through the home's existing living spaces with restrained, tailored detailing.",
+    location: 'Palo Alto',
     year: '2026',
     heroImage: getAssetPath('/img/22-1.webp'),
     content: [
@@ -20,7 +18,7 @@ export const project22 = {
           { src: getAssetPath('/img/22-2.webp'), alt: 'Single Family Home Remodel overview' },
           { src: getAssetPath('/img/22-3.webp'), alt: 'Single Family Home Remodel overview' }
         ],
-        description
+        description: 'A walk-in shower and adjacent closet were rebuilt together, giving this suite efficient storage right beside the vanity.'
       },
       {
         layout: 'two',
@@ -28,7 +26,7 @@ export const project22 = {
           { src: getAssetPath('/img/22-4.webp'), alt: 'Single Family Home Remodel overview' },
           { src: getAssetPath('/img/22-5.webp'), alt: 'Single Family Home Remodel overview' }
         ],
-        description
+        description: "The living room's new sightline leads straight to a remodeled bathroom finished in cool, contemporary tile."
       },
       {
         layout: 'two',

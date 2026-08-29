@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project1 = {
     id: 1,
-    title: 'Single Family Home Rebuild',
+    title: 'Rebuild',
     slug: 'project-1',
     category: 'House Demo and Rebuild',
     status: 'completed',
     image: getAssetPath('/img/1-1.jpeg'),
-    description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach without elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.',
+    description: "A full teardown rebuild in Pleasanton delivers generous room-to-room flow and an unhurried, understated exterior that lets the site's scale speak for itself.",
     location: 'Pleasanton',
     year: '2024',
     heroImage: getAssetPath('/img/1-1.jpeg'),
@@ -24,7 +24,7 @@ export const project1 = {
             alt: 'Construction site overview'
           }
         ],
-        description: 'The project showcases modern architectural design with sustainable building practices.'
+        description: "The rebuilt exterior presents clean lines and a low-key palette, letting the home's generous footprint read as calm rather than showy."
       },
       {
         layout: 'one',
@@ -34,7 +34,7 @@ export const project1 = {
             alt: 'Interior construction details'
           }
         ],
-        description: 'State-of-the-art construction techniques ensure durability and energy efficiency.'
+        description: 'A single elevation view captures how the new massing sits comfortably on its expansive lot, understated and well-proportioned.'
       },
       {
         layout: 'two',
@@ -42,12 +42,12 @@ export const project1 = {
           {
             src: getAssetPath('/img/1-5.jpg'),
             alt: 'Building facade',
-            description: 'Modern glass facade provides natural lighting and energy efficiency.'
+            description: "Broad window openings along the front elevation pull daylight toward the entry without disrupting the facade's quiet symmetry."
           },
           {
             src: getAssetPath('/img/1-6.jpeg'),
             alt: 'Structural framework',
-            description: 'Reinforced structure ensures long-term stability.'
+            description: "The living room's open framing keeps sightlines long, giving the family space an easy, uncluttered sense of scale."
           }
         ],
       },

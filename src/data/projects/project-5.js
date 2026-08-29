@@ -7,7 +7,7 @@ export const project5 = {
     category: 'Residential Remodel & Addition',
     status: 'completed',
     image: getAssetPath('/img/5-1.jpeg'),
-    description: 'Natural light and simple geometry frame the dining experience with quiet elegance.',
+    description: 'A luxury remodel in San Jose centers on a sculpted fireplace and a skylit kitchen, pairing dramatic architectural moments with warm, livable detail.',
     location: 'San Jose',
     year: '2023',
     heroImage: getAssetPath('/img/5-1.jpeg'),
@@ -20,7 +20,7 @@ export const project5 = {
             alt: 'House exterior'
           }
         ],
-        description: 'This project features a highly modern fireplace, necessitating careful consideration during framing to accommodate specific fireplace requirements as desired by the homeowner. Framing also included provisions for a recessed TV above the fireplace.'
+        description: "The great room's fireplace anchors the space, its sculpted mantel and recessed television keeping the wall uncluttered."
       },
       {
         layout: 'two',
@@ -28,12 +28,12 @@ export const project5 = {
           {
             src: getAssetPath('/img/5-3.png'),
             alt: 'House interior',
-            description: 'The vaulted ceiling expands the sense of volume, allowing the space to breathe vertically.'
+            description: 'Ceilings vault upward through this space, drawing the eye up and making the room feel taller than its footprint suggests.'
           },
           {
             src: getAssetPath('/img/5-4.png'),
             alt: 'Panoramic city views',
-            description: 'Another distinctive feature is the large skylight above the kitchen, which required precise execution from our construction team. The final result showcases an impressive and stylish design.'
+            description: 'A wide skylight floods the kitchen with overhead daylight, washing the counters and cabinetry in even, shadow-free light.'
           }
         ]
       },

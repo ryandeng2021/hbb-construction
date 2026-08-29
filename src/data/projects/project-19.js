@@ -2,12 +2,12 @@ import { getAssetPath } from '../../utils/path';
 
 export const project19 = {
     id: 19,
-    title: 'Single Family Home Addition & Remodel',
+    title: 'Addition & Remodel',
     slug: 'project-19',
     category: 'House Addition & Remodel',
     status: 'completed',
     image: getAssetPath('/img/19-1.png'),
-    description: 'Large openings allow daylight to penetrate deep into the interior, enhancing spatial depth and clarity.',
+    description: 'A whole-house addition in Mountain View reworks the kitchen, bathrooms, and bedrooms into one light-filled sequence from entry to yard.',
     location: 'Mountain View',
     year: '2026',
     heroImage: getAssetPath('/img/19-1.png'),
@@ -63,7 +63,7 @@ export const project19 = {
             alt: 'Single Family Home Remodel overview'
           }
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'The kitchen opens directly into the living area, letting cooking, dining, and lounging share one continuous, easygoing space.'
       },
       {
         layout: 'two',
@@ -77,7 +77,7 @@ export const project19 = {
             alt: 'Single Family Home Remodel overview'
           },
         ],
-        description: 'This project stands out with its expansive land area and spacious layout, allowing for a simple design approach witout elaborate decorations. The overall aesthetic is serene and understated, reflecting a tranquil beauty. The client is highly satisfied with the overall construction, as it perfectly captures the original design concept of the house.'
+        description: 'Clean white cabinetry and a long island give this kitchen an efficient, uncluttered workspace built for everyday cooking and gathering.'
       },
       {
         layout: 'one',

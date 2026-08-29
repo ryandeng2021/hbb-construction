@@ -66,7 +66,8 @@ export const usefulLinks = [
   { id: 1, title: 'Home', url: '/' },
   { id: 2, title: 'About Us', url: '/aboutus' },
   { id: 3, title: 'Projects', url: '/projects' },
-  { id: 4, title: 'Contact Us', url: '/#contact' },
+  { id: 4, title: 'Gallery', url: '/gallery' },
+  { id: 5, title: 'Contact Us', url: '/#contact' },
 ];
 
 // Navigation menu items with dropdowns
@@ -96,6 +97,12 @@ export const navigationMenu = [
   },
   {
     id: 4,
+    title: 'Gallery',
+    href: '/gallery',
+    hasDropdown: false
+  },
+  {
+    id: 5,
     title: 'Contact Us',
     href: '/#contact',
     hasDropdown: false

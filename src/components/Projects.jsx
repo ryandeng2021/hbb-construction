@@ -77,8 +77,14 @@ const Projects = () => {
                     </div>
                   </div>
                   <div className="card-body">
-                    <h3 className="card-title fs-20 fw-bold oswald mb-2">{project.title}</h3>
-                    <p className="card-text text-muted roboto mb-0 small">{project.category}</p>
+                    <h3 className="card-title fs-30 fw-bold oswald mb-2">{project.title}</h3>
+                    <p className="card-text text-muted roboto mb-0 small">
+                      <i className="uil uil-map-marker me-1" />
+                      {project.location}
+                      <span className="mx-2">•</span>
+                      <i className="uil uil-calendar-alt me-1" />
+                      {project.year}
+                    </p>
                   </div>
                 </div>
               }

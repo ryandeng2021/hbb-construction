@@ -7,7 +7,7 @@ export const project10 = {
     category: 'ADU',
     status: 'completed',
     image: getAssetPath('/img/11-5.png'),
-    description: 'This project features a compact residential unit similar to a condo. Due to limited storage space, the homeowner desired more storage options. After discussions with the homeowner, our team created a sunken space similar to a basement using concrete, and raised the crawl space. This solution not only ensured compliance with building codes but also maximized storage capacity. Additionally, it effectively mitigates termite risks to a certain extent.',
+    description: 'A compact detached ADU in San Jose that trades square footage for smart storage, tucking a concrete sunken level beneath a raised crawl space for extra room and lasting durability.',
     location: 'San Jose',
     year: '2023',
     heroImage: getAssetPath('/img/11-1.jpeg'),
@@ -46,7 +46,7 @@ export const project10 = {
             alt: 'Public plaza and green spaces'
           }
         ],
-        description: 'Natural light plays a central role in shaping the interior atmosphere throughout the day.'
+        description: 'The kitchen opens directly into the living area, letting the two spaces share light and sightlines as one continuous gathering space.'
       }
     ]
   };
