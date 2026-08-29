@@ -9,6 +9,14 @@ export default class SandBox extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* Google Fonts — Cormorant Garamond */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+            rel="stylesheet"
+          />
+
           {/* Favicon — Chrome tab + bookmarks */}
           <link rel="icon" href={`${BASE_PATH}/favicon.ico`} sizes="32x32" />
           <link rel="icon" type="image/png" href={`${BASE_PATH}/img/favicon/favicon-96x96.png`} sizes="96x96" />
