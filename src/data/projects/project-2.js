@@ -4,8 +4,8 @@ export const project2 = {
     id: 2,
     title: 'Rebuild',
     slug: 'project-2',
-    category: 'House Demo and Rebuild',
-    status: 'Completed',
+    category: 'New Construction',
+    status: 'completed',
     image: getAssetPath('/img/2-1.jpeg'),
     description: "This Palo Alto rebuild pairs a sculptural entry with sunlit living spaces, translating the client's brief into a home that feels both grounded and airy.",
     location: 'Palo Alto',
@@ -43,12 +43,12 @@ export const project2 = {
             layout: 'two',
             images: [
               {
-                src: getAssetPath('/img/2-5.jpg'),
+                src: getAssetPath('/img/2-5.jpeg'),
                 alt: 'Building facade',
                 description: 'In the kitchen, a continuous run of cabinetry and stone countertops creates a clean, efficient backdrop for everyday cooking.'
               },
               {
-                src: getAssetPath('/img/2-6.jpg'),
+                src: getAssetPath('/img/2-6.jpeg'),
                 alt: 'Structural framework',
               }
             ]

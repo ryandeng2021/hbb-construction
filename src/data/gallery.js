@@ -112,7 +112,6 @@ export const galleryCategories = [
       '15-8.jpeg',
       '15-7.jpeg',
       '15-9.jpg',
-      '25-1.webp',
       '14-8.jpg',
       '14-5.jpeg',
       '14-3.jpeg',
@@ -242,12 +241,6 @@ export const galleryCategories = [
       '25-3.webp',
       '25-4.webp',
       '25-5.webp',
-      '26-3.webp',
-      '26-4.webp',
-      '26-6.webp',
-      '26-7.webp',
-      '26-9.webp',
-      '26-11.webp',
       '13-2.jpg',
       '14-6.jpeg',
       '19-6.webp',
@@ -395,9 +388,7 @@ export const galleryCategories = [
       '20-15.webp',
       '23-5.webp',
       '23-6.webp',
-      '24-23.webp',
-      '25-2.webp',
-      '26-2.webp'
+      '24-23.webp'
     ])
   },
   {
@@ -435,7 +426,6 @@ export const galleryCategories = [
       '24-52.webp',
       '24-53.webp',
       '24-60.webp',
-      '23-2.webp',
       '20-1.webp',
       '19-1.webp',
       '17-1.jpg',

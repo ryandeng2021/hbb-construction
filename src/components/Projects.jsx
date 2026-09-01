@@ -9,14 +9,29 @@ import { projects } from '../data';
  *
  * @returns JSX.Element
  */
+// Buckets each project's free-form category text into one of the filter tabs
+const getCategoryGroup = (category = '') => {
+  const normalized = category.toLowerCase();
+  if (normalized.includes('adu')) return 'adu';
+  if (normalized.includes('construction')) return 'new-construction';
+  return 'remodel-addition';
+};
+
+const FILTERS = [
+  { key: 'all', label: 'All' },
+  { key: 'remodel-addition', label: 'Remodel & Addition' },
+  { key: 'new-construction', label: 'New Construction' },
+  { key: 'adu', label: 'ADU' },
+];
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   // Filter projects based on active tab
-  const filteredProjects = 
-    activeFilter === 'all' 
-      ? projects 
-      : projects.filter(project => project.status === activeFilter);
+  const filteredProjects =
+    activeFilter === 'all'
+      ? projects
+      : projects.filter(project => getCategoryGroup(project.category) === activeFilter);
 
   return (
     <div>
@@ -33,25 +48,18 @@ const Projects = () => {
 
       {/* Filter Tabs */}
       <div className="d-flex justify-content-center mb-10">
-        <ul className="nav nav-pills nav-pills-bg">
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeFilter === 'all' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('all')}
-              type="button"
-            >
-              All
-            </button>
-          </li>
-          <li className="nav-item">
-            <button
-              className={`nav-link ${activeFilter === 'completed' ? 'active' : ''}`}
-              onClick={() => setActiveFilter('completed')}
-              type="button"
-            >
-              Completed
-            </button>
-          </li>
+        <ul className="nav nav-pills nav-pills-bg project-filter-tabs">
+          {FILTERS.map(filter => (
+            <li className="nav-item" key={filter.key}>
+              <button
+                className={`nav-link ${activeFilter === filter.key ? 'active' : ''}`}
+                onClick={() => setActiveFilter(filter.key)}
+                type="button"
+              >
+                {filter.label}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
 

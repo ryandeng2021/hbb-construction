@@ -385,6 +385,19 @@ h2 span {
   border-color: #000000;
 }
 
+/* Keep all 7 gallery category tabs on a single row once there's room for them */
+@media (min-width: 1200px) {
+  .gallery-filter-tabs {
+    flex-wrap: nowrap !important;
+  }
+
+  .gallery-filter-tabs .nav-link {
+    margin: 0 0.35rem;
+    padding: 0.5rem 1.1rem;
+    white-space: nowrap;
+  }
+}
+
 /*==============================
 |=     TEAM CARDS     =
 ==============================*/
@@ -1318,8 +1331,8 @@ h2 span {
 /* Tab photo-count badge */
 .gallery-tab-count {
   display: inline-block;
-  margin-left: 0.4rem;
-  padding: 0.05rem 0.5rem;
+  margin-left: 0.6rem;
+  padding: 0.15rem 0.55rem;
   border-radius: 50px;
   font-size: 0.75rem;
   background: rgba(0, 0, 0, 0.08);

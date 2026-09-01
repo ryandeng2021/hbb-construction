@@ -134,10 +134,9 @@ export const project24 = {
         ],
       },
        {
-              layout: 'two',
+              layout: 'one',
         images: [
-          { src: getAssetPath('/img/24-36.webp'), alt: 'Single Family Home Remodel overview' },
-          { src: getAssetPath('/img/24-37.webp'), alt: 'Single Family Home Remodel overview' }
+          { src: getAssetPath('/img/24-36.webp'), alt: 'Single Family Home Remodel overview' }
         ],
       },
          {
@@ -169,17 +168,9 @@ export const project24 = {
         ],
       },
          {
-           layout: 'two',
+           layout: 'one',
         images: [
-          { src: getAssetPath('/img/24-46.webp'), alt: 'Single Family Home Remodel overview' },
           { src: getAssetPath('/img/24-47.webp'), alt: 'Single Family Home Remodel overview' }
-        ],
-      },
-       {
-              layout: 'two',
-        images: [
-          { src: getAssetPath('/img/24-48.webp'), alt: 'Single Family Home Remodel overview' },
-          { src: getAssetPath('/img/24-49.webp'), alt: 'Single Family Home Remodel overview' }
         ],
       },
          {
@@ -197,17 +188,9 @@ export const project24 = {
         ],
       },
          {
-           layout: 'two',
+           layout: 'one',
         images: [
-          { src: getAssetPath('/img/24-54.webp'), alt: 'Single Family Home Remodel overview' },
-          { src: getAssetPath('/img/24-55.webp'), alt: 'Single Family Home Remodel overview' }
-        ],
-      },
-       {
-              layout: 'two',
-        images: [
-          { src: getAssetPath('/img/24-56.webp'), alt: 'Single Family Home Remodel overview' },
-          { src: getAssetPath('/img/24-57.webp'), alt: 'Single Family Home Remodel overview' }
+          { src: getAssetPath('/img/24-54.webp'), alt: 'Single Family Home Remodel overview' }
         ],
       },
          {

@@ -2,6 +2,7 @@
 // - heroImage: Hero image at top (optional, falls back to 'image')
 // - content: Array of sections with layout ('one'|'two'|'three'), images, video, description
 
+import { project27 } from './project-27';
 import { project25 } from './project-25';
 import { project23 } from './project-23';
 import { project17 } from './project-17';
@@ -29,6 +30,7 @@ import { project12 } from './project-12';
 import { project13 } from './project-13';
 
 export const projects = [
+  project27,
   project24,
   project20,
   project19,
@@ -39,7 +41,6 @@ export const projects = [
   project18,
   project17,
   project15,
-  project26,
   project1,
   project2,
   project3,
@@ -52,5 +53,7 @@ export const projects = [
   project10,
   project11,
   project12,
-  project13
+  project13,
+  project25,
+  project26,
 ];

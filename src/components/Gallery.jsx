@@ -82,7 +82,7 @@ const Gallery = () => {
 
       {/* Category Tabs */}
       <div className="d-flex justify-content-center mb-10 flex-wrap">
-        <ul className="nav nav-pills nav-pills-bg flex-wrap justify-content-center">
+        <ul className="nav nav-pills nav-pills-bg gallery-filter-tabs flex-wrap justify-content-center">
           {galleryCategories.map((category) => (
             <li key={category.id} className="nav-item">
               <button

@@ -4,7 +4,7 @@ export const project1 = {
     id: 1,
     title: 'Rebuild',
     slug: 'project-1',
-    category: 'House Demo and Rebuild',
+    category: 'New Construction',
     status: 'completed',
     image: getAssetPath('/img/1-1.jpeg'),
     description: "A full teardown rebuild in Pleasanton delivers generous room-to-room flow and an unhurried, understated exterior that lets the site's scale speak for itself.",

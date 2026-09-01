@@ -58,5 +58,57 @@
     position: relative !important;
   }
 
+  /* Project filter tabs: 2 even columns so both rows of pills line up and stay centered */
+  .project-filter-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .project-filter-tabs .nav-item {
+    margin: 0;
+  }
+
+  .project-filter-tabs .nav-link {
+    margin: 0;
+    width: 100%;
+    padding: 0.55rem 0.5rem;
+    text-align: center;
+  }
+
+  /* Gallery filter tabs: 3 tabs on row one, 4 on row two, flush to the same left/right edges */
+  .gallery-filter-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .gallery-filter-tabs .nav-item {
+    margin: 0;
+  }
+
+  .gallery-filter-tabs .nav-item:nth-child(-n + 3) {
+    grid-column: span 4;
+  }
+
+  .gallery-filter-tabs .nav-item:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+
+  .gallery-filter-tabs .nav-link {
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .gallery-filter-tabs .gallery-tab-count {
+    margin-left: 0.35rem;
+    padding: 0.15rem 0.45rem;
+  }
+
 }
 

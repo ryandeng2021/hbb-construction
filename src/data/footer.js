@@ -10,10 +10,7 @@ export const footerData = {
   description: 'HBB Construction is a trusted residential construction company in Bay Area, delivering high-quality, innovative, and reliable home-building solutions.',
   contact: {
     address: '3006 Lawrence Expy, Santa Clara, CA, 95051, United States',
-    email: 'ryand@hbbconstruction.com',
-    phones: [
-      '+1 (650) 996-0715'
-    ]
+    email: 'project@hbbconstruction.com'
   },
   map: {
     embedUrl: 'https://www.google.com/maps?q=3006+Lawrence+Expy,+Santa+Clara,+CA+95051&z=17&output=embed',

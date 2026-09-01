@@ -91,18 +91,6 @@ const Footer = () => {
                   {footerData.contact.email}
                 </a>
               </div>
-
-              {/* Phone Numbers */}
-              <div className="d-flex">
-                <i className="uil uil-phone-volume fs-26 text-main" />
-                <p className="mt-1 ms-2 fs-18 d-flex flex-column roboto">
-                  {footerData.contact.phones.map((phone, index) => (
-                    <a key={index} href={`tel:${phone.replace(/\s/g, '')}`}>
-                      {phone}
-                    </a>
-                  ))}
-                </p>
-              </div>
             </div>
           </div>
 
