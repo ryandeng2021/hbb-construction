@@ -26,24 +26,10 @@ export const project15 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/14-18.jpg'),
-            alt: 'Single Family Home Remodel overview'
-          }
-        ],
-        description: 'Viewed from a different angle, the exterior\'s restrained detailing and generous setbacks reinforce the sense of quiet scale the homeowner asked for.'
-      },
-      {
-        layout: 'two',
-        images: [
-          {
             src: getAssetPath('/video/14.mp4'),
             alt: 'Single Family Home Remodel overview',
             isVideo: true
-          },
-          {
-            src: getAssetPath('/img/14-18.jpg'),
-            alt: 'Single Family Home Remodel overview'
-          },
+          }
         ],
         description: 'A walkthrough video captures the finished exterior in motion, showing how the simple facade reads consistently from every approach to the house.'
       },

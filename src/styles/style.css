@@ -113,7 +113,7 @@
 @media (max-width: 576px) {
   #projects .nav-link,
   .projects-page .nav .nav-link {
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
     margin-inline: 0.25rem;
   }
   .projects-page-header {
@@ -365,7 +365,7 @@ h2 span {
 /* Nav pills styling for project filters */
 .nav-pills-bg .nav-link {
   color: #727272;
-  background: transparent;
+  background: #fff;
   border: 2px solid #e0e0e0;
   margin: 0 0.5rem;
   border-radius: 50px;
@@ -376,13 +376,14 @@ h2 span {
 .nav-pills-bg .nav-link:hover {
   color: #000000;
   border-color: #000000;
-  background: transparent;
+  background: #fff;
 }
 
 .nav-pills-bg .nav-link.active {
   color: #fff;
   background: #000000;
   border-color: #000000;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
 /* Keep all 7 gallery category tabs on a single row once there's room for them */

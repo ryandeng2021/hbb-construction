@@ -58,57 +58,45 @@
     position: relative !important;
   }
 
-  /* Project filter tabs: 2 even columns so both rows of pills line up and stay centered */
-  .project-filter-tabs {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
+}
+
+/*======================================
+=  FILTER TABS: SCROLLABLE CHIP ROW    =
+=  (below the width where they fit     =
+=  comfortably on one centered line)   =
+======================================*/
+@media (max-width: 1199px) {
+  .nav-pills-bg.project-filter-tabs,
+  .nav-pills-bg.gallery-filter-tabs {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
     width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-block: 0.25rem;
+    padding-inline: 1.25rem;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 1.25rem, #000 calc(100% - 1.25rem), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 1.25rem, #000 calc(100% - 1.25rem), transparent);
   }
 
-  .project-filter-tabs .nav-item {
-    margin: 0;
+  .project-filter-tabs::-webkit-scrollbar,
+  .gallery-filter-tabs::-webkit-scrollbar {
+    display: none;
   }
 
-  .project-filter-tabs .nav-link {
-    margin: 0;
-    width: 100%;
-    padding: 0.55rem 0.5rem;
-    text-align: center;
-  }
-
-  /* Gallery filter tabs: 3 tabs on row one, 4 on row two, flush to the same left/right edges */
-  .gallery-filter-tabs {
-    display: grid !important;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 0.5rem;
-    width: 100%;
-  }
-
+  .project-filter-tabs .nav-item,
   .gallery-filter-tabs .nav-item {
-    margin: 0;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
   }
 
-  .gallery-filter-tabs .nav-item:nth-child(-n + 3) {
-    grid-column: span 4;
-  }
-
-  .gallery-filter-tabs .nav-item:nth-child(n + 4) {
-    grid-column: span 3;
-  }
-
+  .project-filter-tabs .nav-link,
   .gallery-filter-tabs .nav-link {
-    margin: 0;
-    width: 100%;
-    padding: 0.5rem 0.4rem;
-    font-size: 0.85rem;
-    text-align: center;
+    white-space: nowrap;
   }
-
-  .gallery-filter-tabs .gallery-tab-count {
-    margin-left: 0.35rem;
-    padding: 0.15rem 0.45rem;
-  }
-
 }
 

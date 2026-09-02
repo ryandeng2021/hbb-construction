@@ -6,11 +6,11 @@ export const project27 = {
     slug: 'project-27',
     category: 'House Remodel',
     status: 'completed',
-    image: getAssetPath('/img/27-1.webp'),
+    image: getAssetPath('/img/27-7.webp'),
     description: 'A Los Altos remodel that reimagined a 4-bedroom, 2.5-bath home as a brighter, more open 3-bedroom, 3-bath residence.',
     location: 'Los Altos',
     year: '2026',
-    heroImage: getAssetPath('/img/27-1.webp'),
+    heroImage: getAssetPath('/img/27-7.webp'),
     content: [
       {
         layout: 'two',

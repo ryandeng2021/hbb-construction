@@ -1,16 +1,16 @@
 import { getAssetPath } from '../../utils/path';
 
 export const project24 = {
-    id: 2    ,
+    id: 24,
     title: 'Addition & Remodel',
     slug: 'project-24',
-    category: 'New Construction',
+    category: 'House Addition & Remodel',
     status: 'completed',
-    image: getAssetPath('/img/24-1.webp'),
+    image: getAssetPath('/img/24-2.webp'),
     description: 'This ground-up Hillsborough estate unfolds gradually, moving from the arrival elevation through sprawling living, kitchen, and bedroom wings within.',
     location: 'Hillsborough',
     year: '2026',
-    heroImage: getAssetPath('/img/24-1.webp'),
+    heroImage: getAssetPath('/img/24-2.webp'),
     content: [
       {
         layout: 'two',

@@ -1,7 +1,7 @@
 import { getAssetPath } from '../../utils/path';
 
 export const project26= {
-    id: 2    ,
+    id: 26,
     title: 'Addition & Remodel',
     slug: 'project-26',
     category: 'House Addition & Remodel',

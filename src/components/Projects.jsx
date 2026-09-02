@@ -19,8 +19,8 @@ const getCategoryGroup = (category = '') => {
 
 const FILTERS = [
   { key: 'all', label: 'All' },
-  { key: 'remodel-addition', label: 'Remodel & Addition' },
   { key: 'new-construction', label: 'New Construction' },
+  { key: 'remodel-addition', label: 'Remodel & Addition' },
   { key: 'adu', label: 'ADU' },
 ];
 
