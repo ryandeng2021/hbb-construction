@@ -12,6 +12,30 @@ export const backgroundImages = {
 // Note: getAssetPath will automatically prefix with basePath in production
 export const heroCarousel = [
   {
+    id: 20,
+    image: getAssetPath('/img/20-1.webp'),
+    title: 'New Construction in Los Altos',
+    subtitle: 'Ground-up homes, built down to the last detail.'
+  },
+  {
+    id: 19,
+    image: getAssetPath('/img/19-1.webp'),
+    title: 'Whole-House Addition & Remodel',
+    subtitle: 'More space and more light, without losing the home you know.'
+  },
+  {
+    id: 24,
+    image: getAssetPath('/img/24-2.webp'),
+    title: 'Addition & Remodel in Hillsborough',
+    subtitle: 'Sprawling living, kitchen, and bedroom wings under one roof.'
+  },
+  {
+    id: 27,
+    image: getAssetPath('/img/27-7.webp'),
+    title: 'Whole-Home Remodel in Los Altos',
+    subtitle: 'Fewer rooms, a noticeably better way to live.'
+  },
+  {
     id: 1,
     image: getAssetPath('/img/1-1.jpeg'),
     title: 'Residential Construction Company in Bay Area',
