@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Image from 'next/image';
+import Lightbox from './Lightbox';
 
 /**
  * Flexible Project Content Component
@@ -22,8 +23,70 @@ import Image from 'next/image';
  */
 const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
   const [imageDimensions, setImageDimensions] = useState({});
+  const [lightboxIndex, setLightboxIndex] = useState(null);
   const containerRefs = useRef({});
   const imageRefs = useRef({});
+
+  // Flatten every still image on the page (hero first, then each section in order) so the
+  // lightbox can page through them, and map each render slot to its position in that list.
+  const { lightboxImages, lightboxKeys } = useMemo(() => {
+    const list = [];
+    const keys = {};
+
+    if (heroImage) {
+      keys.hero = list.length;
+      list.push({ src: heroImage, alt: heroAlt || 'Project Hero' });
+    }
+
+    sections.forEach((section, sectionIndex) => {
+      if (section.video) return; // Videos keep their own native controls
+
+      const { images } = section;
+      const imagesArray = Array.isArray(images) ? images : images ? [images] : [];
+
+      imagesArray.forEach((img, imgIndex) => {
+        if (typeof img === 'object' && img?.isVideo === true) return;
+
+        const src = typeof img === 'string' ? img : img?.src;
+        if (!src) return;
+
+        keys[`${sectionIndex}-${imgIndex}`] = list.length;
+        list.push({
+          src,
+          alt:
+            typeof img === 'string'
+              ? `Project image ${imgIndex + 1}`
+              : img?.alt || `Project image ${imgIndex + 1}`,
+          description: typeof img === 'string' ? null : img?.description || null
+        });
+      });
+    });
+
+    return { lightboxImages: list, lightboxKeys: keys };
+  }, [heroImage, heroAlt, sections]);
+
+  // Props that turn an image into a click-to-zoom target
+  const zoomProps = useCallback(
+    (key) => {
+      const targetIndex = lightboxKeys[key];
+      if (targetIndex === undefined) return {};
+
+      const open = () => setLightboxIndex(targetIndex);
+      return {
+        onClick: open,
+        onKeyDown: (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            open();
+          }
+        },
+        role: 'button',
+        tabIndex: 0,
+        title: 'Click to view full screen'
+      };
+    },
+    [lightboxKeys]
+  );
 
   // Calculate dimensions for images in a row
   const calculateImageDimensions = useCallback((sectionIndex, imagesArray, containerElement) => {
@@ -194,7 +257,8 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                   width={1200}
                   height={600}
                   unoptimized={true}
-                  className="rounded"
+                  className="rounded zoomable-image"
+                  {...zoomProps('hero')}
                 />
               </div>
             </div>
@@ -310,12 +374,13 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                               width={dimensions?.width || 400}
                               height={dimensions?.height || 400}
                               unoptimized={true}
-                              className="rounded project-image-dynamic"
+                              className="rounded project-image-dynamic zoomable-image"
                               style={dimensions ? {
                                 width: `${dimensions.width}px`,
                                 height: `${dimensions.height}px`,
                                 objectFit: 'contain'
                               } : { objectFit: 'contain' }}
+                              {...zoomProps(dimensionKey)}
                             />
                           )}
                         </div>
@@ -389,12 +454,13 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                               width={dimensions?.width || 600}
                               height={dimensions?.height || 400}
                               unoptimized={true}
-                              className="rounded project-image-dynamic"
+                              className="rounded project-image-dynamic zoomable-image"
                               style={dimensions ? {
                                 width: `${dimensions.width}px`,
                                 height: `${dimensions.height}px`,
                                 objectFit: 'contain'
                               } : { objectFit: 'contain' }}
+                              {...zoomProps(dimensionKey)}
                             />
                           )}
                         </div>
@@ -436,8 +502,9 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                             width={1200}
                             height={600}
                             unoptimized={true}
-                            className="rounded"
+                            className="rounded zoomable-image"
                             style={{ width: '100%', height: 'auto' }}
+                            {...zoomProps(`${index}-0`)}
                           />
                         )}
                       </div>
@@ -454,6 +521,21 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
           </section>
         );
       })}
+
+      {/* Fullscreen viewer for every still image on the page */}
+      <Lightbox
+        images={lightboxImages}
+        index={lightboxIndex}
+        onIndexChange={setLightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        renderCaption={(image) =>
+          image.description ? (
+            <div className="gallery-lightbox-caption">
+              <p className="mb-0 fs-15 text-white roboto">{image.description}</p>
+            </div>
+          ) : null
+        }
+      />
     </div>
   );
 };

@@ -1366,7 +1366,7 @@ h2 span {
 .gallery-lightbox {
   background: rgba(0, 0, 0, 0.92);
   z-index: 1080;
-  padding: 2rem;
+  padding: 1rem;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -1380,8 +1380,8 @@ h2 span {
 }
 
 .gallery-lightbox-content {
-  max-width: 90vw;
-  max-height: 85vh;
+  max-width: 94vw;
+  max-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1406,11 +1406,16 @@ h2 span {
 .gallery-lightbox-image {
   width: auto;
   height: auto;
-  max-width: 90vw;
-  max-height: 70vh;
+  max-width: 94vw;
+  max-height: 90vh;
   object-fit: contain;
   border-radius: 4px;
   animation: gallery-image-fade-in 0.25s ease both;
+}
+
+/* Leave room underneath for the caption / project link */
+.gallery-lightbox-content-captioned .gallery-lightbox-image {
+  max-height: 70vh;
 }
 
 .gallery-lightbox-close {
@@ -1498,3 +1503,21 @@ h2 span {
   }
 }
 
+
+/*==============================
+|=     CLICK-TO-ZOOM IMAGES     =
+==============================*/
+
+.zoomable-image {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.zoomable-image:hover {
+  opacity: 0.9;
+}
+
+.zoomable-image:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
