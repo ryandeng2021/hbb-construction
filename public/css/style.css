@@ -131,7 +131,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 96, 105, 123;
   --bs-body-bg-rgb: 254, 254, 254;
-  --bs-font-sans-serif: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+  --bs-font-sans-serif: "Cormorant Garamond", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-root-font-size: 20px;
@@ -28087,7 +28087,7 @@ article .post-meta li.ms-auto:before {
   position: relative;
 }
 .code-wrapper .btn-clipboard {
-  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+  font-family: "Cormorant Garamond", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
