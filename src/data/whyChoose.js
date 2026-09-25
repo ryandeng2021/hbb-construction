@@ -6,7 +6,7 @@ export const whyChooseSection = {
   span: ' Construction',
   location: ' in Bay Area',
   image: {
-    src: getAssetPath('/img/6-1.jpg'),
+    src: getAssetPath('/img/6-1.webp'),
     alt: 'Transforming Residential Construction in Bay Area | HBB CONSTRUCTION',
     width: 600,
     height: 700

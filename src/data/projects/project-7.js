@@ -6,17 +6,17 @@ export const project7 = {
     slug: 'project-7',
     category: 'House Remodel',
     status: 'completed',
-    image: getAssetPath('/img/7-3.jpeg'),
+    image: getAssetPath('/img/7-3.webp'),
     description: "Set in Newark, this addition revolves around a rebuilt kitchen whose hand-built range hood became the room's defining design statement.",
     location: 'Newark',
     year: '2023',
-    heroImage: getAssetPath('/img/7-3.jpeg'),
+    heroImage: getAssetPath('/img/7-3.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/7-4.jpeg'),
+            src: getAssetPath('/img/7-4.webp'),
             alt: 'Campus overview'
           }
         ],
@@ -26,11 +26,11 @@ export const project7 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/7-5.jpeg'),
+            src: getAssetPath('/img/7-5.webp'),
             alt: 'Science laboratories'
           },
           {
-            src: getAssetPath('/img/7-6.jpg'),
+            src: getAssetPath('/img/7-6.webp'),
             alt: 'Sports and recreation facilities'
           }
         ],
@@ -40,12 +40,12 @@ export const project7 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/7-1.jpeg'),
+            src: getAssetPath('/img/7-1.webp'),
             alt: 'Academic buildings',
             description: 'From the street, the addition reads as a natural extension of the original house, matched in scale and roofline.'
           },
           {
-            src: getAssetPath('/img/7-2.jpeg'),
+            src: getAssetPath('/img/7-2.webp'),
             alt: 'Library and research facilities',
             description: 'New siding and trim were matched precisely to the existing exterior, so the addition blends in rather than standing apart.'
           }

@@ -6,21 +6,21 @@ export const project8 = {
     slug: 'project-8',
     category: 'House Remodel & Addition',
     status: 'completed',
-    image: getAssetPath('/img/8-1.jpeg'),
+    image: getAssetPath('/img/8-1.webp'),
     description: 'In Cupertino, imported finishes chosen by the homeowner drove every plumbing and electrical decision, resulting in a home built to exact specification.',
     location: 'Cupertino',
     year: '2024',
-    heroImage: getAssetPath('/img/8-1.jpeg'),
+    heroImage: getAssetPath('/img/8-1.webp'),
     content: [
       {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/8-2.jpeg'),
+            src: getAssetPath('/img/8-2.webp'),
             alt: 'Hospital building exterior'
           },
           {
-            src: getAssetPath('/img/8-3.jpeg'),
+            src: getAssetPath('/img/8-3.webp'),
             alt: 'Medical facility construction'
           }
         ],
@@ -30,7 +30,7 @@ export const project8 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/8-4.jpeg'),
+            src: getAssetPath('/img/8-4.webp'),
             alt: 'Operating theaters and medical equipment'
           }
         ],
@@ -40,7 +40,7 @@ export const project8 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/8-5.jpeg'),
+            src: getAssetPath('/img/8-5.webp'),
             alt: 'Patient rooms',
           },
         ]
@@ -49,7 +49,7 @@ export const project8 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/8-6.jpeg'),
+            src: getAssetPath('/img/8-6.webp'),
             alt: 'Emergency department',
           }
         ]
@@ -58,7 +58,7 @@ export const project8 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/8-7.jpeg'),
+            src: getAssetPath('/img/8-7.webp'),
             alt: 'Outpatient clinics and diagnostic centers'
           }
         ],
@@ -67,11 +67,11 @@ export const project8 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/8-8.jpeg'),
+            src: getAssetPath('/img/8-8.webp'),
             alt: 'Patient rooms',
           },
           {
-            src: getAssetPath('/img/8-9.jpeg'),
+            src: getAssetPath('/img/8-9.webp'),
             alt: 'Emergency department',
           }
         ]
@@ -80,11 +80,11 @@ export const project8 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/8-10.jpeg'),
+            src: getAssetPath('/img/8-10.webp'),
             alt: 'Patient rooms',
           },
           {
-            src: getAssetPath('/img/8-11.jpeg'),
+            src: getAssetPath('/img/8-11.webp'),
             alt: 'Emergency department',
           }
         ]

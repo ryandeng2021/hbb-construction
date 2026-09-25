@@ -6,17 +6,17 @@ export const project4 = {
     slug: 'project-4',
     category: 'House Remodel',
     status: 'completed',
-    image: getAssetPath('/img/4-1.jpg'),
+    image: getAssetPath('/img/4-1.webp'),
     description: 'Centered on light and openness, this San Jose remodel gives every room an easy, California-casual connection to the outdoors.',
     location: 'San Jose',
     year: '2024',
-    heroImage: getAssetPath('/img/4-1.jpg'),
+    heroImage: getAssetPath('/img/4-1.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/4-2.png'),
+            src: getAssetPath('/img/4-2.webp'),
             alt: 'Interior spaces'
           },
         ]
@@ -25,7 +25,7 @@ export const project4 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/4-3.jpeg'),
+            src: getAssetPath('/img/4-3.webp'),
             alt: 'Interior  spaces'
           }
         ],
@@ -35,12 +35,12 @@ export const project4 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/4-4.png'),
+            src: getAssetPath('/img/4-4.webp'),
             alt: 'Conference facilities',
             description: "A single stone finish carries through the bathroom's walls and floor, giving the room an unbroken, spa-like calm."
           },
           {
-            src: getAssetPath('/img/4-5.png'),
+            src: getAssetPath('/img/4-5.webp'),
             alt: 'Common areas and amenities',
             description: "Fixtures here are kept minimal and matte-finished, so the bathroom's materials do the talking rather than the hardware."
           }
@@ -50,7 +50,7 @@ export const project4 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/4-6.jpeg'),
+            src: getAssetPath('/img/4-6.webp'),
             alt: 'Building infrastructure'
           }
         ]
@@ -59,11 +59,11 @@ export const project4 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/4-7.jpeg'),
+            src: getAssetPath('/img/4-7.webp'),
             alt: 'Conference facilities',
           },
           {
-            src: getAssetPath('/img/4-8.jpeg'),
+            src: getAssetPath('/img/4-8.webp'),
             alt: 'Common areas and amenities',
           }
         ]
@@ -72,7 +72,7 @@ export const project4 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/4-9.jpg'),
+            src: getAssetPath('/img/4-9.webp'),
             alt: 'Building infrastructure'
           }
         ]

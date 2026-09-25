@@ -14,7 +14,7 @@ const ProjectsPage = () => {
         path="/projects"
         title="Our Projects"
         description="Explore HBB Construction's portfolio of Bay Area residential projects - custom homes, additions, remodels, and ADUs."
-        image="/img/1-1.jpeg"
+        image="/img/1-1.webp"
       />
 
       <main className="content-wrapper overflow-hidden projects-page">

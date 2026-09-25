@@ -6,17 +6,17 @@ export const project6 = {
     slug: 'project-6',
     category: 'House Remodel',
     status: 'completed',
-    image: getAssetPath('/img/6-1.jpg'),
+    image: getAssetPath('/img/6-1.webp'),
     description: 'This San Mateo remodel is built around one showpiece kitchen, finished with a sculptural range hood the homeowners had long envisioned.',
     location: 'San Mateo',
     year: '2024',
-    heroImage: getAssetPath('/img/6-1.jpg'),
+    heroImage: getAssetPath('/img/6-1.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/6-3.jpg'),
+            src: getAssetPath('/img/6-3.webp'),
             alt: 'New retail wing development'
           }
         ],
@@ -25,7 +25,7 @@ export const project6 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/6-4.jpg'),
+            src: getAssetPath('/img/6-4.webp'),
             alt: 'Entertainment complex'
           }
         ],
@@ -35,12 +35,12 @@ export const project6 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/6-5.jpg'),
+            src: getAssetPath('/img/6-5.webp'),
             alt: 'Food court area',
             description: "An oversized island anchors the kitchen's layout, giving the room a natural gathering point for cooking and conversation."
           },
           {
-            src: getAssetPath('/img/6-6.jpg'),
+            src: getAssetPath('/img/6-6.webp'),
             alt: 'Parking facility expansion',
             description: "Pendant lighting over the counters keeps the kitchen bright without competing with the room's minimal cabinetry."
           }
@@ -50,12 +50,12 @@ export const project6 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/6-7.jpg'),
+            src: getAssetPath('/img/6-7.webp'),
             alt: 'Food court area',
             description: "The custom range hood becomes the kitchen's focal point, its bold form set against otherwise quiet, pared-back surfaces."
           },
           {
-            src: getAssetPath('/img/6-8.jpg'),
+            src: getAssetPath('/img/6-8.webp'),
             alt: 'Parking facility expansion',
             description: 'Even the smallest details, from hardware to trim, were chosen to keep the kitchen feeling deliberate and uncluttered.'
           }
@@ -65,7 +65,7 @@ export const project6 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/6-2.jpg'),
+            src: getAssetPath('/img/6-2.webp'),
             alt: 'Mall expansion construction'
           }
         ],

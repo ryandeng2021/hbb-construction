@@ -14,7 +14,7 @@ const GalleryPage = () => {
         path="/gallery"
         title="Gallery"
         description="Browse photos of HBB Construction's work by area - kitchens, bathrooms, bedrooms, living rooms, and exterior elevations."
-        image="/img/1-1.jpeg"
+        image="/img/1-1.webp"
       />
 
       <main className="content-wrapper overflow-hidden projects-page">

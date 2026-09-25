@@ -6,17 +6,17 @@ export const project12 = {
     slug: 'project-12',
     category: 'ADU ',
     status: 'completed',
-    image: getAssetPath('/img/13-1.jpg'),
+    image: getAssetPath('/img/13-1.webp'),
     description: 'A detached backyard ADU in San Jose built on a raised, reinforced foundation that quietly solves the homeowner\'s storage shortage while guarding against moisture and pests.',
     location: 'San Jose',
     year: '2022',
-    heroImage: getAssetPath('/img/13-1.jpg'),
+    heroImage: getAssetPath('/img/13-1.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/13-5.jpg'),
+            src: getAssetPath('/img/13-5.webp'),
             alt: 'Single Family Home Remodel overview'
           }
         ],
@@ -26,11 +26,11 @@ export const project12 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/13-3.jpg'),
+            src: getAssetPath('/img/13-3.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/13-4.jpg'),
+            src: getAssetPath('/img/13-4.webp'),
             alt: 'Commercial office spaces',
           }
         ]
@@ -39,7 +39,7 @@ export const project12 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/13-2.jpg'),
+            src: getAssetPath('/img/13-2.webp'),
             alt: 'Retail and dining spaces'
           }
         ],

@@ -6,11 +6,11 @@ export const project11 = {
     slug: 'project-11',
     category: 'House Remodel & Addition',
     status: 'completed',
-    image: getAssetPath('/img/12-8.jpg'),
+    image: getAssetPath('/img/12-8.webp'),
     description: 'A Fremont remodel and addition anchored by a striking black-and-white bathroom, where a built-in soaking tub and a floating vanity create a sleek, gallery-like retreat.',
     location: 'Fremont',
     year: '2023',
-    heroImage: getAssetPath('/img/12-8.jpg'),
+    heroImage: getAssetPath('/img/12-8.webp'),
     content: [
       {
         layout: 'one',
@@ -25,11 +25,11 @@ export const project11 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/12-3.jpeg'),
+            src: getAssetPath('/img/12-3.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/12-4.jpeg'),
+            src: getAssetPath('/img/12-4.webp'),
             alt: 'Commercial office spaces',
           }
         ]
@@ -38,11 +38,11 @@ export const project11 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/12-5.jpg'),
+            src: getAssetPath('/img/12-5.webp'),
             alt: 'Retail and dining spaces'
           },
           {
-            src: getAssetPath('/img/12-6.jpg'),
+            src: getAssetPath('/img/12-6.webp'),
             alt: 'Public plaza and green spaces'
           }
         ],
@@ -51,7 +51,7 @@ export const project11 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/12-7.jpg'),
+            src: getAssetPath('/img/12-7.webp'),
             alt: 'Parking and infrastructure'
           }
         ],
@@ -61,7 +61,7 @@ export const project11 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/12-1.jpeg'),
+            src: getAssetPath('/img/12-1.webp'),
             alt: 'Parking and infrastructure'
           }
         ],

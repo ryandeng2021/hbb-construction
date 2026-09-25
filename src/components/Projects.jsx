@@ -22,16 +22,21 @@ const FILTERS = [
   { key: 'new-construction', label: 'New Construction' },
   { key: 'remodel-addition', label: 'Remodel & Addition' },
   { key: 'adu', label: 'ADU' },
+  { key: 'ongoing', label: 'Ongoing' },
 ];
+
+// "Ongoing" filters on build status rather than category, so it cuts across the other tabs
+const matchesFilter = (project, filter) => {
+  if (filter === 'all') return true;
+  if (filter === 'ongoing') return project.status === 'ongoing';
+  return getCategoryGroup(project.category) === filter;
+};
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   // Filter projects based on active tab
-  const filteredProjects =
-    activeFilter === 'all'
-      ? projects
-      : projects.filter(project => getCategoryGroup(project.category) === activeFilter);
+  const filteredProjects = projects.filter(project => matchesFilter(project, activeFilter));
 
   return (
     <div>
@@ -83,6 +88,12 @@ const Projects = () => {
                     <div className="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                       <i className="uil uil-search-plus fs-30 text-white" />
                     </div>
+                    {project.status === 'ongoing' && (
+                      <span className="project-status-badge">
+                        <i className="uil uil-constructor me-1" />
+                        Ongoing
+                      </span>
+                    )}
                   </div>
                   <div className="card-body">
                     <h3 className="card-title fs-30 fw-bold oswald mb-2">{project.title}</h3>

@@ -24,9 +24,9 @@ const About = (props) => {
         <video
           className="mr-5"
           style={{ maxWidth: '100%' }}
-          autoPlay
-          muted
-          loop
+          preload="none"
+          poster={video?.poster || video?.src?.replace(/\.(mp4|webm|mov|m4v)$/i, '-poster.webp')}
+          playsInline
           src={video?.src}
           alt={video?.alt}
           controls

@@ -13,6 +13,17 @@ export const project19 = {
     heroImage: getAssetPath('/img/19-1.webp'),
     content: [
       {
+        layout: 'one',
+        images: [
+          {
+            src: getAssetPath('/video/19-v.mp4'),
+            alt: 'Project walkthrough',
+            isVideo: true
+          }
+        ],
+        description: 'A short walkthrough of the finished home.'
+      },
+      {
         layout: 'two',
         images: [
           { src: getAssetPath('/img/19-2.webp'), alt: 'Street elevation after the addition' },
@@ -156,6 +167,6 @@ export const project19 = {
           { src: getAssetPath('/img/19-49.webp'), alt: 'Bedroom with deep window seat and vaulted ceiling' },
           { src: getAssetPath('/img/19-50.webp'), alt: 'Bedroom with window seat and sliding doors to the deck' }
         ]
-      }
+      },
     ]
   };

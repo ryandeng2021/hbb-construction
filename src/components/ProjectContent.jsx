@@ -21,6 +21,19 @@ import Lightbox from './Lightbox';
  *   - video: Object with { src: string, alt: string } (takes precedence over images, legacy support)
  *   - description: Optional text description for the section
  */
+// Videos are click-to-play behind a poster frame. `preload="none"` is the point:
+// a visitor who never presses play downloads none of the (multi-megabyte) file,
+// which is most of them. Autoplaying instead would pull every video on the page
+// down on load whether or not anyone watches it.
+// Convention: /video/foo.mp4 is paired with /video/foo-poster.webp, overridable
+// per-item with an explicit `poster`.
+const posterFor = (src, explicit) => {
+  if (explicit) return explicit;
+  if (typeof src !== 'string') return undefined;
+  const poster = src.replace(/\.(mp4|webm|mov|m4v)$/i, '-poster.webp');
+  return poster === src ? undefined : poster;
+};
+
 const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
   const [imageDimensions, setImageDimensions] = useState({});
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -111,8 +124,11 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
         const isVideo = typeof img === 'object' && img?.isVideo === true;
         
         if (isVideo) {
-          // For videos, use a default aspect ratio or load video metadata
+          // For videos, use a default aspect ratio or load video metadata.
+          // 'metadata' keeps this probe to the file header instead of pulling
+          // down the whole clip just to learn its dimensions.
           const video = document.createElement('video');
+          video.preload = 'metadata';
           video.src = imgSrc;
           video.onloadedmetadata = () => {
             resolve({
@@ -280,9 +296,8 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                     <video
                       className="rounded"
                       style={{ maxWidth: '100%', height: 'auto' }}
-                      autoPlay
-                      muted
-                      loop
+                      preload="none"
+                      poster={posterFor(video.src, video.poster)}
                       playsInline
                       src={video.src}
                       alt={video.alt || 'Project video'}
@@ -356,9 +371,8 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                                 height: `${dimensions.height}px`,
                                 objectFit: 'contain'
                               } : { objectFit: 'contain' }}
-                              autoPlay
-                              muted
-                              loop
+                              preload="none"
+                              poster={posterFor(imgSrc, typeof img === 'object' ? img?.poster : undefined)}
                               playsInline
                               src={imgSrc}
                               alt={imgAlt}
@@ -436,9 +450,8 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                                 height: `${dimensions.height}px`,
                                 objectFit: 'contain'
                               } : { objectFit: 'contain' }}
-                              autoPlay
-                              muted
-                              loop
+                              preload="none"
+                              poster={posterFor(imgSrc, typeof img === 'object' ? img?.poster : undefined)}
                               playsInline
                               src={imgSrc}
                               alt={imgAlt}
@@ -487,9 +500,11 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
                           <video
                             className="rounded"
                             style={{ width: '100%', height: 'auto' }}
-                            autoPlay
-                            muted
-                            loop
+                            preload="none"
+                            poster={posterFor(
+                              typeof imagesArray[0] === 'string' ? imagesArray[0] : (imagesArray[0]?.src || imagesArray[0]),
+                              typeof imagesArray[0] === 'object' ? imagesArray[0]?.poster : undefined
+                            )}
                             playsInline
                             src={typeof imagesArray[0] === 'string' ? imagesArray[0] : (imagesArray[0]?.src || imagesArray[0])}
                             alt={typeof imagesArray[0] === 'string' ? 'Project video' : (imagesArray[0]?.alt || 'Project video')}

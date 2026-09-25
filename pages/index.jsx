@@ -21,7 +21,7 @@ const Home = () => {
         path="/"
         title="HBB Construction | Residential Builders in the Bay Area"
         description="Bay Area residential construction company specializing in custom homes, remodels, additions, and ADUs. Honey Badger Brothers Construction - built with integrity and precision."
-        image="/img/1-1.jpeg"
+        image="/img/1-1.webp"
         includeLocalBusiness
       />
 

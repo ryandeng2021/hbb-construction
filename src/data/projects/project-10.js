@@ -6,17 +6,17 @@ export const project10 = {
     slug: 'project-10',
     category: 'ADU',
     status: 'completed',
-    image: getAssetPath('/img/11-5.png'),
+    image: getAssetPath('/img/11-5.webp'),
     description: 'A compact detached ADU in San Jose that trades square footage for smart storage, tucking a concrete sunken level beneath a raised crawl space for extra room and lasting durability.',
     location: 'San Jose',
     year: '2023',
-    heroImage: getAssetPath('/img/11-1.jpeg'),
+    heroImage: getAssetPath('/img/11-1.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/11-2.png'),
+            src: getAssetPath('/img/11-2.webp'),
             alt: 'Single Family Home Remodel overview'
           }
         ],
@@ -25,11 +25,11 @@ export const project10 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/11-3.jpeg'),
+            src: getAssetPath('/img/11-3.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/11-4.png'),
+            src: getAssetPath('/img/11-4.webp'),
             alt: 'Commercial office spaces',
           }
         ]
@@ -38,11 +38,11 @@ export const project10 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/11-5.png'),
+            src: getAssetPath('/img/11-5.webp'),
             alt: 'Retail and dining spaces'
           },
           {
-            src: getAssetPath('/img/11-6.jpg'),
+            src: getAssetPath('/img/11-6.webp'),
             alt: 'Public plaza and green spaces'
           }
         ],

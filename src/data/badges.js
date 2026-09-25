@@ -1,7 +1,7 @@
 import { getAssetPath } from '../utils/path';
 
 export const badgesData = {
-  backgroundImage: getAssetPath('/img/bg-sp.jpg'),
+  backgroundImage: getAssetPath('/img/bg-sp.webp'),
   items: [
     {
       id: 1,

@@ -6,21 +6,32 @@ export const project18 = {
     slug: 'project-18',
     category: 'House Addition & Remodel',
     status: 'completed',
-    image: getAssetPath('/img/18-1.jpg'),
+    image: getAssetPath('/img/18-1.webp'),
     description: 'A Sunnyvale addition and remodel that pairs an updated kitchen with reworked bathrooms and living areas, giving the home a more open, modern everyday flow.',
     location: 'Sunnyvale',
     year: '2026',
-    heroImage: getAssetPath('/img/18-1.jpg'),
+    heroImage: getAssetPath('/img/18-1.webp'),
     content: [
+      {
+        layout: 'one',
+        images: [
+          {
+            src: getAssetPath('/video/18-v.mp4'),
+            alt: 'Project walkthrough',
+            isVideo: true
+          }
+        ],
+        description: 'A short walkthrough of the finished home.'
+      },
       {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/18-2.jpg'),
+            src: getAssetPath('/img/18-2.webp'),
             alt: 'Single Family Home Remodel overview'
           },
           {
-            src: getAssetPath('/img/18-3.jpg'),
+            src: getAssetPath('/img/18-3.webp'),
             alt: 'Single Family Home Remodel overview'
           }
         ],
@@ -30,11 +41,11 @@ export const project18 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/18-4.jpg'),
+            src: getAssetPath('/img/18-4.webp'),
             alt: 'Single Family Home Remodel overview'
           },
           {
-            src: getAssetPath('/img/18-5.jpg'),
+            src: getAssetPath('/img/18-5.webp'),
             alt: 'Single Family Home Remodel overview'
           },
         ],
@@ -44,7 +55,7 @@ export const project18 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/18-7.jpg'),
+            src: getAssetPath('/img/18-7.webp'),
             alt: 'Commercial office spaces',
           },
         ]
@@ -53,11 +64,11 @@ export const project18 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/18-8.jpg'),
+            src: getAssetPath('/img/18-8.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/18-9.jpg'),
+            src: getAssetPath('/img/18-9.webp'),
             alt: 'Commercial office spaces',
           },
         ]
@@ -66,11 +77,11 @@ export const project18 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/18-10.jpg'),
+            src: getAssetPath('/img/18-10.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/18-11.jpg'),
+            src: getAssetPath('/img/18-11.webp'),
             alt: 'Commercial office spaces',
           },
         ]
@@ -79,11 +90,11 @@ export const project18 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/18-15.jpg'),
+            src: getAssetPath('/img/18-15.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/18-6.jpg'),
+            src: getAssetPath('/img/18-6.webp'),
             alt: 'Residential units',
           },
         ]
@@ -92,11 +103,11 @@ export const project18 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/18-12.jpg'),
+            src: getAssetPath('/img/18-12.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/18-14.jpg'),
+            src: getAssetPath('/img/18-14.webp'),
             alt: 'Residential units',
           },
         ]
@@ -105,7 +116,7 @@ export const project18 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/18-13.jpg'),
+            src: getAssetPath('/img/18-13.webp'),
             alt: 'Residential units',
           },
         ]

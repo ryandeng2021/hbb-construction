@@ -20,7 +20,7 @@ const AboutUs = () => {
         path="/aboutus"
         title="About Us"
         description="Learn about HBB Construction (Honey Badger Brothers) - our Bay Area team, in-house construction process, and commitment to residential building excellence."
-        image="/img/1-1.jpeg"
+        image="/img/1-1.webp"
       />
 
       <main className="content-wrapper overflow-hidden">

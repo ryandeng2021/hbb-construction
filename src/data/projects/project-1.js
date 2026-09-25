@@ -6,21 +6,21 @@ export const project1 = {
     slug: 'project-1',
     category: 'New Construction',
     status: 'completed',
-    image: getAssetPath('/img/1-1.jpeg'),
+    image: getAssetPath('/img/1-1.webp'),
     description: "A full teardown rebuild in Pleasanton delivers generous room-to-room flow and an unhurried, understated exterior that lets the site's scale speak for itself.",
     location: 'Pleasanton',
     year: '2024',
-    heroImage: getAssetPath('/img/1-1.jpeg'),
+    heroImage: getAssetPath('/img/1-1.webp'),
     content: [
       {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/1-2.png'),
+            src: getAssetPath('/img/1-2.webp'),
             alt: 'Building exterior view'
           },
           {
-            src: getAssetPath('/img/1-3.jpeg'),
+            src: getAssetPath('/img/1-3.webp'),
             alt: 'Construction site overview'
           }
         ],
@@ -30,7 +30,7 @@ export const project1 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/1-4.jpeg'),
+            src: getAssetPath('/img/1-4.webp'),
             alt: 'Interior construction details'
           }
         ],
@@ -45,7 +45,7 @@ export const project1 = {
             description: "Broad window openings along the front elevation pull daylight toward the entry without disrupting the facade's quiet symmetry."
           },
           {
-            src: getAssetPath('/img/1-6.jpeg'),
+            src: getAssetPath('/img/1-6.webp'),
             alt: 'Structural framework',
             description: "The living room's open framing keeps sightlines long, giving the family space an easy, uncluttered sense of scale."
           }
@@ -55,11 +55,11 @@ export const project1 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/1-7.jpg'),
+            src: getAssetPath('/img/1-7.webp'),
             alt: 'Building facade',
           },
           {
-            src: getAssetPath('/img/1-8.jpeg'),
+            src: getAssetPath('/img/1-8.webp'),
             alt: 'Structural framework',
           }
         ]
@@ -68,7 +68,7 @@ export const project1 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/1-9.jpeg'),
+            src: getAssetPath('/img/1-9.webp'),
             alt: 'Interior construction details'
           }
         ],

@@ -6,17 +6,17 @@ export const project5 = {
     slug: 'project-5',
     category: 'Residential Remodel & Addition',
     status: 'completed',
-    image: getAssetPath('/img/5-1.jpeg'),
+    image: getAssetPath('/img/5-1.webp'),
     description: 'A luxury remodel in San Jose centers on a sculpted fireplace and a skylit kitchen, pairing dramatic architectural moments with warm, livable detail.',
     location: 'San Jose',
     year: '2023',
-    heroImage: getAssetPath('/img/5-1.jpeg'),
+    heroImage: getAssetPath('/img/5-1.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/5-2.jpeg'),
+            src: getAssetPath('/img/5-2.webp'),
             alt: 'House exterior'
           }
         ],
@@ -26,12 +26,12 @@ export const project5 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/5-3.png'),
+            src: getAssetPath('/img/5-3.webp'),
             alt: 'House interior',
             description: 'Ceilings vault upward through this space, drawing the eye up and making the room feel taller than its footprint suggests.'
           },
           {
-            src: getAssetPath('/img/5-4.png'),
+            src: getAssetPath('/img/5-4.webp'),
             alt: 'Panoramic city views',
             description: 'A wide skylight floods the kitchen with overhead daylight, washing the counters and cabinetry in even, shadow-free light.'
           }
@@ -41,7 +41,7 @@ export const project5 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/5-5.jpeg'),
+            src: getAssetPath('/img/5-5.webp'),
             alt: 'Building lobby and concierge'
           }
         ],

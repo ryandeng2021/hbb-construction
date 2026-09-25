@@ -6,17 +6,17 @@ export const project3 = {
     slug: 'project-3',
     category: 'House Remodel & Addition',
     status: 'completed',
-    image: getAssetPath('/img/3-1.jpeg'),
+    image: getAssetPath('/img/3-1.webp'),
     description: 'A Belmont remodel and addition keeps its expanded footprint quiet and cohesive, favoring restrained detailing over any single showpiece room.',
     location: 'Belmont',
     year: '2023',
-    heroImage: getAssetPath('/img/3-1.jpeg'),
+    heroImage: getAssetPath('/img/3-1.webp'),
     content: [
       {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/3-4.jpeg'),
+            src: getAssetPath('/img/3-4.webp'),
             alt: 'Warehouse exterior overview'
           }
         ],
@@ -26,12 +26,12 @@ export const project3 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/3-2.jpeg'),
+            src: getAssetPath('/img/3-2.webp'),
             alt: 'Interior storage area',
             description: "The kitchen's tall upper cabinetry stretches storage toward the ceiling while keeping the counters below open and workable."
           },
           {
-            src: getAssetPath('/img/3-3.jpg'),
+            src: getAssetPath('/img/3-3.webp'),
             alt: 'Loading dock facilities',
             description: 'Just beyond the range, the dining area opens directly off the kitchen, turning meal prep and gathering into one shared moment.'
           }

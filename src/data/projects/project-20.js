@@ -13,6 +13,17 @@ export const project20 = {
     heroImage: getAssetPath('/img/20-1.webp'),
     content: [
       {
+        layout: 'one',
+        images: [
+          {
+            src: getAssetPath('/video/20-v.mp4'),
+            alt: 'Project walkthrough',
+            isVideo: true
+          }
+        ],
+        description: 'A short walkthrough of the finished home.'
+      },
+      {
         layout: 'two',
         images: [
           { src: getAssetPath('/img/20-4.webp'), alt: 'Single Family Home Remodel overview' },
@@ -204,6 +215,6 @@ export const project20 = {
           { src: getAssetPath('/img/20-56.webp'), alt: 'Street-facing elevation with oak entry doors and copper rain chains' },
           { src: getAssetPath('/img/20-3.webp'), alt: 'Rear yard with ipe deck, outdoor kitchen and lawn' }
         ]
-      }
+      },
     ]
   };

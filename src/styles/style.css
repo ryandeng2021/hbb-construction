@@ -362,6 +362,25 @@ h2 span {
   opacity: 1;
 }
 
+/* "Ongoing" flag on in-progress project cards */
+.project-status-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  background: rgba(20, 20, 20, 0.85);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
 /* Nav pills styling for project filters */
 .nav-pills-bg .nav-link {
   color: #727272;
@@ -1520,4 +1539,149 @@ h2 span {
 .zoomable-image:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------
+   Schedule-a-tour call to action + modal (ongoing project pages)
+   --------------------------------------------------------------- */
+.tour-cta {
+  margin-top: 3rem;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  background: #f7f6f4;
+  border: 1px solid #e8e5e0;
+  text-align: center;
+}
+
+.tour-cta h2 {
+  margin-bottom: 0.75rem;
+}
+
+.tour-cta p {
+  max-width: 34rem;
+  margin: 0 auto 1.5rem;
+  color: #6b7280;
+}
+
+.tour-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  animation: tour-fade-in 0.2s ease;
+}
+
+@keyframes tour-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.tour-modal {
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
+  margin: auto;
+  padding: 2.25rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.tour-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #6b7280;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tour-modal-close:hover {
+  background: #f1f1f1;
+  color: #111;
+}
+
+.tour-field {
+  margin-bottom: 1rem;
+}
+
+.tour-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tour-required {
+  color: #c0392b;
+}
+
+.tour-field input,
+.tour-field textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #d8d5d0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #111;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tour-field input:focus,
+.tour-field textarea:focus {
+  outline: none;
+  border-color: #9a8f7d;
+  box-shadow: 0 0 0 3px rgba(154, 143, 125, 0.18);
+}
+
+.tour-field textarea {
+  resize: vertical;
+}
+
+.tour-error {
+  margin: 0.5rem 0 0;
+  color: #c0392b;
+  font-size: 0.875rem;
+}
+
+.tour-privacy {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.tour-modal-done {
+  padding: 1.5rem 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.tour-modal-done .uil-check-circle {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
+  color: #2e7d52;
+}
+
+@media (max-width: 575.98px) {
+  .tour-cta { padding: 2rem 1.25rem; }
+  .tour-modal { padding: 1.75rem 1.25rem; }
 }

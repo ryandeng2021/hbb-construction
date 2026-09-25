@@ -13,6 +13,17 @@ export const project23 = {
     heroImage: getAssetPath('/img/23-1.webp'),
     content: [
       {
+        layout: 'one',
+        images: [
+          {
+            src: getAssetPath('/video/23-v.mp4'),
+            alt: 'Project walkthrough',
+            isVideo: true
+          }
+        ],
+        description: 'A short walkthrough of the finished home.'
+      },
+      {
         layout: 'two',
         images: [
           { src: getAssetPath('/img/23-2.webp'), alt: 'Single Family Home Remodel overview' },

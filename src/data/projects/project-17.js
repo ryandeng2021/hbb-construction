@@ -6,21 +6,32 @@ export const project17 = {
     slug: 'project-17',
     category: 'House Addition & Remodel',
     status: 'completed',
-    image: getAssetPath('/img/17-1.jpg'),
+    image: getAssetPath('/img/17-1.webp'),
     description: 'A San Jose addition and remodel spanning kitchen, living room, and bedrooms, where crisp white cabinetry and warm wood tones tie every new space together.',
     location: 'San Jose',
     year: '2026',
-    heroImage: getAssetPath('/img/17-1.jpg'),
+    heroImage: getAssetPath('/img/17-1.webp'),
     content: [
+      {
+        layout: 'one',
+        images: [
+          {
+            src: getAssetPath('/video/17-v.mp4'),
+            alt: 'Project walkthrough',
+            isVideo: true
+          }
+        ],
+        description: 'A short walkthrough of the finished home.'
+      },
       {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/17-2.jpg'),
+            src: getAssetPath('/img/17-2.webp'),
             alt: 'Single Family Home Remodel overview'
           },
           {
-            src: getAssetPath('/img/17-3.jpg'),
+            src: getAssetPath('/img/17-3.webp'),
             alt: 'Single Family Home Remodel overview'
           }
         ],
@@ -30,11 +41,11 @@ export const project17 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/17-4.jpg'),
+            src: getAssetPath('/img/17-4.webp'),
             alt: 'Single Family Home Remodel overview'
           },
           {
-            src: getAssetPath('/img/17-5.jpg'),
+            src: getAssetPath('/img/17-5.webp'),
             alt: 'Single Family Home Remodel overview'
           },
         ],
@@ -128,11 +139,11 @@ export const project17 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/17-6.jpg'),
+            src: getAssetPath('/img/17-6.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/17-7.jpg'),
+            src: getAssetPath('/img/17-7.webp'),
             alt: 'Commercial office spaces',
           },
         ]
@@ -141,11 +152,11 @@ export const project17 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/17-9.jpg'),
+            src: getAssetPath('/img/17-9.webp'),
             alt: 'Commercial office spaces',
           },
           {
-            src: getAssetPath('/img/17-10.jpg'),
+            src: getAssetPath('/img/17-10.webp'),
             alt: 'Residential units',
           },
         ]
@@ -154,7 +165,7 @@ export const project17 = {
         layout: 'one',
         images: [
           {
-            src: getAssetPath('/img/17-11.jpg'),
+            src: getAssetPath('/img/17-11.webp'),
             alt: 'Commercial office spaces',
           },
         ]
@@ -163,11 +174,11 @@ export const project17 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/17-15.jpg'),
+            src: getAssetPath('/img/17-15.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/17-16.jpg'),
+            src: getAssetPath('/img/17-16.webp'),
             alt: 'Commercial office spaces',
           },
         ]
@@ -176,11 +187,11 @@ export const project17 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/17-12.jpg'),
+            src: getAssetPath('/img/17-12.webp'),
             alt: 'Residential units',
           },
           {
-            src: getAssetPath('/img/17-13.jpg'),
+            src: getAssetPath('/img/17-13.webp'),
             alt: 'Residential units',
           },
         ]
@@ -189,7 +200,7 @@ export const project17 = {
         layout: 'two',
         images: [
           {
-            src: getAssetPath('/img/17-14.jpg'),
+            src: getAssetPath('/img/17-14.webp'),
             alt: 'Residential units',
           },
             {

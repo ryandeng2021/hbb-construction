@@ -7,13 +7,13 @@ export const coreAdvantages = {
       id: 1,
       heading: 'Expert Team\nIn-House Construction',
       description: 'We handle all foundation and framing work in-house, ensuring full control over quality and schedule.',
-      image: getAssetPath('/img/14-2.jpg')
+      image: getAssetPath('/img/14-2.webp')
     },
     {
       id: 2,
       heading: 'End-to-End Service\nSeamless Delivery',
       description: 'From survey and design to construction, our team manages every step efficiently and smoothly.',
-      image: getAssetPath('/img/14-3.jpeg')
+      image: getAssetPath('/img/14-3.webp')
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ export const coreAdvantages = {
       id: 4,
       heading: 'Experienced & Reliable',
       description: 'Years of diverse project experience ensure smooth execution and design realization.',
-      image: getAssetPath('/img/14-8.jpg')
+      image: getAssetPath('/img/14-8.webp')
     }
   ]
 };

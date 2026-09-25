@@ -15,7 +15,7 @@ export const DEFAULT_TITLE = 'HBB Construction | Residential Builders in the Bay
 export const DEFAULT_DESCRIPTION =
   'HBB Construction is a Bay Area residential construction company specializing in custom homes, remodels, additions, and ADUs. Built with integrity and precision.';
 
-export const DEFAULT_OG_IMAGE = '/img/1-1.jpeg';
+export const DEFAULT_OG_IMAGE = '/img/1-1.webp';
 
 export const BUSINESS = {
   name: 'HBB Construction',
@@ -49,7 +49,7 @@ export const absoluteUrl = (path = '/') => {
 
 /**
  * Absolute URL for a public asset (OG images, etc.).
- * @param {string} path - Asset path like '/img/1-1.jpeg'
+ * @param {string} path - Asset path like '/img/1-1.webp'
  */
 export const absoluteAssetUrl = (path) => {
   if (!path) return absoluteUrl('/');

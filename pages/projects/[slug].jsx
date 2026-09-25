@@ -1,16 +1,22 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Image from 'next/image';
 import NextLink from 'components/NextLink';
 import PageProgress from 'components/PageProgress';
 import ProjectContent from 'components/ProjectContent';
 import SEO from 'components/SEO';
+import TourBookingModal from 'components/TourBookingModal';
 import { projects } from '../../src/data';
 import { absoluteUrl, absoluteAssetUrl, truncateMeta } from '../../src/data/site';
+import { tourBooking } from '../../src/data/tourBooking';
 
 /**
  * Individual project detail page
  */
 const ProjectDetail = ({ project }) => {
+  const [isTourFormOpen, setIsTourFormOpen] = useState(false);
+
+  // Only sites still under construction can be walked
+  const offersTours = project?.status === 'ongoing';
   // If project not found
   if (!project) {
     return (
@@ -109,6 +115,26 @@ const ProjectDetail = ({ project }) => {
               sections={project.content || []}
             />
 
+            {/* Tour request - ongoing builds only */}
+            {offersTours && (
+              <div className="row">
+                <div className="col-lg-9 mx-auto">
+                  <div className="tour-cta">
+                    <h2 className="oswald no-icon justify-content-center">{tourBooking.heading}</h2>
+                    <p className="roboto fs-16">{tourBooking.body}</p>
+                    <button
+                      type="button"
+                      className="btn btn-primary btn-lg"
+                      onClick={() => setIsTourFormOpen(true)}
+                    >
+                      <i className="uil uil-calendar-alt me-2" />
+                      {tourBooking.buttonLabel}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Project Overview Description (if no content sections) */}
             {(!project.content || project.content.length === 0) && (
               <div className="row mb-8">
@@ -163,6 +189,13 @@ const ProjectDetail = ({ project }) => {
           </div>
         </section>
       </main>
+
+      <TourBookingModal
+        isOpen={isTourFormOpen}
+        onClose={() => setIsTourFormOpen(false)}
+        projectTitle={project.title}
+        projectLocation={project.location}
+      />
     </Fragment>
   );
 };
