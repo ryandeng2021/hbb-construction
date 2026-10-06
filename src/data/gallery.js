@@ -31,7 +31,8 @@ const PREFIX_TO_PROJECT_SLUG = {
   24: 'project-24',
   25: 'project-25',
   26: 'project-26',
-  27: 'project-27'
+  27: 'project-27',
+  31: 'project-31'
 };
 
 const projectsBySlug = new Map(projects.map((project) => [project.slug, project]));
@@ -83,6 +84,8 @@ export const galleryCategories = [
     id: 'kitchen',
     label: 'Kitchen',
     images: buildImages('Kitchen', [
+      '31-1.webp',
+      '31-2.webp',
       '27-24.webp',
       '27-25.webp',
       '27-26.webp',
@@ -193,6 +196,11 @@ export const galleryCategories = [
     id: 'bathroom',
     label: 'Bathroom',
     images: buildImages('Bathroom', [
+      '31-8.webp',
+      '31-9.webp',
+      '31-10.webp',
+      '31-6.webp',
+      '31-7.webp',
       '24-39.webp',
       '27-30.webp',
       '27-13.webp',
@@ -289,6 +297,10 @@ export const galleryCategories = [
     id: 'bedroom',
     label: 'Bedroom',
     images: buildImages('Bedroom', [
+      '31-18.webp',
+      '31-19.webp',
+      '31-20.webp',
+      '31-21.webp',
       '24-14.webp',
       '24-15.webp',
       '24-16.webp',
@@ -338,6 +350,8 @@ export const galleryCategories = [
     id: 'closet',
     label: 'Closet',
     images: buildImages('Closet', [
+      '31-16.webp',
+      '31-17.webp',
       '26-8.webp',
       '24-42.webp',
       '24-43.webp',
@@ -367,6 +381,8 @@ export const galleryCategories = [
     id: 'livingroom',
     label: 'Living Room',
     images: buildImages('Living Room', [
+      '31-3.webp',
+      '31-12.webp',
       '17-17.webp',
       '27-23.webp',
       '27-28.webp',
@@ -441,6 +457,7 @@ export const galleryCategories = [
     id: 'stairs',
     label: 'Stairs',
     images: buildImages('Stairs', [
+      '31-4.webp',
       '17-9.webp',
       '27-5.webp',
       '27-12.webp',
