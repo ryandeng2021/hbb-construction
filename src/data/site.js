@@ -2,11 +2,11 @@
  * Site-wide SEO and indexing configuration.
  * Update SITE_URL if the production domain changes.
  */
-/** Production origin (no trailing slash). GitHub Pages project site. */
-export const SITE_URL = 'https://suzycheung1115-lang.github.io';
+/** Production origin (no trailing slash). Custom domain served by GitHub Pages. */
+export const SITE_URL = 'https://www.hbbconstruction.com';
 
 /** Path prefix in production (matches next.config.js repositoryName). */
-export const SITE_BASE_PATH = '/hbb-construction';
+export const SITE_BASE_PATH = '';
 
 export const SITE_NAME = 'HBB Construction';
 

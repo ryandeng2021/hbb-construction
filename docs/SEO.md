@@ -12,7 +12,7 @@
 
 Configured as:
 
-`https://suzycheung1115-lang.github.io/hbb-construction/`
+`https://www.hbbconstruction.com/`
 
 If the live domain changes, update:
 
@@ -23,11 +23,11 @@ If the live domain changes, update:
 ## After deploy — submit to Google
 
 1. Open [Google Search Console](https://search.google.com/search-console)
-2. Add property for `https://suzycheung1115-lang.github.io/hbb-construction/` (URL-prefix property)
+2. Add property for `https://www.hbbconstruction.com/` (URL-prefix property)
 3. Verify ownership (HTML meta tag, or Google Analytics, or DNS if you use a custom domain later)
 4. Under **Sitemaps**, submit:
 
-   `https://suzycheung1115-lang.github.io/hbb-construction/sitemap.xml`
+   `https://www.hbbconstruction.com/sitemap.xml`
 
 5. Use **URL Inspection** on the homepage and a few project pages → **Request indexing**
 

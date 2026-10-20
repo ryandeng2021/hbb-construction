@@ -9,8 +9,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://suzycheung1115-lang.github.io';
-const BASE_PATH = '/hbb-construction';
+const SITE_URL = 'https://www.hbbconstruction.com';
+const BASE_PATH = '';
 const today = new Date().toISOString().slice(0, 10);
 
 const root = path.join(__dirname, '..');

@@ -1,5 +1,5 @@
-# https://suzycheung1115-lang.github.io/hbb-construction/
+# https://www.hbbconstruction.com/
 User-agent: *
 Allow: /
 
-Sitemap: https://suzycheung1115-lang.github.io/hbb-construction/sitemap.xml
+Sitemap: https://www.hbbconstruction.com/sitemap.xml
