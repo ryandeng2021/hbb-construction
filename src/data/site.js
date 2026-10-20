@@ -82,7 +82,7 @@ export const getLocalBusinessJsonLd = () => ({
   alternateName: BUSINESS.legalName,
   description: BUSINESS.description,
   url: absoluteUrl('/'),
-  logo: absoluteAssetUrl('/img/logo.svg'),
+  logo: absoluteAssetUrl('/img/logo.png'),
   image: absoluteAssetUrl(DEFAULT_OG_IMAGE),
   email: BUSINESS.email,
   telephone: BUSINESS.phone,

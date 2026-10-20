@@ -20,7 +20,6 @@ export default class SandBox extends Document {
           {/* Favicon — Chrome tab + bookmarks */}
           <link rel="icon" href={`${BASE_PATH}/favicon.ico`} sizes="32x32" />
           <link rel="icon" type="image/png" href={`${BASE_PATH}/img/favicon/favicon-96x96.png`} sizes="96x96" />
-          <link rel="icon" type="image/svg+xml" href={`${BASE_PATH}/img/favicon/favicon.svg`} />
           <link rel="apple-touch-icon" sizes="180x180" href={`${BASE_PATH}/img/favicon/apple-touch-icon.png`} />
           <link rel="manifest" href={`${BASE_PATH}/img/favicon/site.webmanifest`} />
           <meta name="theme-color" content="#111111" />

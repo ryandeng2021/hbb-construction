@@ -5,7 +5,7 @@ export const backgroundImages = {
   // footer: getAssetPath('/img/bg-sp.webp'),
   imgBg: getAssetPath('/img/img-bg.webp'),
   // whyChoose: getAssetPath('/img/bg-sp.webp'), 
-  icon: getAssetPath('/img/logo.svg')
+  icon: getAssetPath('/img/logo.png')
 };
 
 // Hero carousel images

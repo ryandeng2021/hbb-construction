@@ -36,7 +36,7 @@ export const getBasePath = () => {
  * Prefixes a path with the basePath if needed
  * Use this for CSS variables, inline styles, or any paths that Next.js doesn't automatically prefix
  * 
- * @param {string} path - The asset path (e.g., '/img/logo.svg')
+ * @param {string} path - The asset path (e.g., '/img/logo.png')
  * @returns {string} - The path with basePath prefix if needed
  */
 export const getAssetPath = (path) => {

@@ -46,8 +46,8 @@ const Navbar = ({
             <PrefixedImage
               unoptimized={true}
               alt="Logo | HBB Construction"
-              src="/img/logo.svg"
-              width={190}
+              src="/img/logo.png"
+              width={91}
               height={70}
             />
           }
@@ -67,8 +67,8 @@ const Navbar = ({
             title={
               <PrefixedImage
                 alt="Logo | HBB Construction"
-                src="/img/logo.svg"
-                width={160}
+                src="/img/logo.png"
+                width={78}
                 height={60}
                 unoptimized={true}
                 data-bs-dismiss="offcanvas"

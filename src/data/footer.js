@@ -2,9 +2,9 @@ import { getAssetPath } from '../utils/path';
 
 export const footerData = {
   logo: {
-    src: getAssetPath('/img/logo.svg'),
+    src: getAssetPath('/img/logo.png'),
     alt: 'Logo | HBB Construction',
-    width: 200,
+    width: 104,
     height: 80
   },
   description: 'HBB Construction is a trusted residential construction company in Bay Area, delivering high-quality, innovative, and reliable home-building solutions.',
