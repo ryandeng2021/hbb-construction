@@ -1681,6 +1681,19 @@ h2 span {
   color: #2e7d52;
 }
 
+.tour-modal-done .uil-envelope-send {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
+  color: #b7791f;
+}
+
+.tour-handoff-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 @media (max-width: 575.98px) {
   .tour-cta { padding: 2rem 1.25rem; }
   .tour-modal { padding: 1.75rem 1.25rem; }

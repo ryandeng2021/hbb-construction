@@ -10,7 +10,7 @@
 //
 // Until a key is set the form still works, but falls back to opening the
 // visitor's own mail client with the details pre-filled.
-export const WEB3FORMS_ACCESS_KEY = '';
+export const WEB3FORMS_ACCESS_KEY = '83d2c86e-ee33-4700-9ce7-14d876efe165';
 
 // Where the mailto fallback sends to while no access key is configured.
 export const FALLBACK_EMAIL = 'ryand@hbbconstruction.com';
@@ -25,4 +25,10 @@ export const tourBooking = {
   modalIntro: 'Leave your details and we will get back to you within one business day to arrange a time.',
   successTitle: 'Request received',
   successBody: 'Thanks - we will be in touch within one business day to confirm a time.',
+  // Shown instead of the success message when the mailto fallback is used,
+  // because at that point nothing has actually reached us yet
+  handoffTitle: 'One more step - please press Send',
+  handoffBody:
+    'We opened your email app with your request filled in. It has not reached us until you press Send there.',
+  handoffNoApp: 'Email app did not open? Use one of these instead:',
 };

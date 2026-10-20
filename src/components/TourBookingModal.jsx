@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { WEB3FORMS_ACCESS_KEY, FALLBACK_EMAIL, tourBooking } from '../data/tourBooking';
+import { BUSINESS } from '../data/site';
 
 const FIELDS = [
   { name: 'name', label: 'Name', type: 'text', required: true, autoComplete: 'name' },
@@ -11,11 +12,16 @@ const FIELDS = [
 
 const EMPTY = { name: '', email: '', phone: '', preferred: '', message: '' };
 
+// '+1-650-996-0715' -> '650-996-0715' for display; the tel: link keeps the full number
+const PHONE_DISPLAY = BUSINESS.phone.replace(/^\+1-/, '');
+
 /**
  * Tour request form shown over an ongoing project page.
  *
  * Posts to Web3Forms when an access key is configured; otherwise it hands the
- * details to the visitor's mail client so the form is never a dead end.
+ * details to the visitor's mail client so the form is never a dead end. In that
+ * case the visitor still has to press Send themselves, so we show a "handoff"
+ * screen with other ways to reach us rather than claiming the request arrived.
  *
  * @param {Object} props
  * @param {boolean} props.isOpen
@@ -25,8 +31,9 @@ const EMPTY = { name: '', email: '', phone: '', preferred: '', message: '' };
  */
 const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) => {
   const [values, setValues] = useState(EMPTY);
-  const [state, setState] = useState('idle'); // idle | sending | sent | error
+  const [state, setState] = useState('idle'); // idle | sending | sent | handoff | error
   const [error, setError] = useState('');
+  const [copied, setCopied] = useState(false);
   const firstFieldRef = useRef(null);
 
   const subject = `Tour request - ${projectTitle}${projectLocation ? ` (${projectLocation})` : ''}`;
@@ -37,6 +44,7 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
       setValues(EMPTY);
       setState('idle');
       setError('');
+      setCopied(false);
       const id = setTimeout(() => firstFieldRef.current?.focus(), 50);
       return () => clearTimeout(id);
     }
@@ -57,20 +65,38 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
 
   const update = (name) => (e) => setValues((v) => ({ ...v, [name]: e.target.value }));
 
-  // No access key configured yet - hand off to the visitor's mail client instead
+  const body = [
+    `Name: ${values.name}`,
+    `Email: ${values.email}`,
+    values.phone && `Phone: ${values.phone}`,
+    values.preferred && `Preferred time: ${values.preferred}`,
+    '',
+    values.message,
+  ].filter(Boolean).join('\n');
+
+  const mailtoUrl =
+    `mailto:${FALLBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // For visitors who use Gmail in the browser and have no desktop mail app set up
+  const gmailUrl =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(FALLBACK_EMAIL)}` +
+    `&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // No access key configured yet - hand off to the visitor's mail client instead.
+  // Nothing has reached us at this point, so this must not show the success screen.
   const sendViaMailto = useCallback(() => {
-    const body = [
-      `Name: ${values.name}`,
-      `Email: ${values.email}`,
-      values.phone && `Phone: ${values.phone}`,
-      values.preferred && `Preferred time: ${values.preferred}`,
-      '',
-      values.message,
-    ].filter(Boolean).join('\n');
-    window.location.href =
-      `mailto:${FALLBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setState('sent');
-  }, [values, subject]);
+    window.location.href = mailtoUrl;
+    setState('handoff');
+  }, [mailtoUrl]);
+
+  const copyRequest = async () => {
+    try {
+      await navigator.clipboard.writeText(`To: ${FALLBACK_EMAIL}\nSubject: ${subject}\n\n${body}`);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -117,7 +143,31 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
           <i className="uil uil-times" />
         </button>
 
-        {state === 'sent' ? (
+        {state === 'handoff' ? (
+          <div className="tour-modal-done">
+            <i className="uil uil-envelope-send" />
+            <h3 className="oswald mb-2">{tourBooking.handoffTitle}</h3>
+            <p className="roboto text-muted mb-4">{tourBooking.handoffBody}</p>
+            <p className="roboto fs-14 mb-3">{tourBooking.handoffNoApp}</p>
+            <div className="tour-handoff-actions">
+              <a className="btn btn-primary" href={gmailUrl} target="_blank" rel="noopener noreferrer">
+                Send with Gmail
+              </a>
+              <a className="btn btn-outline-primary" href={mailtoUrl}>
+                Open email app again
+              </a>
+              <button type="button" className="btn btn-outline-primary" onClick={copyRequest}>
+                <i className="uil uil-copy me-1" />
+                {copied ? 'Copied' : 'Copy request text'}
+              </button>
+            </div>
+            <p className="roboto text-muted fs-14 mt-3 mb-3">
+              Or email <a href={mailtoUrl}>{FALLBACK_EMAIL}</a> or call{' '}
+              <a href={`tel:${BUSINESS.phone}`}>{PHONE_DISPLAY}</a>.
+            </p>
+            <button type="button" className="btn btn-link" onClick={onClose}>Close</button>
+          </div>
+        ) : state === 'sent' ? (
           <div className="tour-modal-done">
             <i className="uil uil-check-circle" />
             <h3 className="oswald mb-2">{tourBooking.successTitle}</h3>
@@ -162,7 +212,12 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
                 </div>
               ))}
 
-              {state === 'error' && <p className="tour-error">{error}</p>}
+              {state === 'error' && (
+                <p className="tour-error">
+                  {error} You can also email <a href={mailtoUrl}>{FALLBACK_EMAIL}</a> or call{' '}
+                  <a href={`tel:${BUSINESS.phone}`}>{PHONE_DISPLAY}</a>.
+                </p>
+              )}
 
               <button type="submit" className="btn btn-primary w-100 mt-2" disabled={state === 'sending'}>
                 {state === 'sending' ? 'Sending...' : 'Send request'}
