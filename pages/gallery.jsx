@@ -18,7 +18,7 @@ const GalleryPage = () => {
       />
 
       <main className="content-wrapper overflow-hidden projects-page">
-        <section className="wrapper">
+        <section className="wrapper" data-section="gallery">
           <div className="container py-12 py-md-14">
             <Gallery />
           </div>

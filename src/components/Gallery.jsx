@@ -3,6 +3,7 @@ import Image from 'next/image';
 import NextLink from './NextLink';
 import Lightbox from './Lightbox';
 import { galleryCategories } from '../data/gallery';
+import { track } from '../utils/analytics';
 
 /**
  * Gallery component - showcases project photos grouped by area (kitchen, bathroom, etc.)
@@ -87,7 +88,10 @@ const Gallery = () => {
               <button
                 type="button"
                 className="gallery-item-btn border-0 p-0 w-100"
-                onClick={() => setLightboxIndex(index)}
+                onClick={() => {
+                  track('gallery_image_open', { category: activeCategory, image: image.alt });
+                  setLightboxIndex(index);
+                }}
                 aria-label={`View ${image.alt} full size`}
               >
                 <div className="project-card gallery-card h-100">

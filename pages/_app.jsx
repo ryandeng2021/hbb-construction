@@ -5,6 +5,7 @@ import ThemeProvider from 'theme/ThemeProvider';
 import Layout from 'components/Layout';
 import { backgroundImages } from '../src/data';
 import { getAssetPath } from '../src/utils/path';
+import { initGlobalTracking, initSectionViews } from '../src/utils/analytics';
 import { DEFAULT_TITLE, DEFAULT_DESCRIPTION, SITE_NAME } from '../src/data/site';
 
 // Import global styles and third-party CSS
@@ -16,12 +17,18 @@ import 'plugins/scrollcue/scrollCue.css';
 import 'assets/scss/style.scss';
 
 function MyApp({ Component, pageProps }) {
-  const { pathname } = useRouter();
+  const { pathname, asPath } = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') import('bootstrap');
   }, []);
+
+  // Phone/email clicks and video plays -> GA4 events
+  useEffect(() => initGlobalTracking(), []);
+
+  // Which sections of each page actually get seen
+  useEffect(() => initSectionViews(), [asPath]);
 
   useEffect(() => {
     (async () => {

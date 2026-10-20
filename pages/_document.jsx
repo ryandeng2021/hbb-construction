@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { Fragment } from 'react';
+import { GA_MEASUREMENT_ID, analyticsEnabled } from '../src/utils/analytics';
 
 // BasePath for GitHub Pages - should match next.config.js
 // Set to '' for root domain deployment (e.g., www.hbbconstruction.com)
@@ -9,6 +11,21 @@ export default class SandBox extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* Google Analytics 4 — measurement ID in src/utils/analytics.js */}
+          {analyticsEnabled && (
+            <Fragment>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+                }}
+              />
+            </Fragment>
+          )}
+
           {/* Google Fonts — Cormorant Garamond */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

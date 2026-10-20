@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import NextLink from './NextLink';
 import { projects } from '../data';
+import { track } from '../utils/analytics';
 
 /**
  * Projects component - displays a portfolio of projects with filtering tabs
@@ -58,7 +59,10 @@ const Projects = () => {
             <li className="nav-item" key={filter.key}>
               <button
                 className={`nav-link ${activeFilter === filter.key ? 'active' : ''}`}
-                onClick={() => setActiveFilter(filter.key)}
+                onClick={() => {
+                  track('project_filter', { filter: filter.key });
+                  setActiveFilter(filter.key);
+                }}
                 type="button"
               >
                 {filter.label}

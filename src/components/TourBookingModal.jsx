@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { WEB3FORMS_ACCESS_KEY, FALLBACK_EMAIL, tourBooking } from '../data/tourBooking';
 import { BUSINESS } from '../data/site';
+import { track } from '../utils/analytics';
 
 const FIELDS = [
   { name: 'name', label: 'Name', type: 'text', required: true, autoComplete: 'name' },
@@ -29,7 +30,7 @@ const PHONE_DISPLAY = BUSINESS.phone.replace(/^\+1-/, '');
  * @param {string} props.projectTitle - Named in the email subject so enquiries are identifiable
  * @param {string} [props.projectLocation]
  */
-const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) => {
+const TourBookingModal = ({ isOpen, onClose, projectTitle, projectSlug, projectLocation }) => {
   const [values, setValues] = useState(EMPTY);
   const [state, setState] = useState('idle'); // idle | sending | sent | handoff | error
   const [error, setError] = useState('');
@@ -85,9 +86,10 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
   // No access key configured yet - hand off to the visitor's mail client instead.
   // Nothing has reached us at this point, so this must not show the success screen.
   const sendViaMailto = useCallback(() => {
+    track('tour_request_mailto', { project: projectSlug });
     window.location.href = mailtoUrl;
     setState('handoff');
-  }, [mailtoUrl]);
+  }, [mailtoUrl, projectSlug]);
 
   const copyRequest = async () => {
     try {
@@ -123,8 +125,10 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
       });
       const result = await response.json();
       if (!response.ok || !result.success) throw new Error(result.message || 'Submission failed');
+      track('generate_lead', { lead_type: 'tour_request', project: projectSlug });
       setState('sent');
     } catch (err) {
+      track('tour_request_error', { project: projectSlug });
       setState('error');
       setError(err.message || 'Something went wrong. Please try again, or email us directly.');
     }
@@ -138,7 +142,7 @@ const TourBookingModal = ({ isOpen, onClose, projectTitle, projectLocation }) =>
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
       role="presentation"
     >
-      <div className="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tour-modal-title">
+      <div className="tour-modal" data-section="tour_modal" role="dialog" aria-modal="true" aria-labelledby="tour-modal-title">
         <button type="button" className="tour-modal-close" onClick={onClose} aria-label="Close">
           <i className="uil uil-times" />
         </button>

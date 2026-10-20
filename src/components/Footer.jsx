@@ -27,6 +27,7 @@ const Footer = () => {
   return (
     <footer 
       id="contact" 
+      data-section="footer"
       className="border-top footer-bg overflow-hidden"
       style={{
         backgroundImage: backgroundImages.footer

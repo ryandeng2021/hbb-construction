@@ -28,13 +28,13 @@ const Home = () => {
       <main className="content-wrapper overflow-hidden">
         <Hero />
 
-        <section id="about" className="wrapper">
+        <section id="about" className="wrapper" data-section="about">
           <div className="container py-md-10">
             <About {...aboutSection} />
           </div>
         </section>
 
-        <section id="projects" className="wrapper">
+        <section id="projects" className="wrapper" data-section="projects">
           <div className="container py-md-10">
             <Projects />
           </div>
@@ -42,6 +42,7 @@ const Home = () => {
 
         <section
           className="wrapper badges-wrapper"
+          data-section="badges"
           style={{
             backgroundImage: `url(${badgesData.backgroundImage})`
           }}
@@ -51,13 +52,13 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper whychoose-bg">
+        <section className="wrapper whychoose-bg" data-section="why_choose">
           <div className="container py-md-10">
             <WhyChoose />
           </div>
         </section>
 
-        <section id="process" className="wrapper">
+        <section id="process" className="wrapper" data-section="process">
           <div className="container py-md-10">
             <Process />
           </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import Lightbox from './Lightbox';
+import { track } from '../utils/analytics';
 
 /**
  * Flexible Project Content Component
@@ -84,7 +85,13 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
       const targetIndex = lightboxKeys[key];
       if (targetIndex === undefined) return {};
 
-      const open = () => setLightboxIndex(targetIndex);
+      const open = () => {
+        track('project_photo_open', {
+          photo_index: targetIndex + 1,
+          photo_file: lightboxImages[targetIndex].src.split('/').pop(),
+        });
+        setLightboxIndex(targetIndex);
+      };
       return {
         onClick: open,
         onKeyDown: (event) => {
@@ -98,7 +105,7 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
         title: 'Click to view full screen'
       };
     },
-    [lightboxKeys]
+    [lightboxKeys, lightboxImages]
   );
 
   // Calculate dimensions for images in a row

@@ -36,7 +36,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section>
+    <section data-section="hero">
       {/* Hero carousel container */}
       <div className="swiper-container hero" style={{ height: '90vh', position: 'relative', overflow: 'hidden' }}>
         {/* Carousel slides wrapper for seamless looping */}
@@ -60,6 +60,7 @@ const Hero = () => {
               <div
                 key={`${slide.id}-${index}`}
                 className="hero-slide"
+                data-hero-slide={heroCarousel[displayIndex].title}
                 style={{
                   minWidth: '100%',
                   width: '100%',
@@ -139,6 +140,7 @@ const Hero = () => {
               <button
                 key={slide.id}
                 type="button"
+                data-hero-slide={slide.title}
                 className={`carousel-indicator ${isActive ? 'active' : ''}`}
                 onClick={() => {
                   setIsTransitioning(true);

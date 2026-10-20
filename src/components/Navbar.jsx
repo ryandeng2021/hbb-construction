@@ -133,7 +133,7 @@ const Navbar = ({
               <div className="d-flex mb-5">
                 <i className="nav-icon uil uil-phone-volume fs-32 text-main bg-white rounded-circle me-2" />
                 <p className="fs-18 text-center m-0 d-flex flex-column">
-                  <a href="tel:+919876543210">+1 (650) 996-0715</a>
+                  <a href="tel:+16509960715">+1 (650) 996-0715</a>
                 </p>
               </div>
               <SocialLinks />
@@ -168,7 +168,7 @@ const Navbar = ({
       )}
 
       {/* Main navbar element with sticky or normal className */}
-      <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
+      <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName} data-section="header">
         {fancy ? (
           // Fancy container with background and layout tweaks
           <div className="container">

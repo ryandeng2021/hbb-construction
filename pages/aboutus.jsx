@@ -24,7 +24,7 @@ const AboutUs = () => {
       />
 
       <main className="content-wrapper overflow-hidden">
-        <section id="about" className="wrapper">
+        <section id="about" className="wrapper" data-section="about">
           <div className="container py-12 py-md-14">
             <div className="mb-6">
               <NextLink
@@ -42,19 +42,19 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="wrapper">
+        <section className="wrapper" data-section="core_advantages">
           <div className="container py-12 py-md-14">
             <CoreAdvantages />
           </div>
         </section>
 
-        <section id="construction-timeline" className="wrapper">
+        <section id="construction-timeline" className="wrapper" data-section="timeline">
           <div className="container py-md-10">
             <ConstructionTimeline />
           </div>
         </section>
 
-        <section id="team" className="wrapper">
+        <section id="team" className="wrapper" data-section="team">
           <div className="container py-12 py-md-14">
             <Team />
           </div>

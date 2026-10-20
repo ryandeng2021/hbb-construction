@@ -8,6 +8,7 @@ import TourBookingModal from 'components/TourBookingModal';
 import { projects } from '../../src/data';
 import { absoluteUrl, absoluteAssetUrl, truncateMeta } from '../../src/data/site';
 import { tourBooking } from '../../src/data/tourBooking';
+import { track } from '../../src/utils/analytics';
 
 /**
  * Individual project detail page
@@ -72,7 +73,7 @@ const ProjectDetail = ({ project }) => {
       />
 
       <main className="content-wrapper overflow-hidden">
-        <section className="wrapper">
+        <section className="wrapper" data-section="project_detail" data-project={project.slug}>
           <div className="container py-12 py-md-14 container-project-detail">
             {/* Back Button */}
             <div className="mb-6">
@@ -119,13 +120,16 @@ const ProjectDetail = ({ project }) => {
             {offersTours && (
               <div className="row">
                 <div className="col-lg-9 mx-auto">
-                  <div className="tour-cta">
+                  <div className="tour-cta" data-section="tour_cta">
                     <h2 className="oswald no-icon justify-content-center">{tourBooking.heading}</h2>
                     <p className="roboto fs-16">{tourBooking.body}</p>
                     <button
                       type="button"
                       className="btn btn-primary btn-lg"
-                      onClick={() => setIsTourFormOpen(true)}
+                      onClick={() => {
+                        track('tour_form_open', { project: project.slug });
+                        setIsTourFormOpen(true);
+                      }}
                     >
                       <i className="uil uil-calendar-alt me-2" />
                       {tourBooking.buttonLabel}
@@ -194,6 +198,7 @@ const ProjectDetail = ({ project }) => {
         isOpen={isTourFormOpen}
         onClose={() => setIsTourFormOpen(false)}
         projectTitle={project.title}
+        projectSlug={project.slug}
         projectLocation={project.location}
       />
     </Fragment>
