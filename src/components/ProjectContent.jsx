@@ -233,23 +233,40 @@ const ProjectContent = ({ heroImage, heroAlt, sections = [] }) => {
       if ((isTwoImage || isThreeImage) && imagesArray.length > 0) {
         const containerKey = `section-${sectionIndex}`;
         
+        // Measuring a row downloads every image in it, so hold off until the row is
+        // about to scroll into view. Measuring every row on page load pulled down the
+        // whole project at once and defeated the images' lazy loading.
+        const startMeasuring = (containerElement) => {
+          // Use ResizeObserver to recalculate on container resize
+          const resizeObserver = new ResizeObserver(() => {
+            calculateImageDimensions(sectionIndex, imagesArray, containerElement);
+          });
+
+          resizeObserver.observe(containerElement);
+          observers.push(resizeObserver);
+
+          // Initial calculation with a small delay to ensure images are rendered
+          const timeoutId = setTimeout(() => {
+            calculateImageDimensions(sectionIndex, imagesArray, containerElement);
+          }, 100);
+          timeouts.push(timeoutId);
+        };
+
         // Wait for container to be available
         const checkContainer = () => {
           const containerElement = containerRefs.current[containerKey];
           if (containerElement) {
-            // Use ResizeObserver to recalculate on container resize
-            const resizeObserver = new ResizeObserver(() => {
-              calculateImageDimensions(sectionIndex, imagesArray, containerElement);
-            });
-            
-            resizeObserver.observe(containerElement);
-            observers.push(resizeObserver);
-            
-            // Initial calculation with a small delay to ensure images are rendered
-            const timeoutId = setTimeout(() => {
-              calculateImageDimensions(sectionIndex, imagesArray, containerElement);
-            }, 100);
-            timeouts.push(timeoutId);
+            const visibilityObserver = new IntersectionObserver(
+              (entries) => {
+                if (!entries.some((entry) => entry.isIntersecting)) return;
+                visibilityObserver.disconnect();
+                startMeasuring(containerElement);
+              },
+              { rootMargin: '600px 0px' }
+            );
+
+            visibilityObserver.observe(containerElement);
+            observers.push(visibilityObserver);
           } else {
             // Retry if container not ready
             const retryTimeout = setTimeout(checkContainer, 50);
