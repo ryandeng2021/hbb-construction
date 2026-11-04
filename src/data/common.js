@@ -8,6 +8,23 @@ export const backgroundImages = {
   icon: getAssetPath('/img/logo.png')
 };
 
+// Small promo card that pops up shortly after the home page opens. Its clip is the
+// portrait Kling render (1080x1504, bottom watermark strip cropped off), shown small
+// so it stays sharp - full-screen it looked soft.
+export const promoPopup = {
+  video: getAssetPath('/video/hero-intro-mobile.mp4'),
+  poster: getAssetPath('/video/hero-intro-mobile-poster.webp'),
+  eyebrow: 'Honey Badger Brothers Construction',
+  title: 'Planning to build or remodel?',
+  body: 'Get a free quote for your remodel, addition, ADU or new home - or come tour one of our builds in progress.',
+  quoteLabel: 'Get a Free Quote',
+  tourLabel: 'Book a Tour',
+  // Text on the small button left in the corner after the card is closed
+  minimizedLabel: 'Free Quote',
+  // Wait this long after the page opens before showing the card
+  delayMs: 1500
+};
+
 // Hero carousel images
 // Note: getAssetPath will automatically prefix with basePath in production
 export const heroCarousel = [
@@ -78,7 +95,7 @@ export const heroCarousel = [
     subtitle: 'Homes crafted with care and attention to detail.'
   },
   {
-    id: 6,
+    id: 7,
     image: getAssetPath('/img/7-1.webp'),
     title: 'Transforming Residential Construction in California',
     subtitle: 'Precision-built spaces for modern living.'

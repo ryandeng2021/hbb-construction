@@ -1698,3 +1698,184 @@ h2 span {
   .tour-cta { padding: 2rem 1.25rem; }
   .tour-modal { padding: 1.75rem 1.25rem; }
 }
+
+/* ---------- Home page promo card (pops up shortly after the page opens) ---------- */
+.promo-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.45);
+  overflow-y: auto;
+  animation: tour-fade-in 0.3s ease;
+}
+
+.promo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  width: 100%;
+  max-width: 620px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  animation: promo-pop-in 0.35s ease;
+}
+
+@keyframes promo-pop-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Stretches to the card's full height; the clip is cropped to fit, never stretched */
+.promo-media {
+  position: relative;
+  min-height: 340px;
+  background: #1f1f1f;
+}
+
+.promo-media video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+
+.promo-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.75rem;
+}
+
+.promo-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a8f7d;
+}
+
+.promo-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.promo-text {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.promo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.promo-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 1;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #374151;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.promo-close:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Minimized: a small button in the bottom-right corner, above the scroll-to-top button */
+.promo-mini {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 4.75rem;
+  z-index: 1015;
+  display: flex;
+  align-items: center;
+  animation: promo-pop-in 0.3s ease;
+}
+
+.promo-mini-open {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 1.1rem 0.35rem 0.35rem;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.promo-mini-open:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.22);
+}
+
+.promo-mini-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #1f1f1f center 62% / cover no-repeat;
+}
+
+.promo-mini-close {
+  position: absolute;
+  top: -0.45rem;
+  right: -0.45rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: #374151;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+  .promo-card {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+  .promo-media {
+    min-height: 0;
+    height: 210px;
+  }
+  .promo-body { padding: 1.5rem 1.25rem 1.4rem; }
+  .promo-title { font-size: 1.4rem; }
+  .promo-text { margin-bottom: 1.1rem; }
+  .promo-mini { right: 1rem; bottom: 4.5rem; }
+}

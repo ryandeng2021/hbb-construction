@@ -9,6 +9,7 @@ import WhyChoose from 'components/WhyChoose';
 import Projects from 'components/Projects';
 import Process from 'components/Process';
 import Badges from 'components/Badges';
+import PromoPopup from 'components/PromoPopup';
 
 // Data
 import { aboutSection, badgesData } from '../src/data';
@@ -27,6 +28,7 @@ const Home = () => {
 
       <main className="content-wrapper overflow-hidden">
         <Hero />
+        <PromoPopup />
 
         <section id="about" className="wrapper" data-section="about">
           <div className="container py-md-10">

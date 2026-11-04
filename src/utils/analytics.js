@@ -76,7 +76,8 @@ export const initGlobalTracking = () => {
 
   // 'play' doesn't bubble, so listen in the capture phase
   const onPlay = (e) => {
-    if (e.target.tagName !== 'VIDEO') return;
+    // Autoplaying videos (the home page promo clip) start on their own, not by a visitor's choice
+    if (e.target.tagName !== 'VIDEO' || e.target.autoplay) return;
     const src = e.target.currentSrc || e.target.querySelector('source')?.src || '';
     track('video_play', { video_file: src.split('/').pop(), section: sectionOf(e.target) });
   };
@@ -114,9 +115,10 @@ export const initSectionViews = () => {
     // once half a screen of them is showing
     { threshold: Array.from({ length: 21 }, (_, i) => i / 20) }
   );
-  // The header is always on screen and the modal only exists once opened - neither says anything
+  // The header is always on screen and the modals / promo card only exist once opened -
+  // none of them says anything
   document
-    .querySelectorAll('[data-section]:not([data-section="header"]):not([data-section="tour_modal"])')
+    .querySelectorAll('[data-section]:not([data-section="header"]):not([data-section$="_modal"]):not([data-section^="promo_"])')
     .forEach((el) => observer.observe(el));
   return () => observer.disconnect();
 };
