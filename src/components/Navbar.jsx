@@ -1,10 +1,11 @@
-import { Fragment, useRef } from 'react';
+import { Fragment, useCallback, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import useSticky from 'hooks/useSticky';
 import Image from 'next/image.js';
 import PrefixedImage from './PrefixedImage';
 import NextLink from 'components/NextLink';
 import SocialLinks from 'components/SocialLinks';
+import TourBookingModal from 'components/TourBookingModal';
 import { navigationMenu } from '../data';
 
 /**
@@ -30,6 +31,14 @@ const Navbar = ({
 
   // Next.js router (not used here but available if needed)
   const router = useRouter();
+
+  // "Contact Us" opens the contact form popup instead of jumping to the footer
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const closeContact = useCallback(() => setIsContactOpen(false), []);
+  const openContact = (e) => {
+    e.preventDefault();
+    setIsContactOpen(true);
+  };
 
   // Class name for fixed sticky navbar version
   const fixedClassName =
@@ -114,6 +123,10 @@ const Navbar = ({
                       ))}
                     </ul>
                   </div>
+                ) : item.opensContactForm ? (
+                  <a href={item.href} className="nav-link" onClick={openContact}>
+                    {item.title}
+                  </a>
                 ) : (
                   <NextLink href={item.href} title={item.title} className="nav-link" />
                 )}
@@ -183,6 +196,8 @@ const Navbar = ({
           </div>
         )}
       </nav>
+
+      <TourBookingModal mode="contact" isOpen={isContactOpen} onClose={closeContact} />
     </Fragment>
   );
 };

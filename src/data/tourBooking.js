@@ -23,6 +23,8 @@ export const tourBooking = {
   buttonLabel: 'Schedule a Tour',
   modalTitle: 'Schedule a Tour',
   modalIntro: 'Leave your details and we will get back to you within one business day to arrange a time.',
+  submitLabel: 'Send request',
+  privacy: 'We only use your details to arrange the visit.',
   successTitle: 'Request received',
   successBody: 'Thanks - we will be in touch within one business day to confirm a time.',
   // Shown instead of the success message when the mailto fallback is used,
@@ -30,5 +32,19 @@ export const tourBooking = {
   handoffTitle: 'One more step - please press Send',
   handoffBody:
     'We opened your email app with your request filled in. It has not reached us until you press Send there.',
+  handoffNoApp: 'Email app did not open? Use one of these instead:',
+};
+
+// Same form, opened from "Contact Us" in the navbar for general enquiries
+export const contactForm = {
+  modalTitle: 'Contact Us',
+  modalIntro: 'Tell us a little about your project and we will get back to you within one business day.',
+  submitLabel: 'Send message',
+  privacy: 'We only use your details to reply to your enquiry.',
+  successTitle: 'Message received',
+  successBody: 'Thanks for reaching out - we will be in touch within one business day.',
+  handoffTitle: 'One more step - please press Send',
+  handoffBody:
+    'We opened your email app with your message filled in. It has not reached us until you press Send there.',
   handoffNoApp: 'Email app did not open? Use one of these instead:',
 };

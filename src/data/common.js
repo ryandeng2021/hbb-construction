@@ -129,7 +129,9 @@ export const navigationMenu = [
     id: 5,
     title: 'Contact Us',
     href: '/#contact',
-    hasDropdown: false
+    hasDropdown: false,
+    // Opens the contact form popup; href stays as the fallback before the page has loaded
+    opensContactForm: true
   }
 ];
 
