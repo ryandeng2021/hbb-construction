@@ -1,31 +1,7 @@
-import { Fragment } from 'react';
-import Projects from 'components/Projects';
-import PageProgress from 'components/PageProgress';
 import SEO from 'components/SEO';
+import Projects from 'components/Projects';
+import Reveal from 'components/editorial/Reveal';
 
-/**
- * Projects page - displays the portfolio of all projects
- */
-const ProjectsPage = () => {
-  return (
-    <Fragment>
-      <PageProgress />
-      <SEO
-        path="/projects"
-        title="Our Projects"
-        description="Explore HBB Construction's portfolio of Bay Area residential projects - custom homes, additions, remodels, and ADUs."
-        image="/img/1-1.webp"
-      />
-
-      <main className="content-wrapper overflow-hidden projects-page">
-        <section className="wrapper" data-section="projects">
-          <div className="container py-12 py-md-14">
-            <Projects />
-          </div>
-        </section>
-      </main>
-    </Fragment>
-  );
-};
-
-export default ProjectsPage;
+export default function ProjectsPage() {
+  return <><SEO path="/projects" title="Our Work | Bay Area Homes & Renovations" description="Explore HBB Construction’s Bay Area portfolio of custom homes, additions, remodels and ADUs. Find residences by city and project type." image="/img/1-1.webp" /><main id="main-content" className="ed-portfolio ed-section"><header className="ed-portfolio-intro"><Reveal><h1 className="hbb-portfolio-title">The HBB Portfolio</h1></Reveal><p>New beginnings. Thoughtful transformations.<br />Explore the places we help bring to life.</p></header><Projects /></main></>;
+}

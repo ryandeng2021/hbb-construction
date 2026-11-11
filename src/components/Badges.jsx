@@ -7,7 +7,7 @@ import { badgesData } from '../data';
  */
 const Badges = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [displayNumbers, setDisplayNumbers] = useState({});
+  const [displayNumbers, setDisplayNumbers] = useState(() => Object.fromEntries(badgesData.items.map(item => [item.id, item.number])));
   const sectionRef = useRef(null);
 
   // Intersection Observer to trigger animation when section comes into view
@@ -36,7 +36,7 @@ const Badges = () => {
 
   // Animate numbers when visible
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const timers = [];
 
@@ -86,14 +86,6 @@ const Badges = () => {
     };
   }, [isVisible]);
 
-  // Initialize display numbers to 0
-  useEffect(() => {
-    const initialNumbers = {};
-    badgesData.items.forEach((item) => {
-      initialNumbers[item.id] = 0;
-    });
-    setDisplayNumbers(initialNumbers);
-  }, []);
 
   return (
     <section ref={sectionRef} className="badges-section">
@@ -107,7 +99,7 @@ const Badges = () => {
                   <span className="badge-value">
                     {displayNumbers[item.id] !== undefined
                       ? displayNumbers[item.id].toLocaleString()
-                      : '0'}
+                      : item.number.toLocaleString()}
                   </span>
                   {item.suffix && <span className="badge-suffix">{item.suffix}</span>}
                 </div>

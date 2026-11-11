@@ -7,10 +7,11 @@ export const project18 = {
     category: 'House Addition & Remodel',
     status: 'completed',
     image: getAssetPath('/img/18-1.webp'),
-    description: 'A Sunnyvale addition and remodel that pairs an updated kitchen with reworked bathrooms and living areas, giving the home a more open, modern everyday flow.',
-    location: 'Sunnyvale',
+    description: 'A San Jose addition and remodel that pairs an updated kitchen with reworked bathrooms and living areas, giving the home a more open, modern everyday flow.',
+    location: 'San Jose',
     year: '2026',
     heroImage: getAssetPath('/img/18-1.webp'),
+    coverImage: getAssetPath('/img/18-1.webp'),
     content: [
       {
         layout: 'one',

@@ -15,6 +15,7 @@ import 'styles/style.css';
 import 'styles/responsive.css';
 import 'plugins/scrollcue/scrollCue.css';
 import 'assets/scss/style.scss';
+import 'styles/editorial.css';
 
 function MyApp({ Component, pageProps }) {
   const { pathname, asPath } = useRouter();

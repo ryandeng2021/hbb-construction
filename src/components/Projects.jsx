@@ -1,123 +1,24 @@
+import Arrow from './editorial/Arrow';
 import { useState } from 'react';
-import Image from 'next/image';
-import NextLink from './NextLink';
+import Link from 'next/link';
 import { projects } from '../data';
 import { track } from '../utils/analytics';
+import Photo from './editorial/Photo';
+import { projectPresentation } from './editorial/projectMedia';
+import { projectType, projectName } from './editorial/projectHelpers';
 
-/**
- * Projects component - displays a portfolio of projects with filtering tabs
- * and a grid of project images that link to individual project pages.
- *
- * @returns JSX.Element
- */
-// Buckets each project's free-form category text into one of the filter tabs
-const getCategoryGroup = (category = '') => {
-  const normalized = category.toLowerCase();
-  if (normalized.includes('adu')) return 'adu';
-  if (normalized.includes('construction')) return 'new-construction';
-  return 'remodel-addition';
-};
-
-const FILTERS = [
-  { key: 'all', label: 'All' },
-  { key: 'new-construction', label: 'New Construction' },
-  { key: 'remodel-addition', label: 'Remodel & Addition' },
-  { key: 'adu', label: 'ADU' },
-  { key: 'ongoing', label: 'Ongoing' },
-];
-
-// "Ongoing" filters on build status rather than category, so it cuts across the other tabs
-const matchesFilter = (project, filter) => {
-  if (filter === 'all') return true;
-  if (filter === 'ongoing') return project.status === 'ongoing';
-  return getCategoryGroup(project.category) === filter;
-};
-
-const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  // Filter projects based on active tab
-  const filteredProjects = projects.filter(project => matchesFilter(project, activeFilter));
-
-  return (
-    <div>
-      {/* Header Section */}
-      <div className="text-center mb-8 projects-page-header">
-        <div className="d-inline-flex align-items-center mb-3">
-          <i className="uil uil-hard-hat fs-40 text-main me-2" />
-          <h1 className="mb-0 oswald">
-            Our <span className="text-main">Projects</span>
-          </h1>
-        </div>
-        <p className="fs-18 text-main roboto">Our Art Of Work</p>
-      </div>
-
-      {/* Filter Tabs */}
-      <div className="d-flex justify-content-center mb-10">
-        <ul className="nav nav-pills nav-pills-bg project-filter-tabs">
-          {FILTERS.map(filter => (
-            <li className="nav-item" key={filter.key}>
-              <button
-                className={`nav-link ${activeFilter === filter.key ? 'active' : ''}`}
-                onClick={() => {
-                  track('project_filter', { filter: filter.key });
-                  setActiveFilter(filter.key);
-                }}
-                type="button"
-              >
-                {filter.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Projects Grid */}
-      <div className="row g-4">
-        {filteredProjects.map((project) => (
-          <div key={project.id} className="col-md-6 col-lg-4">
-            <NextLink 
-              href={`/projects/${project.slug}`} 
-              title={
-                <div className="card border-0 shadow-sm h-100 project-card">
-                  <div className="card-img-top mb-0 overflow-hidden position-relative project-image-container">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={400}
-                      height={300}
-                      unoptimized={true}
-                      className="project-image"
-                    />
-                    <div className="project-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                      <i className="uil uil-search-plus fs-30 text-white" />
-                    </div>
-                    {project.status === 'ongoing' && (
-                      <span className="project-status-badge">
-                        <i className="uil uil-constructor me-1" />
-                        Ongoing
-                      </span>
-                    )}
-                  </div>
-                  <div className="card-body">
-                    <h3 className="card-title fs-30 fw-bold oswald mb-2">{project.title}</h3>
-                    <p className="card-text text-muted roboto mb-0 small">
-                      <i className="uil uil-map-marker me-1" />
-                      {project.location}
-                      <span className="mx-2">•</span>
-                      <i className="uil uil-calendar-alt me-1" />
-                      {project.year}
-                    </p>
-                  </div>
-                </div>
-              }
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Projects;
-
+export default function Projects() {
+  const [city, setCity] = useState('All cities');
+  const [type, setType] = useState('All project types');
+  const [status, setStatus] = useState('All projects');
+  const cities = [...new Set(projects.map(p => p.location))].sort();
+  const types = [...new Set(projects.map(projectType))].sort();
+  const filtered = projects.filter(p => (city === 'All cities' || p.location === city) && (type === 'All project types' || projectType(p) === type) && (status === 'All projects' || p.status === status));
+  const reset = () => { setCity('All cities'); setType('All project types'); setStatus('All projects'); };
+  return <>
+    <div className="ed-filters"><div><label htmlFor="project-city">Location</label><select id="project-city" value={city} onChange={e => (setCity(e.target.value), track('project_filter', { city: e.target.value }))}><option>All cities</option>{cities.map(c => <option key={c}>{c}</option>)}</select></div><div><label htmlFor="project-type">Project type</label><select id="project-type" value={type} onChange={e => (setType(e.target.value), track('project_filter', { filter: e.target.value }))}><option>All project types</option>{types.map(t => <option key={t}>{t}</option>)}</select></div><div><label htmlFor="project-status">Status</label><select id="project-status" value={status} onChange={e => (setStatus(e.target.value), track('project_filter', { status: e.target.value }))}><option>All projects</option><option value="completed">Completed</option><option value="ongoing">In progress</option></select></div><button type="button" onClick={reset} className="ed-reset">Reset filters ↺</button></div>
+    <p className="ed-results" role="status">{filtered.length} {filtered.length === 1 ? 'residence' : 'residences'}</p>
+    <div className="ed-project-grid">{filtered.map(project => <Link key={project.id} href={`/projects/${project.slug}`} className="ed-project-card"><div className="ed-project-photo"><Photo src={projectPresentation(project).cover || project.image} alt={`${projectType(project)} in ${project.location}`} /><span className="ed-image-arrow" aria-hidden="true"><Arrow /></span></div><div className="ed-project-caption"><div><h2>{projectName(project)}</h2><p>{projectType(project)} · {project.year}{project.status === 'ongoing' ? ' · In progress' : ''}</p></div><span aria-hidden="true"><Arrow /></span></div></Link>)}</div>
+    {!filtered.length && <div className="ed-empty"><h2>No residences match this selection.</h2><p>Try another city or project type to explore more of our work.</p><button className="ed-button" onClick={reset} type="button">Show all projects <Arrow /></button></div>}
+  </>;
+}

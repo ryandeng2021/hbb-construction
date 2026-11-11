@@ -55,7 +55,7 @@ const PHONE_DISPLAY = BUSINESS.phone.replace(/^\+1-/, '');
  * @param {string} [props.projectTitle] - Tour mode: named in the email subject so enquiries are identifiable
  * @param {string} [props.projectLocation]
  */
-const TourBookingModal = ({ mode = 'tour', isOpen, onClose, projectTitle, projectSlug, projectLocation }) => {
+const TourBookingModal = ({ mode = 'tour', isOpen, onClose, projectTitle, projectSlug, projectLocation, initialMessage = '' }) => {
   const { text, leadType, section, fields } = MODES[mode];
   const isTour = mode === 'tour';
   const [values, setValues] = useState(EMPTY);
@@ -71,14 +71,14 @@ const TourBookingModal = ({ mode = 'tour', isOpen, onClose, projectTitle, projec
   // Reset whenever the dialog is reopened so a second visitor starts clean
   useEffect(() => {
     if (isOpen) {
-      setValues(EMPTY);
+      setValues({ ...EMPTY, message: initialMessage });
       setState('idle');
       setError('');
       setCopied(false);
       const id = setTimeout(() => firstFieldRef.current?.focus(), 50);
       return () => clearTimeout(id);
     }
-  }, [isOpen]);
+  }, [isOpen, initialMessage]);
 
   // Escape to dismiss, and keep the page behind from scrolling
   useEffect(() => {

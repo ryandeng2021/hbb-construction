@@ -6,7 +6,8 @@ import SEO from 'components/SEO';
 import Hero from 'components/Hero';
 import About from 'components/About';
 import WhyChoose from 'components/WhyChoose';
-import Projects from 'components/Projects';
+import FeaturedResidences from 'components/editorial/FeaturedResidences';
+import PortfolioRibbon from 'components/editorial/PortfolioRibbon';
 import Process from 'components/Process';
 import Badges from 'components/Badges';
 import PromoPopup from 'components/PromoPopup';
@@ -26,7 +27,7 @@ const Home = () => {
         includeLocalBusiness
       />
 
-      <main className="content-wrapper overflow-hidden">
+      <main id="main-content" className="content-wrapper overflow-hidden">
         <Hero />
         <PromoPopup />
 
@@ -36,11 +37,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="projects" className="wrapper" data-section="projects">
-          <div className="container py-md-10">
-            <Projects />
-          </div>
-        </section>
+        <FeaturedResidences />
+        <PortfolioRibbon />
 
         <section
           className="wrapper badges-wrapper"

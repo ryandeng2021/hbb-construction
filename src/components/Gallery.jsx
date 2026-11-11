@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from 'next/image';
+import Image from './editorial/Photo';
 import NextLink from './NextLink';
 import Lightbox from './Lightbox';
 import { galleryCategories } from '../data/gallery';
