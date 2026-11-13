@@ -26,13 +26,12 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
             </Fragment>
           )}
 
-          {/* Google Fonts — Cormorant Garamond */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
-            rel="stylesheet"
-          />
+          {/* Preserve the public site's Cormorant Garamond, served locally. */}
+          <link rel="preload" href="/fonts/cormorant-garamond/CormorantGaramond-variable.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+          <style dangerouslySetInnerHTML={{ __html: `
+            @font-face { font-family: 'Cormorant Garamond'; src: url('/fonts/cormorant-garamond/CormorantGaramond-variable.ttf') format('truetype'); font-style: normal; font-weight: 300 700; font-display: swap; }
+            @font-face { font-family: 'Cormorant Garamond'; src: url('/fonts/cormorant-garamond/CormorantGaramond-Italic-variable.ttf') format('truetype'); font-style: italic; font-weight: 300 700; font-display: swap; }
+          ` }} />
 
           {/* Favicon — Chrome tab + bookmarks */}
           <link rel="icon" href={`${BASE_PATH}/favicon.ico`} sizes="32x32" />

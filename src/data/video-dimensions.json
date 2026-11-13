@@ -1,0 +1,38 @@
+{
+  "/video/hero-intro-mobile.mp4": {
+    "width": 1080,
+    "height": 1504
+  },
+  "/video/18-v.mp4": {
+    "width": 720,
+    "height": 1280
+  },
+  "/video/14-v.mp4": {
+    "width": 720,
+    "height": 960
+  },
+  "/video/23-v.mp4": {
+    "width": 960,
+    "height": 720
+  },
+  "/video/pic-1.mp4": {
+    "width": 960,
+    "height": 540
+  },
+  "/video/16-v.mp4": {
+    "width": 720,
+    "height": 1280
+  },
+  "/video/19-v.mp4": {
+    "width": 960,
+    "height": 720
+  },
+  "/video/17-v.mp4": {
+    "width": 720,
+    "height": 960
+  },
+  "/video/20-v.mp4": {
+    "width": 720,
+    "height": 960
+  }
+}

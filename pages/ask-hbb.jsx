@@ -1,0 +1,3 @@
+import SEO from 'components/SEO';
+import ProjectGuide from 'components/editorial/ProjectGuide';
+export default function AskHBB(){return <><SEO path="/ask-hbb" title="Ask HBB | Your Home Project Guide" description="Explore questions about Bay Area construction quotes, project timelines, design, permits, building details and ADUs with HBB’s interactive project guide."/><main id="main-content" className="ed-section hbb-guide-page"><header className="hbb-guide-intro"><div><span className="ed-eyebrow">Ask HBB</span><h1>A question is<br />a good beginning.</h1></div><p>Choose a topic or ask in your own words.<br />Explore one useful answer at a time.</p></header><ProjectGuide standalone /></main></>}

@@ -17,6 +17,7 @@ export const project20 = {
         images: [
           {
             src: getAssetPath('/video/20-v.mp4'),
+            poster: getAssetPath('/video/20-v-1s-poster.webp'),
             alt: 'Project walkthrough',
             isVideo: true
           }

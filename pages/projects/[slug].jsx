@@ -1,8 +1,14 @@
+import Arrow from 'components/editorial/Arrow';
 import { Fragment, useState } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
+import Photo from 'components/editorial/Photo';
+import { projectIntroduction } from 'components/editorial/projectCopy';
+import { projectPresentation } from 'components/editorial/projectMedia';
+import Reveal from 'components/editorial/Reveal';
+import { projectName, projectType } from 'components/editorial/projectHelpers';
 import NextLink from 'components/NextLink';
 import PageProgress from 'components/PageProgress';
-import ProjectContent from 'components/ProjectContent';
+import ProjectContent from 'components/editorial/ProjectGallery';
 import SEO from 'components/SEO';
 import TourBookingModal from 'components/TourBookingModal';
 import { projects } from '../../src/data';
@@ -41,12 +47,13 @@ const ProjectDetail = ({ project }) => {
     );
   }
 
+  const presentation = projectPresentation(project);
   const projectJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     name: project.title,
     description: truncateMeta(project.description),
-    image: absoluteAssetUrl(project.image),
+    image: absoluteAssetUrl(presentation.cover || project.image),
     url: absoluteUrl(`/projects/${project.slug}`),
     locationCreated: project.location
       ? { '@type': 'Place', name: project.location }
@@ -68,130 +75,22 @@ const ProjectDetail = ({ project }) => {
           project.description ||
           `${project.title} — ${project.category || 'residential project'} by HBB Construction${project.location ? ` in ${project.location}` : ''}.`
         }
-        image={project.image || project.heroImage}
+        image={presentation.cover || project.image || project.heroImage}
         jsonLd={projectJsonLd}
       />
 
-      <main className="content-wrapper overflow-hidden">
-        <section className="wrapper" data-section="project_detail" data-project={project.slug}>
-          <div className="container py-12 py-md-14 container-project-detail">
-            {/* Back Button */}
-            <div className="mb-6">
-              <NextLink 
-                href="/projects" 
-                title={
-                  <Fragment>
-                    <i className="uil uil-arrow-left me-2" />
-                    Back to Projects
-                  </Fragment>
-                }
-                className="btn btn-outline-primary"
-              />
-            </div>
-
-            {/* Project Header */}
-            <div className="text-center mb-8">
-              <span className="badge bg-primary mb-3">{project.category}</span>
-              <h1 className="mb-3 oswald">{project.title}</h1>
-              <div className="d-flex justify-content-center gap-4 text-muted">
-                <span>
-                  <i className="uil uil-map-marker me-1" />
-                  {project.location}
-                </span>
-                <span>
-                  <i className="uil uil-calendar-alt me-1" />
-                  {project.year}
-                </span>
-                <span>
-                  <i className="uil uil-check-circle me-1" />
-                  {project.status === 'completed' ? 'Completed' : 'Ongoing'}
-                </span>
-              </div>
-            </div>
-
-            {/* Project Content - Hero Image and Sections */}
-            <ProjectContent
-              heroImage={project.heroImage || project.image}
-              heroAlt={project.title}
-              sections={project.content || []}
-            />
-
-            {/* Tour request - ongoing builds only */}
-            {offersTours && (
-              <div className="row">
-                <div className="col-lg-9 mx-auto">
-                  <div className="tour-cta" data-section="tour_cta">
-                    <h2 className="oswald no-icon justify-content-center">{tourBooking.heading}</h2>
-                    <p className="roboto fs-16">{tourBooking.body}</p>
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-lg"
-                      onClick={() => {
-                        track('tour_form_open', { project: project.slug });
-                        setIsTourFormOpen(true);
-                      }}
-                    >
-                      <i className="uil uil-calendar-alt me-2" />
-                      {tourBooking.buttonLabel}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Project Overview Description (if no content sections) */}
-            {(!project.content || project.content.length === 0) && (
-              <div className="row mb-8">
-                <div className="col-lg-8 mx-auto">
-                  <h2 className="mb-4 oswald">Project Overview</h2>
-                  <p className="roboto fs-16 mb-4">{project.description}</p>
-                </div>
-              </div>
-            )}
-
-            {/* Related Projects */}
-            <div className="row mt-10">
-              <div className="col-12">
-                <h2 className="mb-6 text-center oswald">Related Projects</h2>
-                <div className="row g-4">
-                  {projects
-                    .filter(p => p.id !== project.id && p.category === project.category)
-                    .slice(0, 3)
-                    .map((relatedProject) => (
-                      <div key={relatedProject.id} className="col-md-4">
-                        <NextLink 
-                          href={`/projects/${relatedProject.slug}`}
-                          title={
-                            <div className="card border-0 shadow-sm h-100 project-card">
-                              <div className="card-img-top mb-0 overflow-hidden">
-                                <Image
-                                  src={relatedProject.image}
-                                  alt={relatedProject.title}
-                                  width={400}
-                                  height={250}
-                                  unoptimized={true}
-                                  className="w-100"
-                                  style={{ objectFit: 'cover' }}
-                                />
-                              </div>
-                              <div className="card-body">
-                                <h3 className="card-title fs-18 fw-bold oswald mb-2">
-                                  {relatedProject.title}
-                                </h3>
-                                <p className="card-text text-muted roboto small mb-0">
-                                  {relatedProject.category}
-                                </p>
-                              </div>
-                            </div>
-                          }
-                        />
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <main id="main-content" className="ed-detail" data-section="project_detail" data-project={project.slug}>
+        <header className="ed-detail-heading ed-section">
+          <Link href="/projects" className="ed-back">← Back to all work</Link>
+          <div className="ed-detail-title"><div><span className="ed-eyebrow">{project.location} / {projectType(project)}</span><h1>{projectName(project)}</h1></div><p>{project.year} · {project.status === 'completed' ? 'Completed' : 'In progress'}</p></div>
+        </header>
+        <div className={`ed-section hbb-project-introduction ${presentation.cover ? '' : 'hbb-introduction-no-cover'}`}>
+          {presentation.cover && <div className="ed-detail-hero"><Photo src={presentation.cover} alt={`${project.title} in ${project.location}`} priority sizes="(max-width: 800px) 88vw, 50vw" /></div>}
+          <section className="ed-project-overview"><dl>{[['Location',project.location],['Scope',projectType(project)],['Year',project.year],['Builder','HBB Construction']].map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><Reveal><p>{projectIntroduction(project)}</p></Reveal></section>
+        </div>
+        <div className="ed-section ed-detail-content"><ProjectContent heroAlt={`${project.title} in ${project.location}`} media={presentation.media} introduction={projectIntroduction(project)} /></div>
+        {offersTours && <section className="ed-section ed-tour" data-section="tour_cta"><span className="ed-eyebrow">See the work in person</span><h2>{tourBooking.heading}</h2><p>{tourBooking.body}</p><button className="ed-button" type="button" onClick={() => { track("tour_form_open", { project: project.slug }); setIsTourFormOpen(true); }}>{tourBooking.buttonLabel} <Arrow /></button></section>}
+        <section className="ed-section ed-next-project"><span className="ed-eyebrow">Continue exploring</span>{(() => { const next = projects[(projects.findIndex(p => p.id === project.id) + 1) % projects.length]; return <Link href={`/projects/${next.slug}`}><div><h2>{projectName(next)}</h2><p>{projectType(next)} · {next.location}</p></div><span aria-hidden="true"><Arrow /></span><Photo src={next.image} alt={`${next.title} in ${next.location}`} /></Link>; })()}</section>
       </main>
 
       <TourBookingModal

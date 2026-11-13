@@ -14,9 +14,9 @@ export const backgroundImages = {
 export const promoPopup = {
   video: getAssetPath('/video/hero-intro-mobile.mp4'),
   poster: getAssetPath('/video/hero-intro-mobile-poster.webp'),
-  eyebrow: 'Honey Badger Brothers Construction',
-  title: 'Planning to build or remodel?',
-  body: 'Get a free quote for your remodel, addition, ADU or new home - or come tour one of our builds in progress.',
+  eyebrow: 'HBB Construction',
+  title: 'Building or remodeling?',
+  body: 'Get a free quote or tour a home in progress.',
   quoteLabel: 'Get a Free Quote',
   tourLabel: 'Book a Tour',
   // Text on the small button left in the corner after the card is closed

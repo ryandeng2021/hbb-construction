@@ -17,7 +17,7 @@ const GalleryPage = () => {
         image="/img/1-1.webp"
       />
 
-      <main className="content-wrapper overflow-hidden projects-page">
+      <main id="main-content" className="content-wrapper overflow-hidden projects-page hbb-gallery">
         <section className="wrapper" data-section="gallery">
           <div className="container py-12 py-md-14">
             <Gallery />
