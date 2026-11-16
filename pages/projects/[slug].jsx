@@ -48,6 +48,9 @@ const ProjectDetail = ({ project }) => {
   }
 
   const presentation = projectPresentation(project);
+  const scope = project.scope || projectType(project);
+  const statusLabel = project.status === 'completed' ? 'Completed' : project.status === 'ongoing' ? 'In progress' : null;
+  const projectSummary = [project.year, statusLabel].filter(Boolean).join(' · ');
   const projectJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
@@ -82,11 +85,11 @@ const ProjectDetail = ({ project }) => {
       <main id="main-content" className="ed-detail" data-section="project_detail" data-project={project.slug}>
         <header className="ed-detail-heading ed-section">
           <Link href="/projects" className="ed-back">← Back to all work</Link>
-          <div className="ed-detail-title"><div><span className="ed-eyebrow">{project.location} / {projectType(project)}</span><h1>{projectName(project)}</h1></div><p>{project.year} · {project.status === 'completed' ? 'Completed' : 'In progress'}</p></div>
+          <div className="ed-detail-title"><div><span className="ed-eyebrow">{project.location} / {scope}</span><h1>{projectName(project)}</h1></div>{projectSummary && <p>{projectSummary}</p>}</div>
         </header>
         <div className={`ed-section hbb-project-introduction ${presentation.cover ? '' : 'hbb-introduction-no-cover'}`}>
           {presentation.cover && <div className="ed-detail-hero"><Photo src={presentation.cover} alt={`${project.title} in ${project.location}`} priority sizes="(max-width: 800px) 88vw, 50vw" /></div>}
-          <section className="ed-project-overview"><dl>{[['Location',project.location],['Scope',projectType(project)],['Year',project.year],['Builder','HBB Construction']].map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><Reveal><p>{projectIntroduction(project)}</p></Reveal></section>
+          <section className="ed-project-overview"><dl>{[['Location',project.location],['Scope',scope],['Year',project.year],['Builder','HBB Construction']].filter(([,value]) => value).map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><Reveal><p>{projectIntroduction(project)}</p></Reveal></section>
         </div>
         <div className="ed-section ed-detail-content"><ProjectContent heroAlt={`${project.title} in ${project.location}`} media={presentation.media} introduction={projectIntroduction(project)} /></div>
         {offersTours && <section className="ed-section ed-tour" data-section="tour_cta"><span className="ed-eyebrow">See the work in person</span><h2>{tourBooking.heading}</h2><p>{tourBooking.body}</p><button className="ed-button" type="button" onClick={() => { track("tour_form_open", { project: project.slug }); setIsTourFormOpen(true); }}>{tourBooking.buttonLabel} <Arrow /></button></section>}

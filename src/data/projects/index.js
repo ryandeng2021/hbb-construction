@@ -2,6 +2,8 @@
 // - heroImage: Hero image at top (optional, falls back to 'image')
 // - content: Array of sections with layout ('one'|'two'|'three'), images, video, description
 
+import { project34 } from './project-34';
+import { project33 } from './project-33';
 import { project32 } from './project-32';
 import { project31 } from './project-31';
 import { project30 } from './project-30';
@@ -40,6 +42,8 @@ export const projects = [
   project19,
   // Ongoing build - closes out the second row on the 3-up desktop grid
   project30,
+  project33,
+  project34,
   project31,
   project32,
   project16,
